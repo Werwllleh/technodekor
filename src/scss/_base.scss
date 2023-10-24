@@ -163,6 +163,38 @@ iframe {
 	padding: 8px 16px;
 }
 
+.color-indigo {
+	background-color: $color-indigo;
+}
+.color-orange {
+	background-color: $color-orange;
+}
+.color-french-pink {
+	background-color: $color-french-pink;
+}
+.color-purple {
+	background-color: $color-purple;
+}
+.color-aquamarine {
+	background-color: $color-aquamarine;
+}
+.color-soft-red {
+	background-color: $color-soft-red;
+}
+.color-blue {
+	background-color: $color-blue;
+}
+.color-fuchsia {
+	background-color: $color-fuchsia;
+}
+.color-yellow {
+	background-color: $color-yellow;
+}
+.color-green {
+	background-color: $color-green;
+}
+
+
 .js-lazy-load:not(.is-loaded) {
 	max-height: 50vh;
 }

@@ -2,6 +2,185 @@
 
 	padding: 24px 0 120px;
 
+	&__stocks {
+		&-title {
+			margin: 0 0 24px 0;
+		}
+		&-items {
+			display: flex;
+			gap: 24px;
+		}
+		&-item {
+			border-radius: 16px;
+			width: 404px;
+			height: 264px;
+			overflow: hidden;
+			padding: 24px;
+			display: flex;
+			flex-direction: column;
+
+			&-image {
+				margin: 0 0 48px 0;
+
+				svg {
+					width: 36px;
+					height: 36px;
+				}
+			}
+
+			&-text {
+				color: $color-white;
+			}
+
+			&-date {
+				margin: auto 0 0 0;
+				color: $color-white;
+			}
+		}
+		&-all-stocks {
+			margin: 24px 0 0 0;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			border-radius: 12px;
+			background: #F3F4F6;
+			padding: 24px;
+
+			p {
+				color: $color-brand-purple;
+			}
+			span {
+
+				svg {
+					width: 10px;
+					height: 10px;
+					fill: #C5CAD3;
+					transform: rotate(-180deg);
+				}
+			}
+		}
+	}
+	&__popular {
+
+		&-title {
+			margin: 0 0 24px 0;
+		}
+
+		&-items {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&-item {
+			position: relative;
+			border-radius: 16px;
+			overflow: hidden;
+			background: #F3F4F6;
+			width: 318.4px;
+			height: 180px;
+			padding: 24px;
+
+			&:hover {
+				background: $color-white;
+				box-shadow: 0 4px 20px 0 rgba(45, 47, 56, 0.08);
+			}
+
+			&-text {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				height: 100%;
+				z-index: 1;
+			}
+
+			&-name{
+				color: $color-brand-purple;
+				max-width: 152px;
+			}
+
+			&-count {
+				color: #596476;
+
+			}
+
+			&-image {
+				position: absolute;
+				right: 0;
+				bottom: -17px;
+				width: 174px;
+				height: 174px;
+				object-fit: contain;
+			}
+		}
+	}
+	&__brands {
+
+		&-title {
+			margin: 0 0 24px 0;
+		}
+
+		&-flex {
+			display: flex;
+			justify-content: space-between;
+			gap: 16px;
+		}
+
+		&-items {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+		}
+
+		&-item {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+			border-radius: 12px;
+			background: #F3F4F6;
+			padding: 16px;
+			width: 268px;
+
+			&:hover {
+				border-radius: 12px;
+				background: $color-white;
+				box-shadow: 0 4px 20px 0 rgba(45, 47, 56, 0.08);
+			}
+
+			&-logo {
+
+				img {
+					width: 40px;
+					height: 40px;
+				}
+			}
+
+			&-name {
+				color: $color-brand-purple;
+			}
+		}
+
+		&-all-brands {
+
+			justify-content: space-between;
+			p {
+				color: $color-brand-purple;
+			}
+
+			span {
+				color: #717C8D;
+				display: flex;
+				align-items: center;
+				gap: 8px;
+				svg {
+					width: 10px;
+					height: 10px;
+					fill: #C5CAD3;
+					transform: rotate(-180deg);
+				}
+			}
+		}
+	}
 	&__about {
 		padding: 56px;
 		border-radius: 16px;
@@ -83,4 +262,5 @@
 			color: $color-txt-primary;
 		}
 	}
+
 }
