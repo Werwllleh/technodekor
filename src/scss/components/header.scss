@@ -1,117 +1,187 @@
 .header {
-	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
-	z-index: 2100;
-	display: flex;
-	align-items: center;
-	padding: 30px;
-	background-color: $color-white;
 
-	&__logo {
-		display: block;
-		width: 140px;
-		height: 19px;
-		transition: $duration-normal;
-	}
+	padding: 40px 0 24px;
 
-	&__menu {
-		position: fixed;
-		left: 0;
-		top: 0;
-		z-index: 98;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		overflow: hidden;
-		overflow-y: auto;
-		margin: 0;
-		margin-top: 84px;
-		padding: 0 20px;
-		width: 100vw;
-		height: 100vh;
-		// stylelint-disable-next-line
-		height: calc(var(--vh) - 84px);
-		color: $color-black;
-		background-color: rgba($color-black, 0.1);
-		opacity: 0;
-		visibility: hidden;
-		transform: translateX(100%);
-		transition: $duration-normal;
-		-webkit-overflow-scrolling: touch;
+	&__top {
 
-		@include active {
-			opacity: 1;
-			visibility: visible;
-			transform: translateX(0);
+		&-body {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 		}
+		&-left {
+			display: flex;
+			align-items: center;
+			gap: 56px;
+			padding: 10px 0;
+		}
+		&-right {
+			display: flex;
+			align-items: center;
+			gap: 56px;
+		}
+
 	}
 
-	&__list {
-		width: 100%;
-		text-align: center;
-	}
+	&__city {
 
-	&__link {
-		position: relative;
-		display: flex;
+		display: inline-flex;
 		align-items: center;
-		justify-content: left;
-		margin: 0 auto;
-		padding: 10px 30px;
-		min-height: 85px;
-		font-weight: 700;
-		font-size: 16px;
-		line-height: 25px;
-		text-align: left;
-		color: rgba($color-black, 0.7);
-		background-color: $color-white;
+		gap: 8px;
 
-		&:not(:last-child) {
-			border-bottom: 1px solid $color-gray;
-		}
-
-		&:first-child {
-			border-top: 1px solid $color-gray;
-		}
-
-		@include hover {
-			color: $color-black;
-		}
-
-		@include active {
-			color: $color-black;
-		}
-	}
-
-	&__burger {
-		z-index: 100;
-		flex-direction: column;
-		margin: (-6.5px / 2) 0;
-		margin-left: auto;
-		width: 39px;
-		color: $color-black;
-
-		span {
+		&-name {
 			display: block;
-			margin: 6.5px 0;
-			width: 39px;
-			height: 2px;
-			background-color: currentColor;
-			transition: $duration-normal;
+			color: $color-brand-purple;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 1.25;
+			letter-spacing: 0.32px;
 		}
+		&-arrow {
+			cursor: pointer;
 
-		@include active {
-			span {
-				&:first-child {
-					transform: translate(0, 8px) rotate(-45deg);
-				}
-
-				&:last-child {
-					transform: translate(0, -6px) rotate(45deg);
-				}
+			svg {
+				width: 6px;
+				height: 10px;
+				transform: rotate(-90deg);
+				fill: #C5CAD3;
 			}
 		}
 	}
+
+	&__nav {
+
+		&-list {
+			display: flex;
+			gap: 20px;
+		}
+		&-elem {
+			color: $color-txt-secondary;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 1.14;
+			letter-spacing: 0.28px;
+		}
+	}
+
+	&__phone {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+
+		&-tel {
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+
+			a {
+				color: $color-brand-purple;
+			}
+			span {
+				color: $color-txt-secondary;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 1.14;
+			}
+		}
+		&-arrow {
+			cursor: pointer;
+
+			svg {
+				width: 6px;
+				height: 10px;
+				transform: rotate(270deg);
+				fill: #C5CAD3;
+			}
+		}
+	}
+
+	&__user {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		padding: 4px;
+
+		&-logo {
+
+			svg {
+				width: 24px;
+				height: 24px;
+				fill: #7D8899;
+			}
+		}
+		&-text {
+			color: $color-brand-purple;
+		}
+	}
+
+	&__bottom {
+
+		&-body {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 56px;
+		}
+
+		&-left {
+			flex: 1 1 auto;
+			display: flex;
+			align-items: center;
+			gap: 56px;
+		}
+
+		&-right {
+
+		}
+	}
+
+	&__logo {
+
+		svg {
+			width: 140px;
+		}
+	}
+
+	&__search {
+		position: relative;
+		border-radius: 12px;
+		background: #F3F4F6;
+		width: 100%;
+		max-width: 720px;
+		padding: 14px 48px 14px 24px;
+
+		input {
+			width: 100%;
+			border: none;
+			outline: none;
+			background-color: transparent;
+
+		}
+
+		&-icon {
+			cursor: pointer;
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			top: 0;
+			right: 24px;
+			bottom: 0;
+			margin: auto 0;
+
+			svg {
+				fill: #7D8899;
+			}
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+	}
+
 }

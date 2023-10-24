@@ -1,2 +1,50 @@
 // stylelint-disable no-empty-source
 // @include font-face("../fonts/FontName/FontName", "FontName", 400, normal);
+@font-face {
+	src: url("../fonts/Roboto-Regular.woff") format("woff");
+	font-family: "Roboto";
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	src: url("../fonts/Inter-Regular.woff") format("woff");
+	font-family: "Inter";
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	src: url("../fonts/Montserrat-Regular.woff") format("woff");
+	font-family: "Montserrat";
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	src: url("../fonts/Inter-Medium.woff") format("woff");
+	font-family: "Inter";
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	src: url("../fonts/Montserrat-Medium.woff") format("woff");
+	font-family: "Montserrat";
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	src: url("../fonts/Inter-SemiBold.woff") format("woff");
+	font-family: "Inter";
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	src: url("../fonts/Montserrat-SemiBold.woff") format("woff");
+	font-family: "Montserrat";
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	src: url("../fonts/Montserrat-Bold.woff") format("woff");
+	font-family: "Montserrat";
+	font-weight: 700;
+	font-style: normal;
+}

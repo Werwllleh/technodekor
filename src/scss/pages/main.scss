@@ -1,0 +1,86 @@
+.main {
+
+	padding: 24px 0 120px;
+
+	&__about {
+		padding: 56px;
+		border-radius: 16px;
+		background-color: $color-brand-purple;
+		display: flex;
+		flex-direction: column;
+		gap: 56px;
+
+		&-header {
+			display: flex;
+			gap: 32px;
+
+		}
+
+		&-logo {
+
+			svg {
+				width: 172px;
+				height: 72px;
+			}
+		}
+
+		&-title {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			color: $color-white;
+		}
+
+		&-cards {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 32px;
+		}
+
+		&-card {
+			flex: 1 1 auto;
+			display: flex;
+			align-items: center;
+			gap: 24px;
+
+			&-icon {
+				border-radius: 32px;
+				background-color: rgba(255, 255, 255, 0.20);
+				padding: 12px;
+
+				svg {
+					height: 36px;
+					width: 36px;
+				}
+			}
+
+			&-about {
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+
+				h4, p {
+					color: $color-white;
+				}
+			}
+		}
+
+		&-text {
+			max-width: 720px;
+
+			p {
+				color: $color-white;
+
+				&:not(:last-child) {
+					margin: 0 0 20px 0;
+				}
+			}
+		}
+
+		&-btn {
+			margin: 24px 0 0 0;
+			color: $color-txt-primary;
+		}
+	}
+}

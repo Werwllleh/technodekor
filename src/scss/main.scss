@@ -8,8 +8,12 @@
 @import "vendor";
 @import "base";
 @import "helpers";
+@import "typography";
 
 @import "components/header";
 @import "components/footer";
 
+@import "mixins/header-button";
+
 @import "pages/home";
+@import "pages/main";

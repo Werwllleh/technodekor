@@ -1,13 +1,30 @@
 // stylelint-disable scss/dollar-variable-empty-line-before
 
 // COLORS
-$color-black: #000;
+$color-black: #000C1A;
 $color-white: #fff;
-$color-gray: #eee;
+$color-gray: #596476;
+$color-orange-dark: #E55C00;
+$color-brand-purple: #393185;
+$color-brand-purple-dark: #1E2152;
+$color-indigo: #5057F7;
+$color-orange: #F7A050;
+$color-french-pink: #F7508C;
+$color-purple: #AE50F7;
+$color-aquamarine: #14BDAA;
+$color-soft-red: #F75050;
+$color-blue: #50A7F7;
+$color-fuchsia: #F750DC;
+$color-yellow: #F7BE50;
+$color-green: #5ECE2A;
+$color-txt-secondary: #717C8D;
+$color-txt-primary: #000C1A;
 
 // FONTS
 // stylelint-disable-next-line
-$font-primary: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+$font-family-inter: "Inter", sans-serif;
+$font-family-montserrat: "Montserrat", sans-serif;
+$font-family-roboto: "Roboto", sans-serif;
 
 // EASING TRANSITIONS
 $duration-normal: 0.4s;
@@ -21,5 +38,5 @@ $desktop: 1025;
 $desktop-xl: 1800;
 $laptop: 1440;
 $tablet: 768;
-$mobile: 320;
+$mobile: 360;
 $desktop-vh: 750;

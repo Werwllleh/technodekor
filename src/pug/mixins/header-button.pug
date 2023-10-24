@@ -1,0 +1,8 @@
+mixin header-button(icon, count)
+	//header button
+	a.header-button&attributes(attributes)
+		.header-button__icon
+			+svg(icon)
+		if (count)
+			.header-button__counter
+				span.h5= count

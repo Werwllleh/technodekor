@@ -9,7 +9,8 @@ html {
 	overflow-x: hidden;
 	min-height: 100vh;
 	box-sizing: border-box;
-	font-family: $font-primary;
+	font-family: $font-family-inter;
+	font-weight: 400;
 	scroll-behavior: smooth;
 
 	&.has-cursor,
@@ -34,6 +35,10 @@ body {
 
 main {
 	flex: 1;
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 0;
 }
 
 p {
@@ -117,6 +122,7 @@ iframe {
 	background-color: transparent;
 	transition: $duration-normal;
 	user-select: none;
+	border-radius: 12px;
 
 	&__content {
 		position: relative;
@@ -128,6 +134,34 @@ iframe {
 		transform: translateZ(0);
 	}
 }
+.btn-dark {
+	background-color: $color-brand-purple;
+
+	&:hover {
+		background-color: $color-brand-purple-dark;
+	}
+}
+.btn-light {
+	border: 1px solid #C5CAD3;
+	background: $color-white;
+
+	&:hover {
+		background: #E5E7EA;
+		box-shadow: 0 4px 20px 0 rgba(45, 47, 56, 0.08);
+	}
+}
+.btn-l {
+	max-width: 226px;
+	padding: 20px 72px;
+}
+.btn-m {
+	max-width: 115px;
+	padding: 14px 20px;
+}
+.btn-s {
+	max-width: 100px;
+	padding: 8px 16px;
+}
 
 .js-lazy-load:not(.is-loaded) {
 	max-height: 50vh;
@@ -137,8 +171,9 @@ iframe {
 	position: relative;
 	z-index: 1;
 	margin: 0 auto;
+	padding: 0 56px;
 	width: 100%;
-	max-width: 100%;
+	max-width: 1800px;
 }
 
 .site {
