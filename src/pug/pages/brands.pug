@@ -22,7 +22,188 @@
 			link: '/'
 		}
 	]
-
+	var brands = [
+		{
+			name: 'Tikkurila',
+			about: 'Финский производитель лакокрасочной продукции',
+			count: 1024,
+			image: 'tikkurila',
+			link: '#',
+			statusNew: false,
+			statusSale: false,
+		},
+		{
+			name: 'VGT-ecology material',
+			about: 'Современный лакокрасочный завод',
+			count: 800,
+			image: 'vgt',
+			link: '#',
+			statusNew: true,
+			statusSale: false,
+		},
+		{
+			name: 'V33',
+			about: 'Лакокрасочные материалы, средства защиты деревянных изделий из Франции',
+			count: 720,
+			image: 'V33',
+			link: '#',
+			statusNew: false,
+			statusSale: false,
+		},
+		{
+			name: 'ferumprotect',
+			about: 'Торговая марка современных лакокрасочных материалов по металлу',
+			count: 560,
+			image: 'ferumprotect',
+			link: '#',
+			statusNew: false,
+			statusSale: false,
+		},
+		{
+			name: 'Prodecor',
+			about: 'Ярославский завод «Русские краски»',
+			count: 580,
+			image: 'prodecor',
+			link: '#',
+			statusNew: false,
+			statusSale: true,
+		},
+		{
+			name: 'OSMO',
+			about: 'Бренд из Германии представлен во всех странах мира',
+			count: 552,
+			image: 'osmo',
+			link: '#',
+			statusNew: false,
+			statusSale: false,
+		},
+		{
+			name: 'Finncolor',
+			about: 'Товарный портфель компании это экологичные и долговечные материалы',
+			count: 540,
+			image: 'finncolor',
+			link: '#',
+			statusNew: false,
+			statusSale: false,
+		},
+		{
+			name: 'Gallery VGT',
+			about: 'Высокодекоративная линейка завода ВГТ',
+			count: 520,
+			image: 'vgt-gallery',
+			link: '#',
+			statusNew: false,
+			statusSale: false,
+		},
+		{
+			name: 'VGT Premium',
+			about: 'Премиум-линейка завода ВГТ',
+			count: 480,
+			image: 'vgt-premium',
+			link: '#',
+			statusNew: false,
+			statusSale: false,
+		},
+		{
+			name: 'Decorazza',
+			about: 'Декоративные штукатурки, дизайнерские краски, тонкослойные покрытия',
+			count: 420,
+			image: 'decorazza',
+			link: '#',
+			statusNew: false,
+			statusSale: false,
+		},
+		{
+			name: 'COLOR FACTOR',
+			about: 'Краски для стен внутри и снаружи зданий профессионального качества',
+			count: 320,
+			image: 'color-factory',
+			link: '#',
+			statusNew: false,
+			statusSale: false,
+		},
+		{
+			name: 'Belinka',
+			about: 'Производитель средств защиты древесины из Словении',
+			count: 300,
+			image: 'belinka',
+			link: '#',
+			statusNew: false,
+			statusSale: false,
+		},
+		{
+			name: 'Arton',
+			about: 'Аэрозольные краски универсальные, для художественных работ и граффити',
+			count: 320,
+			image: 'arton',
+			link: '#',
+			statusNew: false,
+			statusSale: false,
+		},
+		{
+			name: 'Fujiwara Chemical',
+			about: 'Экологически чистые Японские краски и покрытия',
+			count: 280,
+			image: 'fujiwara',
+			link: '#',
+			statusNew: false,
+			statusSale: false,
+		},
+		{
+			name: 'Neomid',
+			about: 'Профессиональные препараты для древесины, камня, бетона',
+			count: 320,
+			image: 'neomid',
+			link: '#',
+			statusNew: false,
+			statusSale: false,
+		},
+		{
+			name: 'Белколор',
+			about: 'Лакокрасочный завод в Белгороде',
+			count: 280,
+			image: 'belcolor',
+			link: '#',
+			statusNew: false,
+			statusSale: false,
+		},
+		{
+			name: 'Silk Plaster',
+			about: 'Жидкие обои',
+			count: 240,
+			image: 'silk-plaster',
+			link: '#',
+			statusNew: false,
+			statusSale: false,
+		},
+		{
+			name: 'Wagner',
+			about: 'Окрасочное оборудование проффессионального качества из Германии',
+			count: 120,
+			image: 'wagner',
+			link: '#',
+			statusNew: false,
+			statusSale: false,
+		},
+		{
+			name: 'Квил',
+			about: 'Современный лакокрасочный завод в Белгороде',
+			count: 104,
+			image: 'kvil',
+			link: '#',
+			statusNew: false,
+			statusSale: false,
+		},
+		{
+			name: 'Новоколор',
+			about: 'Общестроительные лакокрасочные материалы',
+			count: 72,
+			image: 'novocolor',
+			link: '#',
+			statusNew: false,
+			statusSale: false,
+		},
+	]
 .container
 	.brands
 		h1.brands__title.page--title.h1 Бренды
@@ -31,18 +212,11 @@
 				.brands__left-bar
 					+left-bar(leftBarData)
 				.brands__left-stok
-					.brands__stok
-						.brands__stok-image
-							+svg("bag2")
-						.brands__stok-text
-							h2.h2 Колеровка в подарок
-							h5.h5 Скидка 100%
-						a.brands__stok-link
-							p.button-14 Об акции
-							span
-								+svg("arrow")
+					+coloring()
 			.brands__right
-				.brands__text
+				.brands__right-text
 					p.text-16-long При общении с нами, Вы общаетесь НАПРЯМУЮ с Производителем, т.к. наша компания является уполномоченной организацией более 30 крупнейших заводов на вверенной территории!
 					p.text-16-long Мы ведем постоянную "горячую линию" с производством и потому имеем возможность оперативно решать даже самые продвинутые технические и экономические вопросы.
-
+				.brands__right-cards
+					each brand in brands
+						+brand-mini-card(brand.name, brand.about, brand.count, brand.image, brand.link, brand.statusNew, brand.statusSale)

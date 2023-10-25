@@ -1,10 +1,10 @@
 .breadcrumbs {
 	margin: 24px 0;
 
-	@include desktop {
-		margin-bottom: 12px;
-		padding-top: 78px;
-	}
+	//@include desktop {
+	//	margin-bottom: 12px;
+	//	padding-top: 78px;
+	//}
 
 	&__list {
 		position: relative;

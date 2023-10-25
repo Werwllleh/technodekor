@@ -1,0 +1,16 @@
+mixin brand-mini-card(name, about, count, image, link, statusNew, statusSale)
+	//product-card
+	.brand-mini-card&attributes(attributes)
+		.brand-mini-card__body
+			.brand-mini-card__image
+				img(src="./images/brands/" + image + ".png", alt=name)
+			if (statusNew)
+				label.brand-mini-card__label.label--green.text-14 Новинка
+			if (statusSale)
+				label.brand-mini-card__label.label--orange.text-14 Акция
+			.brand-mini-card__column
+				h3.brand-mini-card__name.h3= name
+				p.brand-mini-card__about.text-16= about
+				a.brand-mini-card__count(href= link)
+					p.button-16= count
+					+svg("arrow-crumbs")

@@ -1,63 +1,39 @@
 .brands {
 
+	margin: 0 0 100px 0;
 
 	&__left {
 		&-bar {
 			margin: 0 0 32px 0;
 		}
+
 		&-stok {
 
 		}
 	}
 
-	&__stok {
-		border-radius: 16px;
-		overflow: hidden;
-		background: linear-gradient(90deg, #2564B8 0%, #3A75C4 100%);
-		padding: 32px 24px;
-
-		display: flex;
-		flex-direction: column;
-		gap: 24px;
-
-		&-image {
-
-			svg {
-				width: 36px;
-				height: 36px;
-			}
-		}
-		&-text {
-			color: $color-white;
-			h2 {
-				margin: 0 0 12px 0;
-			}
-		}
-		&-about {
-
-		}
-		&-link {
-			display: flex;
-			align-items: center;
-			gap: 8px;
-
-			p {
-				color: $color-white;
-			}
-
-			span {
-
-				svg {
-					width: 6px;
-					height: 10px;
-					transform: rotate(-180deg);
-					fill: #C5CAD3;
-				}
-			}
-		}
-	}
 
 	&__right {
 
+		&-text {
+			margin: 0 0 32px 0;
+
+			p {
+				&:not(:last-child) {
+					margin: 0 0 24px 0;
+				}
+			}
+		}
+
+		&-cards {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: 40px;
+			row-gap: 32px;
+
+			@include desktop-xm() {
+				grid-template-columns: 1fr;
+			}
+		}
 	}
 }
