@@ -1,9 +1,11 @@
 
 import './vendor';
 import './helpers';
+import './sliders';
 import './components/social';
 
 import './components/catalog-button';
+import './components/left-bar';
 
 
 import lazyLoading from './modules/lazyLoading';

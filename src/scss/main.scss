@@ -13,7 +13,12 @@
 @import "components/header";
 @import "components/footer";
 
-@import "mixins/header-button";
+@import "components/header-button";
+@import "components/catalog-button";
+@import "components/product-card";
+@import "components/breadcrumbs";
+@import "components/left-bar";
 
-@import "pages/home";
+@import "pages/general";
 @import "pages/main";
+@import "pages/brands";

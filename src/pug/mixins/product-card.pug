@@ -1,0 +1,19 @@
+mixin product-card(discount, newStatus, image, name, price, oldPrice, link)
+	//product-card
+	.product-card&attributes(attributes)
+		a.product-card__body(href=link)
+			.product-card__image
+				img(src="./images/product/" + image + ".png", alt=name)
+			.product-card__name
+				p.text-16= name
+			.product-card__price
+				p.price-s.product-card__price-current= price + " ₽ / шт"
+				if (oldPrice)
+					span.product-card__price-old= oldPrice + " ₽"
+		a.product-card__btn.btn-dark.btn.btn-m.button-14(href="#") В корзину
+		if (discount || newStatus)
+			.product-card__labels
+				if (discount)
+					label.product-card__label-discount.text-14= discount
+				if (newStatus)
+					label.product-card__label-status.text-14 Новинка

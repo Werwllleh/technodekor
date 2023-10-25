@@ -1,18 +1,26 @@
-extends pug/base
+html
+	head
+		title Список страниц
+		meta(charset='utf-8')
+		style.
+			body {
+				display: flex;
+				min-height: 100vh;
+				font-size: 30px;
+			}
+			.content {
+				margin: auto;
+			}
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
+	body
+		.content
+			h2 Список страниц
+			ul
+				li
+					a(href="main.html", target="_blank") Главная
+				li
+					a(href="brands.html", target="_blank") Бренды
 
-prepend vars
-	- title = 'ТЕХНОДЕКОР'
-	- description = 'Главная технодекор'
-
-append vars
-	//-
-
-block content
-	//- include pug/data
-
-	//- .site
-	include pug/components/header
-	include pug/pages/main
-
-	include pug/components/footer
-	//- include pug/components/analytics

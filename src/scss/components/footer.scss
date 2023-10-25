@@ -5,11 +5,23 @@
 		background-color: #F3F4F6;
 		padding: 40px 0px;
 
+		@include mobile() {
+			padding: 24px 0px;
+		}
+
 		&-items {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			gap: 24px;
+
+			@include laptop() {
+				flex-wrap: wrap;
+			}
+			@include tablet() {
+				gap: 8px;
+				flex-direction: column;
+			}
 
 		}
 
@@ -21,6 +33,11 @@
 			gap: 24px;
 			border-radius: 16px;
 			padding: 24px 32px;
+
+			@include tablet() {
+				width: 100%;
+				gap: 12px;
+			}
 
 			&:nth-child(1) {
 				background: linear-gradient(90deg, #2564B8 0%, #3A75C4 100%);
@@ -89,6 +106,19 @@
 			display: flex;
 			align-items: flex-start;
 			gap: 144px;
+
+			@include laptop() {
+				justify-content: space-between;
+				gap: 30px;
+			}
+
+			@media (max-width: 650px) {
+				flex-direction: column;
+			}
+
+			@media (max-width: 1200px) {
+				flex-wrap: wrap;
+			}
 		}
 
 		&-column-title {
@@ -120,6 +150,11 @@
 		&-middle-columns {
 			display: flex;
 			gap: 120px;
+
+			@include mobile() {
+				flex-direction: column;
+				gap: 32px;
+			}
 		}
 
 		&-info {
@@ -127,6 +162,14 @@
 			align-items: center;
 			gap: 144px;
 			color: #C5CAD3;
+
+			@include desktop() {
+				gap: 40px;
+			}
+			@include tablet() {
+				flex-direction: column;
+				align-items: flex-start;
+			}
 
 			&-copyright {
 
@@ -136,6 +179,12 @@
 				display: flex;
 				align-items: center;
 				gap: 16px;
+
+				@include tablet() {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 22px;
+				}
 
 				&-logos {
 					display: flex;
@@ -163,6 +212,11 @@
 		width: 180px;
 		height: 75px;
 
+		@include mobile() {
+			width: 90px;
+			height: 38px;
+		}
+
 		svg {
 
 		}
@@ -189,6 +243,11 @@
 			display: flex;
 			align-items: flex-start;
 			gap: 40px;
+
+			@include desktop-xm() {
+				flex-direction: column;
+				gap: 24px;
+			}
 		}
 
 		&-phone {
@@ -220,6 +279,7 @@
 		}
 
 		&-allContacts {
+			margin: 24px 0 0 0;
 
 			a {
 				display: flex;

@@ -1,131 +1,243 @@
-main.main
-	.container
-		.main__popular
-			h2.main__popular-title.h2 Популярное
-			.main__popular-items
-				a.main__popular-item(href="./#")
-					.main__popular-item-text
-						h3.main__popular-item-name.h3 Краски по металлу
-						p.main__popular-item-count.text-16 700 товаров
-					img.main__popular-item-image(src="./images/popular/1.png" alt='')
-				a.main__popular-item(href="./#")
-					.main__popular-item-text
-						h3.main__popular-item-name.h3 Краски с колеровкой
-						p.main__popular-item-count.text-16 1000 товаров
-					img.main__popular-item-image(src="./images/popular/2.png" alt='')
-				a.main__popular-item(href="./#")
-					.main__popular-item-text
-						h3.main__popular-item-name.h3 Аэрозольные краски
-						p.main__popular-item-count.text-16 650 товаров
-					img.main__popular-item-image(src="./images/popular/3.png" alt='')
-				a.main__popular-item(href="./#")
-					.main__popular-item-text
-						h3.main__popular-item-name.h3 Интерьерные краски
-						p.main__popular-item-count.text-16 320 товаров
-					img.main__popular-item-image(src="./images/popular/4.png" alt='')
-				a.main__popular-item(href="./#")
-					.main__popular-item-text
-						h3.main__popular-item-name.h3 Краски ВГТ (VGT)
-						p.main__popular-item-count.text-16 480 товаров
-					img.main__popular-item-image(src="./images/popular/5.png" alt='')
-		.main__stocks
-			h2.main__stocks-title.h2 Акции
-			.main__stocks-items
-				a.main__stocks-item.color-indigo(href="./#")
-					.main__stocks-item-image
-						+svg("bag")
-					h3.main__stocks-item-text.h3 Знакомимся с красками OLSTA! Приветственная скидка 20% весь сезон!
-					p.main__stocks-item-date.text-16 1 июня 2023
-				a.main__stocks-item.color-soft-red(href="./#")
-					.main__stocks-item-image
-						+svg("sale")
-					h3.main__stocks-item-text.h3 Распродажа красок в Чебоксарах
-					p.main__stocks-item-date.text-16 1 июня 2023
-				a.main__stocks-item.color-aquamarine(href="./#")
-					.main__stocks-item-image
-						+svg("bonus")
-					h3.main__stocks-item-text.h3 Акция на краску Тиккурила в Чебоксарах
-					p.main__stocks-item-date.text-16 1 июня 2023
-				a.main__stocks-item.color-purple(href="./#")
-					.main__stocks-item-image
-						+svg("bag")
-					h3.main__stocks-item-text.h3 МОDНОЕ ПРЕОБРАЖЕНИЕ - краска MODA в Чебоксарах
-					p.main__stocks-item-date.text-16 1 июня 2023
-			a.main__stocks-all-stocks(href="./#")
+.container
+	.main-page
+		.main-page__banner
+			.main-page__banner-body
+				.main-page__banner-slider.swiper
+					.swiper-wrapper
+						.swiper-slide
+							.main-page__banner-slide.color-indigo
+								.main-page__banner-slide-image
+									img(src='./images/main-banner/1.png' alt="banner slide")
+								.main-page__banner-slide-about
+									h2.main-page__banner-slide-title.h1 Началась распродажа!
+									p.main-page__banner-slide-text.text-16-long Успейте купить ушедшие из ассортимента бренды по баснословной скидке в Чебоксарах!Официальный дилер!
+									a.main-page__banner-slide-btn.btn.btn-light.btn-l.button-16 Купить сейчас
+						.swiper-slide
+							.main-page__banner-slide.color-fuchsia
+								.main-page__banner-slide-image
+									img(src='./images/main-banner/1.png' alt="banner slide")
+								.main-page__banner-slide-about
+									h2.main-page__banner-slide-title.h1 Началась распродажа!
+									p.main-page__banner-slide-text.text-16-long Успейте купить ушедшие из ассортимента бренды по баснословной скидке в Чебоксарах!Официальный дилер!
+									a.main-page__banner-slide-btn.btn.btn-light.btn-l.button-16 Купить сейчас
+						.swiper-slide
+							.main-page__banner-slide.color-green
+								.main-page__banner-slide-image
+									img(src='./images/main-banner/1.png' alt="banner slide")
+								.main-page__banner-slide-about
+									h2.main-page__banner-slide-title.h1 Началась распродажа!
+									p.main-page__banner-slide-text.text-16-long Успейте купить ушедшие из ассортимента бренды по баснословной скидке в Чебоксарах!Официальный дилер!
+									a.main-page__banner-slide-btn.btn.btn-light.btn-l.button-16 Купить сейчас
+					.swiper-pagination
+					.slider--hover-arrows
+						.swiper-button-prev
+						.swiper-button-next
+		.main-page__popular
+			h2.main-page__popular-title.h2 Популярное
+			.main-page__popular-items.popular__slider.swiper
+				.swiper-wrapper
+					.swiper-slide
+						a.main-page__popular-item(href="./#")
+							.main-page__popular-item-text
+								h3.main-page__popular-item-name.h3 Краски по металлу
+								p.main-page__popular-item-count.text-16 700 товаров
+							img.main-page__popular-item-image(src="./images/popular/1.png" alt='')
+					.swiper-slide
+						a.main-page__popular-item(href="./#")
+							.main-page__popular-item-text
+								h3.main-page__popular-item-name.h3 Краски с колеровкой
+								p.main-page__popular-item-count.text-16 1000 товаров
+							img.main-page__popular-item-image(src="./images/popular/2.png" alt='')
+					.swiper-slide
+						a.main-page__popular-item(href="./#")
+							.main-page__popular-item-text
+								h3.main-page__popular-item-name.h3 Аэрозольные краски
+								p.main-page__popular-item-count.text-16 650 товаров
+							img.main-page__popular-item-image(src="./images/popular/3.png" alt='')
+					.swiper-slide
+						a.main-page__popular-item(href="./#")
+							.main-page__popular-item-text
+								h3.main-page__popular-item-name.h3 Интерьерные краски
+								p.main-page__popular-item-count.text-16 320 товаров
+							img.main-page__popular-item-image(src="./images/popular/4.png" alt='')
+					.swiper-slide
+						a.main-page__popular-item(href="./#")
+							.main-page__popular-item-text
+								h3.main-page__popular-item-name.h3 Краски ВГТ (VGT)
+								p.main-page__popular-item-count.text-16 480 товаров
+							img.main-page__popular-item-image(src="./images/popular/5.png" alt='')
+		.main-page__stocks
+			h2.main-page__stocks-title.h2 Акции
+			.main-page__stocks-items.stocks__slider.swiper
+				.swiper-wrapper
+					.swiper-slide
+						a.main-page__stocks-item.color-indigo(href="./#")
+							.main-page__stocks-item-image
+								+svg("bag")
+							h3.main-page__stocks-item-text.h3 Знакомимся с красками OLSTA! Приветственная скидка 20% весь сезон!
+							p.main-page__stocks-item-date.text-16 1 июня 2023
+					.swiper-slide
+						a.main-page__stocks-item.color-soft-red(href="./#")
+							.main-page__stocks-item-image
+								+svg("sale")
+							h3.main-page__stocks-item-text.h3 Распродажа красок в Чебоксарах
+							p.main-page__stocks-item-date.text-16 1 июня 2023
+					.swiper-slide
+						a.main-page__stocks-item.color-aquamarine(href="./#")
+							.main-page__stocks-item-image
+								+svg("bonus")
+							h3.main-page__stocks-item-text.h3 Акция на краску Тиккурила в Чебоксарах
+							p.main-page__stocks-item-date.text-16 1 июня 2023
+					.swiper-slide
+						a.main-page__stocks-item.color-purple(href="./#")
+							.main-page__stocks-item-image
+								+svg("bag")
+							h3.main-page__stocks-item-text.h3 МОDНОЕ ПРЕОБРАЖЕНИЕ - краска MODA в Чебоксарах
+							p.main-page__stocks-item-date.text-16 1 июня 2023
+			a.main-page__stocks-all-stocks(href="./#")
 				p.button-16 Все акциии
 				span
 					+svg("arrow")
-		.main__brands
-			h2.main__brands-title.h2 Бренды
-			.main__brands-flex
-				.main__brands-items
-					a.main__brands-item(href='./#')
-						.main__brands-item-logo
-							img(src="./images/brands/tikkurila.png" alt="tikkurila")
-						.main__brands-item-name.text-14 Tikkurila
-					a.main__brands-item(href='./#')
-						.main__brands-item-logo
-							img(src="./images/brands/vgt.png" alt="vgt")
-						.main__brands-item-name.text-14 VGT-ecology material
-					a.main__brands-item(href='./#')
-						.main__brands-item-logo
-							img(src="./images/brands/ferumprotect.png" alt="ferumprotect")
-						.main__brands-item-name.text-14 ferumprotect
-					a.main__brands-item(href='./#')
-						.main__brands-item-logo
-							img(src="./images/brands/tikkurila.png" alt="tikkurila")
-						.main__brands-item-name.text-14 Tikkurila
-					a.main__brands-item(href='./#')
-						.main__brands-item-logo
-							img(src="./images/brands/vgt.png" alt="vgt")
-						.main__brands-item-name.text-14 VGT-ecology material
-				a.main__brands-all-brands.main__brands-item
+		.main-page__sale
+			-
+				var products = [
+					{
+						discount: '-25 %',
+						newStatus: true,
+						image: 'product',
+						name: 'Краска с воском IQ 130 для ванн',
+						price: '793,50',
+						oldPrice: '',
+						link: '#'
+					},
+					{
+						discount: '-25 %',
+						newStatus: false,
+						image: 'product',
+						name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров ',
+						price: '793,50',
+						oldPrice: '2 539',
+						link: '#'
+					},
+					{
+						discount: '',
+						newStatus: true,
+						image: 'product',
+						name: 'Краска с воском IQ 130 для ванн',
+						price: '793,50',
+						oldPrice: '2 539',
+						link: '#'
+					},
+					{
+						discount: '-25 %',
+						newStatus: true,
+						image: 'product',
+						name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров ',
+						price: '793,50',
+						oldPrice: '',
+						link: '#'
+					},
+					{
+						discount: '-25 %',
+						newStatus: false,
+						image: 'product',
+						name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров ',
+						price: '793,50',
+						oldPrice: '2 539',
+						link: '#'
+					},
+					{
+						discount: '',
+						newStatus: true,
+						image: 'product',
+						name: 'Краска с воском IQ 130 для ванн',
+						price: '793,50',
+						oldPrice: '2 539',
+						link: '#'
+					},
+				]
+			h2.main-page__sale-title.h2 Распродажа
+			.main-page__cards.mobile--products-cards
+				each product in products
+					+product-card(product.discount, product.newStatus, product.image, product.name, product.price, product.oldPrice, product.link)
+			.main-page__cards.desctop--products-cards.products__slider.swiper
+				.swiper-wrapper
+					each product in products
+						.swiper-slide
+							+product-card(product.discount, product.newStatus, product.image, product.name, product.price, product.oldPrice, product.link)
+				.swiper-button-prev
+				.swiper-button-next
+		.main-page__brands
+			h2.main-page__brands-title.h2 Бренды
+			.main-page__brands-items
+				a.main-page__brands-item(href='./#')
+					.main-page__brands-item-logo
+						img(src="./images/brands/tikkurila.png" alt="tikkurila")
+					.main-page__brands-item-name.text-14 Tikkurila
+				a.main-page__brands-item(href='./#')
+					.main-page__brands-item-logo
+						img(src="./images/brands/vgt.png" alt="vgt")
+					.main-page__brands-item-name.text-14 VGT-ecology material
+				a.main-page__brands-item(href='./#')
+					.main-page__brands-item-logo
+						img(src="./images/brands/ferumprotect.png" alt="ferumprotect")
+					.main-page__brands-item-name.text-14 ferumprotect
+				a.main-page__brands-item(href='./#')
+					.main-page__brands-item-logo
+						img(src="./images/brands/tikkurila.png" alt="tikkurila")
+					.main-page__brands-item-name.text-14 Tikkurila
+				a.main-page__brands-item(href='./#')
+					.main-page__brands-item-logo
+						img(src="./images/brands/vgt.png" alt="vgt")
+					.main-page__brands-item-name.text-14 VGT-ecology material
+				a.main-page__brands-all-brands.main-page__brands-item(href='./#')
 					p.button-16 Все бренды
 					span.h3 82
 						+svg("arrow")
-		.main__about
-			.main__about-header
-				.main__about-logo
+		.main-page__about
+			.main-page__about-header
+				.main-page__about-logo
 					+svg("logo-footer")
-				.main__about-title
+				.main-page__about-title
 					h2.h2 Центр красок Технодекор
 					p.h3 г. Чебоксары
-			.main__about-cards
-				.main__about-card
-					.main__about-card-icon
+			.main-page__about-cards
+				.main-page__about-card
+					.main-page__about-card-icon
 						+svg("compare2")
-					.main__about-card-about
+					.main-page__about-card-about
 						h4.h4 Бесплатный подбор цвета
 						p.text-14 Бесплатный подбор цвета
-				.main__about-card
-					.main__about-card-icon
+				.main-page__about-card
+					.main-page__about-card-icon
 						+svg("car")
-					.main__about-card-about
+					.main-page__about-card-about
 						h4.h4 Бесплатная доставка
 						p.text-14 Даже если срочно
-				.main__about-card
-					.main__about-card-icon
+				.main-page__about-card
+					.main-page__about-card-icon
 						+svg("gift")
-					.main__about-card-about
+					.main-page__about-card-about
 						h4.h4 Система лояльности
 						p.text-14 Клубные карты с бонусами
-				.main__about-card
-					.main__about-card-icon
+				.main-page__about-card
+					.main-page__about-card-icon
 						+svg("shop")
-					.main__about-card-about
+					.main-page__about-card-about
 						h4.h4 Декор-студия
 						p.text-14 Обучение мастеров, подбор материалов
-			.main__about-text
-				.main__about-text-description
+			.main-page__about-text
+				.main-page__about-text-description
 					p.text-16-long Наш сайт — это инструмент покупки и подбора краски и он отвечает на два наиболее частых вопроса: купить краску и чем покрасить? Если вы знаете марку краски, которая вам нужна, смело пользуйтесь поиском. Если Вы хотите узнать, какой краской покрасить ту или иную поверхность, читайте нашу базу знаний или смотрите проекты.
 					p.text-16-long Краски — это наша специализация. Мы знаем о Красках всё!
-				a.main__about-btn.btn.btn-light.btn-m.button-14 Подробнее
-		.swiper
-			.swiper-wrapper
-				.swiper-slide 1
-				.swiper-slide 2
-				.swiper-slide 3
-			.swiper-pagination
-			.swiper-button-prev
-			.swiper-button-next
-			.swiper-scrollbar
+				a.main-page__about-btn.btn.btn-light.btn-m.button-14 Подробнее
+
+		//.swiper
+		//	.swiper-wrapper
+		//		.swiper-slide 1
+		//		.swiper-slide 2
+		//		.swiper-slide 3
+		//	.swiper-pagination
+		//	.swiper-button-prev
+		//	.swiper-button-next
+		//	.swiper-scrollbar

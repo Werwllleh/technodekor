@@ -151,14 +151,21 @@ iframe {
 	}
 }
 .btn-l {
+	width: 100%;
 	max-width: 226px;
 	padding: 20px 72px;
+
+	@include desktop() {
+		padding: 14px 20px;
+	}
 }
 .btn-m {
+	width: 100%;
 	max-width: 115px;
 	padding: 14px 20px;
 }
 .btn-s {
+	width: 100%;
 	max-width: 100px;
 	padding: 8px 16px;
 }
@@ -194,6 +201,27 @@ iframe {
 	background-color: $color-green;
 }
 
+.slider--hover-arrows {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity $duration-normal, visibility $duration-normal;
+}
+
+.main-page__banner-slider {
+	&:hover .slider--hover-arrows{
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.products__slider {
+
+	&:hover .slider--hover-arrows{
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
 
 .js-lazy-load:not(.is-loaded) {
 	max-height: 50vh;
@@ -206,6 +234,10 @@ iframe {
 	padding: 0 56px;
 	width: 100%;
 	max-width: 1800px;
+
+	@include tablet() {
+		padding: 0 16px;
+	}
 }
 
 .site {

@@ -1,0 +1,12 @@
+mixin left-bar(data)
+	//left-bar
+	.left-bar&attributes(attributes)
+		.left-bar__body
+			ul.left-bar__list
+				each info in data
+					if (info.active)
+						li.left-bar__item
+							a.left-bar__item-link.active.button-16(href=info.link)= info.name
+					else
+						li.left-bar__item
+							a.left-bar__item-link.button-16(href=info.link)= info.name

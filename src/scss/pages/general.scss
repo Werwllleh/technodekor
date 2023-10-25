@@ -1,0 +1,10 @@
+.page--title {
+	color: $color-txt-primary;
+	margin: 0 0 24px 0;
+}
+
+.page--grid {
+	display: grid;
+	grid-template-columns: 392px auto;
+	gap: 40px;
+}
