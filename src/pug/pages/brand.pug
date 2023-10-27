@@ -1,0 +1,153 @@
+-
+	var products = [
+		{
+			discount: '-25 %',
+			newStatus: true,
+			image: 'product',
+			name: 'Краска с воском IQ 130 для ванн',
+			price: '793,50',
+			oldPrice: '',
+			link: '#'
+		},
+		{
+			discount: '-25 %',
+			newStatus: false,
+			image: 'product',
+			name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров ',
+			price: '793,50',
+			oldPrice: '2 539',
+			link: '#'
+		},
+		{
+			discount: '',
+			newStatus: true,
+			image: 'product',
+			name: 'Краска с воском IQ 130 для ванн',
+			price: '793,50',
+			oldPrice: '2 539',
+			link: '#'
+		},
+		{
+			discount: '-25 %',
+			newStatus: true,
+			image: 'product',
+			name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров ',
+			price: '793,50',
+			oldPrice: '',
+			link: '#'
+		},
+		{
+			discount: '-25 %',
+			newStatus: false,
+			image: 'product',
+			name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров ',
+			price: '793,50',
+			oldPrice: '2 539',
+			link: '#'
+		},
+		{
+			discount: '',
+			newStatus: true,
+			image: 'product',
+			name: 'Краска с воском IQ 130 для ванн',
+			price: '793,50',
+			oldPrice: '2 539',
+			link: '#'
+		},
+		{
+			discount: '-25 %',
+			newStatus: true,
+			image: 'product',
+			name: 'Краска с воском IQ 130 для ванн',
+			price: '793,50',
+			oldPrice: '',
+			link: '#'
+		},
+		{
+			discount: '-25 %',
+			newStatus: false,
+			image: 'product',
+			name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров ',
+			price: '793,50',
+			oldPrice: '2 539',
+			link: '#'
+		},
+		{
+			discount: '',
+			newStatus: true,
+			image: 'product',
+			name: 'Краска с воском IQ 130 для ванн',
+			price: '793,50',
+			oldPrice: '2 539',
+			link: '#'
+		},
+		{
+			discount: '-25 %',
+			newStatus: true,
+			image: 'product',
+			name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров ',
+			price: '793,50',
+			oldPrice: '',
+			link: '#'
+		},
+		{
+			discount: '-25 %',
+			newStatus: false,
+			image: 'product',
+			name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров ',
+			price: '793,50',
+			oldPrice: '2 539',
+			link: '#'
+		},
+		{
+			discount: '',
+			newStatus: true,
+			image: 'product',
+			name: 'Краска с воском IQ 130 для ванн',
+			price: '793,50',
+			oldPrice: '2 539',
+			link: '#'
+		},
+	]
+.container
+	.brand
+		h1.brand__title.page--title.h1 Тиккурила
+		.brand__content.page--grid
+			.brand__left
+				.brand__left-categories
+					+categories()
+				.brand__left-filter
+			.brand__right
+				.brand__right-header
+					.brand__right-header-image
+						img(src="./images/brands/tikkurila.png")
+					.brand__right-header-text
+						.brand__right-header-info
+							p.text-16-long Лидер рынка РФ. Производство в Финляндии и в России.Финскому бренду Tikkurila уже более 150 лет. С 1862 года компания реализует по всему миру высокоэкологичные и удобные решения для оформления и защиты поверхностей.Сегодня Tikkurila заслуженно признана лидирующей лакокрасочной компанией в Северной Европе, России и ряде других стран Восточной Европы.
+							p.text-16-long Бренд имеет репутацию надежного и проверенного производителя декоративных лакокрасочных изделий.Продукция Tikkurila в...
+						.brand__right-header-more
+							a.button-16 Подробнее
+							span
+								+svg("arrow")
+						.brand__right-header-hide
+							a.button-16 скрыть текст
+				.brand____right-catalog.brand__catalog
+					.brand__catalog-categories
+						+categories()
+					.brand__catalog-header
+						h2.h2 Товары Tikkurila в нашем магазине
+						.brand__catalog-sort
+							select.select.brand__catalog-select
+								option(value='Сначала популярные', selected) Сначала популярные
+								option(value="Сначала дешевые") Сначала дешевые
+								option(value="Сначала дорогие") Сначала дорогие
+								option(value="Еще какие-то") Еще какие-то
+					.brand__catalog-content.catalog--grid
+						each product in products
+							.brand__catalog-card.catalog--card
+								+product-card(product.discount, product.newStatus, product.image, product.name, product.price, product.oldPrice, product.link)
+					.brand__catalog-footer
+						.brand__catalog-footer-more
+							+show-more-btn()
+						.brand__catalog-footer-pagination
+							+pagination()

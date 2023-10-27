@@ -1,0 +1,32 @@
+mixin categories(name, about, count, image, link, statusNew, statusSale)
+	//product-card
+	.categories&attributes(attributes)
+		.categories__body
+			.categories__title
+				span
+					+svg("arrow")
+				h4.h4 Категории товаров
+			.categories__content
+				.categories__content-body
+					ul.categories__list
+						li.categories__item
+							a.text-14.categories__item-link(href='#') Краски
+							span.text-14.categories__item-count 110
+						li.categories__item
+							a.text-14.categories__item-link(href='#') Лакокрасочные материалы
+							span.text-14.categories__item-count 87
+						li.categories__item
+							a.text-14.categories__item-link(href='#') Грунтовка
+							span.text-14.categories__item-count 56
+						li.categories__item
+							a.text-14.categories__item-link(href='#') Герметики
+							span.text-14.categories__item-count 22
+						li.categories__item
+							a.text-14.categories__item-link(href='#') Штукатурки
+							span.text-14.categories__item-count 16
+						li.categories__item
+							a.text-14.categories__item-link(href='#') Смолы
+							span.text-14.categories__item-count 4
+					.categories__all-link
+						a.button-14 Посмотреть все
+

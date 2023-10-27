@@ -10,7 +10,38 @@
 
 	@include desktop() {
 		display: flex;
+		flex-direction: column;
+		gap: 32px;
+	}
+}
+
+.grid--reverse {
+	@include desktop() {
+		display: flex;
 		flex-direction: column-reverse;
 		gap: 32px;
 	}
+}
+
+.catalog--grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 40px;
+	row-gap: 32px;
+
+	@media (min-width: 1026px) and (max-width: 1650px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include desktop() {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	//@include tablet() {
+	//	grid-template-columns: repeat(1, 400px);
+	//}
+}
+
+.catalog--card {
+
 }

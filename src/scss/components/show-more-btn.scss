@@ -1,0 +1,32 @@
+.show-more-btn {
+
+	&__body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		padding: 16px;
+		border-radius: 8px;
+		border: 1px solid #E5E7EA;
+		background: $color-white;
+
+		transition: background $duration-normal, border $duration-normal, box-shadow $duration-normal;
+
+		&:hover {
+			border: 1px solid #C5CAD3;
+			background: #E5E7EA;
+			box-shadow: 0 4px 20px 0 rgba(45, 47, 56, 0.08);
+		}
+
+		span {
+			svg {
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		p {
+			color: $color-txt-primary;
+		}
+	}
+}

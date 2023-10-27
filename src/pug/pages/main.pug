@@ -1,3 +1,60 @@
+-
+	var products = [
+		{
+			discount: '-25 %',
+			newStatus: true,
+			image: 'product',
+			name: 'Краска с воском IQ 130 для ванн',
+			price: '793,50',
+			oldPrice: '',
+			link: '#'
+		},
+		{
+			discount: '-25 %',
+			newStatus: false,
+			image: 'product',
+			name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров ',
+			price: '793,50',
+			oldPrice: '2 539',
+			link: '#'
+		},
+		{
+			discount: '',
+			newStatus: true,
+			image: 'product',
+			name: 'Краска с воском IQ 130 для ванн',
+			price: '793,50',
+			oldPrice: '2 539',
+			link: '#'
+		},
+		{
+			discount: '-25 %',
+			newStatus: true,
+			image: 'product',
+			name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров ',
+			price: '793,50',
+			oldPrice: '',
+			link: '#'
+		},
+		{
+			discount: '-25 %',
+			newStatus: false,
+			image: 'product',
+			name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров ',
+			price: '793,50',
+			oldPrice: '2 539',
+			link: '#'
+		},
+		{
+			discount: '',
+			newStatus: true,
+			image: 'product',
+			name: 'Краска с воском IQ 130 для ванн',
+			price: '793,50',
+			oldPrice: '2 539',
+			link: '#'
+		},
+	]
 .container
 	.main-page
 		.main-page__banner
@@ -99,63 +156,6 @@
 				span
 					+svg("arrow")
 		.main-page__sale
-			-
-				var products = [
-					{
-						discount: '-25 %',
-						newStatus: true,
-						image: 'product',
-						name: 'Краска с воском IQ 130 для ванн',
-						price: '793,50',
-						oldPrice: '',
-						link: '#'
-					},
-					{
-						discount: '-25 %',
-						newStatus: false,
-						image: 'product',
-						name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров ',
-						price: '793,50',
-						oldPrice: '2 539',
-						link: '#'
-					},
-					{
-						discount: '',
-						newStatus: true,
-						image: 'product',
-						name: 'Краска с воском IQ 130 для ванн',
-						price: '793,50',
-						oldPrice: '2 539',
-						link: '#'
-					},
-					{
-						discount: '-25 %',
-						newStatus: true,
-						image: 'product',
-						name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров ',
-						price: '793,50',
-						oldPrice: '',
-						link: '#'
-					},
-					{
-						discount: '-25 %',
-						newStatus: false,
-						image: 'product',
-						name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров ',
-						price: '793,50',
-						oldPrice: '2 539',
-						link: '#'
-					},
-					{
-						discount: '',
-						newStatus: true,
-						image: 'product',
-						name: 'Краска с воском IQ 130 для ванн',
-						price: '793,50',
-						oldPrice: '2 539',
-						link: '#'
-					},
-				]
 			h2.main-page__sale-title.h2 Распродажа
 			.main-page__cards.mobile--products-cards
 				each product in products
