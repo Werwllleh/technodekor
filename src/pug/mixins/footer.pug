@@ -1,84 +1,86 @@
 mixin footer()
-		.footer
-			.footer__top
-				.container
-					.footer__top-items
-						a.footer__top-item
-							.footer__top-item-icon
-								+svg("footer-shopping")
-							.footer__top-item-text
-								p.h4 Как оформить заказ
-								span.text-14 Способы оплаты и доставки
-							.footer__top-item-arrow
-								+svg("arrow")
-						a.footer__top-item
-							.footer__top-item-icon
-								+svg("footer-painter")
-							.footer__top-item-text
-								p.h4 Чем покрасить
-								span.text-14 Советы и рекомендации
-							.footer__top-item-arrow
-								+svg("arrow")
-						a.footer__top-item
-							.footer__top-item-icon
-								+svg("footer-tile")
-							.footer__top-item-text
-								p.h4 Цветовые каталоги
-								span.text-14 Как подобрать цвет
-							.footer__top-item-arrow
-								+svg("arrow")
-			.footer__bottom
-				.container
-					.footer__bottom-body
-						.footer__bottom-columns
-							.footer__bottom-about
-								.footer__logo
-									+svg("logo-footer")
-								.footer__bottom-about-text
-									p.h4 Интернет-магазин красок в Чебоксарах
-							.footer__bottom-middle-columns
-								.footer__bottom-middle-column
-									h3.footer__bottom-column-title.h3 Компания
-									ul.footer__bottom-column-list
-										li.text-16
-											a(href="./#") О компании
-										li.text-16
-											a(href="./#") Услуги
-										li.text-16
-											a(href="./#") Вакансии
-										li.text-16
-											a(href="./#") Новости
-								.footer__bottom-middle-column
-									h3.footer__bottom-column-title.h3 Помощь
-									ul.footer__bottom-column-list
-										li.text-16
-											a(href="./#") Оплата и доставка
-										li.text-16
-											a(href="./#") Блог
-										li.text-16
-											a(href="./#") Проекты
-							.footer__bottom-contacts
-								h3.footer__bottom-column-title.h3 Контакты
-								p.footer__bottom-contacts-address Чебоксары, Базовый проезд, 6а
-								.footer__bottom-contacts-info
-									.footer__bottom-contacts-phone
-										a.h2(href='tel:+78352551503') +7 (8352) 55-15-03
-										.footer__bottom-contacts-more
-											+svg("arrow")
-									.footer__bottom-contacts-mail
-										a.h3(href='mailto:centr@t-dek.ru') centr@t-dek.ru
-								.footer__bottom-contacts-allContacts
-									a.button-16(href='./#') Все контакты
+	.footer
+		.footer__top
+			.container
+				.footer__top-items
+					a.footer__top-item
+						.footer__top-item-icon
+							+svg("footer-shopping")
+						.footer__top-item-text
+							p.h4 Как оформить заказ
+							span.text-14 Способы оплаты и доставки
+						.footer__top-item-arrow
+							+svg("arrow")
+					a.footer__top-item
+						.footer__top-item-icon
+							+svg("footer-painter")
+						.footer__top-item-text
+							p.h4 Чем покрасить
+							span.text-14 Советы и рекомендации
+						.footer__top-item-arrow
+							+svg("arrow")
+					a.footer__top-item
+						.footer__top-item-icon
+							+svg("footer-tile")
+						.footer__top-item-text
+							p.h4 Цветовые каталоги
+							span.text-14 Как подобрать цвет
+						.footer__top-item-arrow
+							+svg("arrow")
+		.footer__bottom
+			.container
+				.footer__bottom-body
+					.footer__bottom-columns
+						.footer__bottom-about
+							.footer__logo
+								+svg("logo-footer")
+							.footer__bottom-about-text
+								p.h4 Интернет-магазин красок в Чебоксарах
+						.footer__bottom-middle-columns
+							.footer__bottom-middle-column
+								h3.footer__bottom-column-title.h3 Компания
+								ul.footer__bottom-column-list
+									li.text-16
+										a(href="./#") О компании
+									li.text-16
+										a(href="./#") Услуги
+									li.text-16
+										a(href="./#") Вакансии
+									li.text-16
+										a(href="./#") Новости
+							.footer__bottom-middle-column
+								h3.footer__bottom-column-title.h3 Помощь
+								ul.footer__bottom-column-list
+									li.text-16
+										a(href="./#") Оплата и доставка
+									li.text-16
+										a(href="./#") Блог
+									li.text-16
+										a(href="./#") Проекты
+						.footer__bottom-contacts
+							h3.footer__bottom-column-title.h3 Контакты
+							p.footer__bottom-contacts-address Чебоксары, Базовый проезд, 6а
+							.footer__bottom-contacts-info
+								.footer__bottom-contacts-phone
+									a.h2(href='tel:+78352551503') +7 (8352) 55-15-03
+									.footer__bottom-contacts-more
 										+svg("arrow")
-						.footer__bottom-info
-							.footer__bottom-info-copyright
-								p.text-14-long 2023 © Технодекор-Чебоксары
-							.footer__bottom-info-pay
-								p.text-14-long Принимаем наличные и оплату онлайн:
-								.footer__bottom-info-pay-logos
-									.footer__bottom-info-pay-logo
-										+svg("visa")
-									.footer__bottom-info-pay-logo
-										+svg("mastercard")
-									.footer__bottom-info-pay-logo
-										+svg("mir")
+								.footer__bottom-contacts-mail
+									a.h3(href='mailto:centr@t-dek.ru') centr@t-dek.ru
+							.footer__bottom-contacts-allContacts
+								a.button-16(href='./#') Все контакты
+									+svg("arrow")
+					.footer__bottom-info
+						.footer__bottom-info-copyright
+							p.text-14-long 2023 © Технодекор-Чебоксары
+						.footer__bottom-info-pay
+							p.text-14-long Принимаем наличные и оплату онлайн:
+							.footer__bottom-info-pay-logos
+								.footer__bottom-info-pay-logo
+									+svg("visa")
+								.footer__bottom-info-pay-logo
+									+svg("mastercard")
+								.footer__bottom-info-pay-logo
+									+svg("mir")
+	.modal-bg
+	include ../includes/modals/index

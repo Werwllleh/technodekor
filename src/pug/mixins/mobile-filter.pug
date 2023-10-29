@@ -1,0 +1,296 @@
+-
+	var filterCategories = [
+		{
+			category: 'Цена, ₽',
+			checkType: 'slider',
+			list: [
+				{
+					name: 'Антисептик',
+					count: 110
+				},
+				{
+					name: 'Аэрозоль',
+					count: 87
+				},
+				{
+					name: 'Воск',
+					count: 56
+				},
+				{
+					name: 'Гель',
+					count: 22
+				},
+				{
+					name: 'Герметик',
+					count: 16
+				},
+				{
+					name: 'Гидроизоляция',
+					count: 4
+				},
+			],
+			moreLink: '#'
+		},
+		{
+			category: 'Тип ЛКМ',
+			checkType: 'checkbox',
+			list: [
+				{
+					name: 'Антисептик',
+					count: 110
+				},
+				{
+					name: 'Аэрозоль',
+					count: 87
+				},
+				{
+					name: 'Воск',
+					count: 56
+				},
+				{
+					name: 'Гель',
+					count: 22
+				},
+				{
+					name: 'Герметик',
+					count: 16
+				},
+				{
+					name: 'Гидроизоляция',
+					count: 4
+				},
+			],
+			moreLink: '#'
+		},
+		{
+			category: 'Материал обработки',
+			checkType: 'checkbox',
+			list: [
+				{
+					name: 'Антисептик',
+					count: 110
+				},
+				{
+					name: 'Аэрозоль',
+					count: 87
+				},
+				{
+					name: 'Воск',
+					count: 56
+				},
+				{
+					name: 'Гель',
+					count: 22
+				},
+				{
+					name: 'Герметик',
+					count: 16
+				},
+				{
+					name: 'Гидроизоляция',
+					count: 4
+				},
+			],
+			moreLink: '#'
+		},
+		{
+			category: 'Бренд',
+			checkType: 'checkbox',
+			list: [
+				{
+					name: 'Антисептик',
+					count: 110
+				},
+				{
+					name: 'Аэрозоль',
+					count: 87
+				},
+				{
+					name: 'Воск',
+					count: 56
+				}
+			],
+			moreLink: ''
+		},
+		{
+			category: 'Марка',
+			checkType: 'radio',
+			list: [
+				{
+					name: 'Все',
+					count: 110
+				},
+				{
+					name: '3 в 1',
+					count: 87
+				},
+				{
+					name: 'БТ',
+					count: 56
+				},
+				{
+					name: 'ВД АК',
+					count: 22
+				},
+				{
+					name: 'ГФ',
+					count: 16
+				},
+				{
+					name: 'КО',
+					count: 4
+				},
+			],
+			moreLink: '#'
+		},
+		{
+			category: 'Основа краски',
+			checkType: 'checkbox',
+			list: [
+				{
+					name: 'Антисептик',
+					count: 110
+				},
+				{
+					name: 'Аэрозоль',
+					count: 87
+				},
+				{
+					name: 'Воск',
+					count: 56
+				},
+				{
+					name: 'Гель',
+					count: 22
+				},
+				{
+					name: 'Герметик',
+					count: 16
+				},
+				{
+					name: 'Гидроизоляция',
+					count: 4
+				},
+			],
+			moreLink: '#'
+		},
+		{
+			category: 'Выбор цветов',
+			checkType: 'checkbox',
+			list: [
+				{
+					name: 'Антисептик',
+					count: 110
+				},
+				{
+					name: 'Аэрозоль',
+					count: 87
+				},
+				{
+					name: 'Воск',
+					count: 56
+				}
+			],
+			moreLink: '#'
+		},
+		{
+			category: 'Тип упаковки',
+			checkType: 'checkbox',
+			list: [
+				{
+					name: 'Антисептик',
+					count: 110
+				},
+				{
+					name: 'Аэрозоль',
+					count: 87
+				},
+				{
+					name: 'Воск',
+					count: 56
+				}
+			],
+			moreLink: '#'
+		},
+		{
+			category: 'Назначение',
+			checkType: 'radio',
+			list: [
+				{
+					name: 'Все',
+					count: 110
+				},
+				{
+					name: 'Антисептик',
+					count: 110
+				},
+				{
+					name: 'Аэрозоль',
+					count: 87
+				},
+				{
+					name: 'Воск',
+					count: 56
+				}
+			],
+			moreLink: '#'
+		},
+		{
+			category: 'Эффект',
+			checkType: 'checkbox',
+			list: [
+				{
+					name: 'Антисептик',
+					count: 110
+				},
+				{
+					name: 'Аэрозоль',
+					count: 87
+				},
+				{
+					name: 'Воск',
+					count: 56
+				}
+			],
+			moreLink: ''
+		},
+	]
+
+mixin filter()
+	//filter
+	.filter&attributes(attributes)
+		.filter__body
+			form
+				each filterCategory in filterCategories
+					.filter__body-category.filter__category
+						.filter__category-header
+							.filter__category-title
+								span
+									+svg("arrow")
+								h4.h4= filterCategory.category
+							.filter__category-separator
+						if (filterCategory.checkType !== 'slider')
+							.filter__category-data
+								ul.filter__category-list
+									each list in filterCategory.list
+										li.filter__category-elem
+											.filter__category-elem-name
+												label.filter__category-elem-checkbox
+													input(type= filterCategory.checkType, name= filterCategory.category, value= list.name)
+													span.text-14= list.name
+											.filter__category-elem-count
+												span.text-14= list.count
+								if (filterCategory.moreLink)
+									.filter__category-link
+										a.button-14(href= filterCategory.moreLink) Посмотреть все
+								.filter__category-separator
+						else
+							.filter__category-data
+								.filter__category-slider
+									+range-slider()
+								.filter__category-separator
+				.filter__footer
+					button.filter__footer-btn.filter__footer-btn-show.btn.btn-dark.btn-m
+						| Показать
+						span.filter__footer-btn-show-count 321
+					input(type="reset", value= "Сбросить").filter__footer-btn.filter__footer-btn-reset.btn.btn-light.btn-m

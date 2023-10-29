@@ -1,0 +1,13 @@
+mixin mobile-filter-btn()
+	//mobile-filter-btn
+	.mobile-filter-btn&attributes(attributes)
+		.mobile-filter-btn__body
+			a.mobile-filter-btn__left
+					span
+						+svg("compare")
+					p.button-14 Фильтры
+			.mobile-filter-btn__right
+				.mobile-filter-btn__right-count
+					h3.h3 5
+				span.mobile-filter-btn__right-clear
+					+svg("close")

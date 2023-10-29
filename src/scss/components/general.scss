@@ -45,3 +45,26 @@
 .catalog--card {
 
 }
+
+body.noscroll {
+	height: 100vh;
+	overflow-y: hidden
+}
+
+.modal-bg {
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 35;
+	transition: .3s all;
+}
+
+.modal-bg.active {
+	opacity: 1;
+	visibility: visible;
+}

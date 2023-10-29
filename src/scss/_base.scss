@@ -5,9 +5,13 @@
 }
 
 html {
+	display: flex;
+	flex-direction: column;
 	position: relative;
 	overflow-x: hidden;
+	min-width: 360px;
 	min-height: 100vh;
+	-webkit-font-smoothing: antialiased;
 	box-sizing: border-box;
 	font-family: $font-family-inter;
 	font-weight: 400;
@@ -26,11 +30,8 @@ html {
 }
 
 body {
-	-webkit-font-smoothing: antialiased;
-	text-decoration-skip: objects;
-	text-rendering: optimizeLegibility;
-	text-size-adjust: 100%;
-	-webkit-tap-highlight-color: transparent;
+	position: relative;
+	overflow: hidden;
 }
 
 main {

@@ -117,6 +117,9 @@
 				.brand__left-categories
 					+categories()
 				.brand__left-filter
+					+filter()
+				.brand__left-coloring
+					+coloring()
 			.brand__right
 				.brand__right-header
 					.brand__right-header-image
@@ -142,6 +145,8 @@
 								option(value="Сначала дешевые") Сначала дешевые
 								option(value="Сначала дорогие") Сначала дорогие
 								option(value="Еще какие-то") Еще какие-то
+					.brand__catalog-filters-mobile-btn
+						+mobile-filter-btn()
 					.brand__catalog-content.catalog--grid
 						each product in products
 							.brand__catalog-card.catalog--card

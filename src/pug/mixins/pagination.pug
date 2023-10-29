@@ -2,8 +2,8 @@ mixin pagination()
 	//product-card
 	.pagination&attributes()
 		ul.pagination__list
-			li.pagination__item.pagination__btn
-				span.pagination__btn-prev
+			li.pagination__item.pagination__btn.pagination__btn-prev
+				span
 					+svg("arrow")
 			li.pagination__item.pagination--num.active 1
 			li.pagination__item.pagination--num 2
@@ -14,8 +14,8 @@ mixin pagination()
 				span
 					+svg("more")
 			li.pagination__item.pagination--num 25
-			li.pagination__item.pagination__btn
-				span.pagination__btn-next
+			li.pagination__item.pagination__btn.pagination__btn-next
+				span
 					+svg("arrow")
 
 

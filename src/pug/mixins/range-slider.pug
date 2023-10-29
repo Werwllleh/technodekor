@@ -1,0 +1,17 @@
+mixin range-slider()
+	//range-slider
+	.range-slider&attributes(attributes)
+		.range-slider__wrapper
+			.range-slider__priceInput
+				.range-slider__field.text-14
+					span от
+					input(type="number", value="100").range-slider__field-minInput
+				.range-slider__separator
+				.range-slider__field.text-14
+					span до
+					input(type="number", value="56000").range-slider__field-maxInput
+			.range-slider__slider
+				.range-slider__slider-progress
+			.range-slider__rangeInput
+				input(type="range", min="0", max="56000", value="100", step="10").range-slider__rangeInput-minRange
+				input(type="range", min="0", max="56000", value="56000", step="10").range-slider__rangeInput-maxRange

@@ -1,0 +1,50 @@
+.mobile-filter-btn {
+	padding: 16px 0;
+
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+	}
+
+	&__left {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		&-count {
+
+			h3 {
+				line-height: 1;
+			}
+		}
+
+		&-clear {
+			cursor: pointer;
+			padding: 2px;
+
+			svg {
+				fill: #7D8899;
+			}
+		}
+	}
+
+	span {
+
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	p {
+		color: $color-brand-purple;
+	}
+}

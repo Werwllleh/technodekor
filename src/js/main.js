@@ -9,6 +9,9 @@ import './components/left-bar';
 import './components/brand-mini-card';
 import './components/categories';
 import './components/select';
+import './components/filter';
+import './components/range-slider';
+import './components/mobile-filter-btn';
 
 
 import lazyLoading from './modules/lazyLoading';
