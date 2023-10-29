@@ -223,6 +223,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./src/js/components/filter.js":
+/*!*************************************!*\
+  !*** ./src/js/components/filter.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var filterCategories = document.querySelectorAll('.filter__category-header');
+  filterCategories.forEach(function (filterCategory) {
+    var filterCategoryList = filterCategory.nextElementSibling;
+    filterCategory.addEventListener('click', function () {
+      filterCategory.classList.toggle('opened');
+      if (filterCategory.classList.contains('opened')) {
+        filterCategoryList.classList.add('show');
+        var filterCategoryListHeight = 0;
+        for (var i = 0; i < filterCategoryList.children.length; i++) {
+          filterCategoryListHeight += filterCategoryList.children[i].clientHeight;
+        }
+        filterCategoryList.style.maxHeight = "".concat(filterCategoryListHeight, "px");
+      } else {
+        filterCategoryList.classList.remove('show');
+        filterCategoryList.style.maxHeight = "0px";
+      }
+    });
+  });
+});
+
+/***/ }),
+
 /***/ "./src/js/components/header.js":
 /*!*************************************!*\
   !*** ./src/js/components/header.js ***!
@@ -242,6 +272,89 @@ document.addEventListener('DOMContentLoaded', function () {
 /***/ (function(module, exports) {
 
 document.addEventListener('DOMContentLoaded', function () {});
+
+/***/ }),
+
+/***/ "./src/js/components/mobile-filter-btn.js":
+/*!************************************************!*\
+  !*** ./src/js/components/mobile-filter-btn.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var mobileFilterBtns = document.querySelectorAll('.mobile-filter-btn__left');
+  var filter = document.querySelector('.modal-filter');
+  var filterClose = document.querySelector('.modal-filter__close');
+  var bg = document.querySelector('.modal-bg');
+  mobileFilterBtns.forEach(function (mobileFilterBtn) {
+    mobileFilterBtn.addEventListener('click', function () {
+      document.body.classList.add('noscroll');
+      filter.classList.add('opened');
+      bg.classList.add('active');
+    });
+  });
+  bg.addEventListener('click', function (e) {
+    document.body.classList.remove('noscroll');
+    filter.classList.remove('opened');
+    bg.classList.remove('active');
+  });
+  filterClose.addEventListener('click', function (e) {
+    document.body.classList.remove('noscroll');
+    filter.classList.remove('opened');
+    bg.classList.remove('active');
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/components/range-slider.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/range-slider.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var rangeInput = document.querySelectorAll(".range-slider__rangeInput input"),
+    priceInput = document.querySelectorAll(".range-slider__field input"),
+    range = document.querySelector(".range-slider__slider-progress");
+  var priceGap = 1000;
+  priceInput.forEach(function (input) {
+    input.addEventListener("input", function (e) {
+      var minPrice = parseInt(priceInput[0].value),
+        maxPrice = parseInt(priceInput[1].value);
+      if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
+        console.log(e.target.className);
+        if (e.target.className === "range-slider__field-minInput") {
+          rangeInput[0].value = minPrice;
+          range.style.left = minPrice / rangeInput[0].max * 100 + "%";
+        } else {
+          rangeInput[1].value = maxPrice;
+          range.style.right = 100 - maxPrice / rangeInput[1].max * 100 + "%";
+        }
+      }
+    });
+  });
+  rangeInput.forEach(function (input) {
+    input.addEventListener("input", function (e) {
+      var minVal = parseInt(rangeInput[0].value),
+        maxVal = parseInt(rangeInput[1].value);
+      if (maxVal - minVal < priceGap) {
+        if (e.target.className === "range-slider__rangeInput-minRange") {
+          rangeInput[0].value = maxVal - priceGap;
+        } else {
+          rangeInput[1].value = minVal + priceGap;
+        }
+      } else {
+        priceInput[0].value = minVal;
+        priceInput[1].value = maxVal;
+        range.style.left = minVal / rangeInput[0].max * 100 + "%";
+        range.style.right = 100 - maxVal / rangeInput[1].max * 100 + "%";
+      }
+    });
+  });
+});
 
 /***/ }),
 
@@ -528,8 +641,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_categories__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/categories */ "./src/js/components/categories.js");
 /* harmony import */ var _components_categories__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_categories__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/select */ "./src/js/components/select.js");
-/* harmony import */ var _modules_lazyLoading__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/lazyLoading */ "./src/js/modules/lazyLoading.js");
-/* harmony import */ var _modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/scrollToAnchor */ "./src/js/modules/scrollToAnchor.js");
+/* harmony import */ var _components_filter__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/filter */ "./src/js/components/filter.js");
+/* harmony import */ var _components_filter__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_components_filter__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _components_range_slider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/range-slider */ "./src/js/components/range-slider.js");
+/* harmony import */ var _components_range_slider__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_components_range_slider__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _components_mobile_filter_btn__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/mobile-filter-btn */ "./src/js/components/mobile-filter-btn.js");
+/* harmony import */ var _components_mobile_filter_btn__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_mobile_filter_btn__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _modules_lazyLoading__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/lazyLoading */ "./src/js/modules/lazyLoading.js");
+/* harmony import */ var _modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/scrollToAnchor */ "./src/js/modules/scrollToAnchor.js");
 
 
 
@@ -541,8 +660,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-_modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_10__["default"].init();
-_modules_lazyLoading__WEBPACK_IMPORTED_MODULE_9__["default"].init();
+
+
+
+_modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_13__["default"].init();
+_modules_lazyLoading__WEBPACK_IMPORTED_MODULE_12__["default"].init();
 
 /***/ }),
 
