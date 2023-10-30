@@ -6,8 +6,17 @@
 	padding: 14px 42px;
 	max-width: 187px;
 
+	@media (max-width: 992px) {
+		border: 0;
+		padding: 0 10px;
+	}
+
 	&.active {
 		background-color: $color-brand-purple;
+
+		@media (max-width: 992px) {
+			background-color: transparent;
+		}
 	}
 
 	&__body {
@@ -21,14 +30,29 @@
 		width: 20px;
 		height: 20px;
 
+		@media (max-width: 992px) {
+			width: 24px;
+			height: 24px;
+		}
+
 		svg {
 			width: 20px;
 			height: 20px;
+
+			@media (max-width: 992px) {
+				width: 24px;
+				height: 24px;
+			}
 		}
 	}
 
 	&__text {
 		color: $color-brand-purple;
+
+		@media (max-width: 992px) {
+			display: none;
+		}
+
 	}
 
 	&--default {
@@ -44,6 +68,8 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+
+
 	}
 
 	&.active &__text {
@@ -58,6 +84,10 @@
 
 		svg {
 			fill: $color-white;
+
+			@media (max-width: 992px) {
+				fill: $color-brand-purple;
+			}
 		}
 	}
 

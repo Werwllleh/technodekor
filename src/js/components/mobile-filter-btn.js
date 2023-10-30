@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const bg = document.querySelector('.modal-bg');
 
 	mobileFilterBtns.forEach((mobileFilterBtn) => {
-		mobileFilterBtn.addEventListener('click', () => {
+		mobileFilterBtn.addEventListener('click', (e) => {
+			e.preventDefault();
 			document.body.classList.add('noscroll');
 			filter.classList.add('opened');
 			bg.classList.add('active');
