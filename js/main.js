@@ -264,7 +264,9 @@ document.addEventListener('DOMContentLoaded', function () {
     menuButton.classList.toggle('active');
     if (menuButton.classList.contains('active')) {
       menuBlock.classList.add('active');
+      document.body.classList.add('noscroll');
     } else {
+      document.body.classList.remove('noscroll');
       menuBlock.classList.remove('active');
       menuTopMoreButton.classList.remove('active');
       menuTopMore.classList.remove('active');
