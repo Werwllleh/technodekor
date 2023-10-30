@@ -13,7 +13,7 @@
 		<meta name="twitter:title" content="Бренд">
 		<meta name="twitter:description" content="Бренд">
 		<title>Бренд</title>
-		<link rel="stylesheet" href="./css/main.css?v=1698589490634">
+		<link rel="stylesheet" href="./css/main.css?v=1698677399285">
 	</head>
 	<body>
 		<!--header-->
@@ -80,8 +80,15 @@
 									</div>
 									<div class="catalog-button__text h4">Каталог</div>
 								</div></a>
+							<div class="header__search-mobile">
+								<div class="header__search-icon">
+									<svg>
+										<use xlink:href="./images/sprites.svg#search"></use>
+									</svg>
+								</div>
+							</div>
 							<div class="header__search">
-								<input placeholder="Посик товаров"/>
+								<input placeholder="Поиcк товаров"/>
 								<div class="header__search-icon">
 									<svg>
 										<use xlink:href="./images/sprites.svg#search"></use>
@@ -90,31 +97,55 @@
 							</div>
 						</div>
 						<div class="header__bottom-right">
-							<div class="header__buttons">
-								<div class="header__bottom-item">
-									<!--header button--><a class="header-button">
-										<div class="header-button__icon">
+							<div class="header__buttons"><a class="header-button header-button-compare">
+									<div class="header-button__icon">
+										<svg>
+											<use xlink:href="./images/sprites.svg#compare"></use>
+										</svg>
+									</div></a><a class="header-button header-button-favourites">
+									<div class="header-button__icon">
+										<svg>
+											<use xlink:href="./images/sprites.svg#heart"></use>
+										</svg>
+									</div></a><a class="header-button header-button-cart">
+									<div class="header-button__icon">
+										<svg>
+											<use xlink:href="./images/sprites.svg#shopping-cart"></use>
+										</svg>
+									</div>
+									<div class="header-button__counter"><span class="h5">12</span></div></a><a class="header-button header-button-more">
+									<div class="header-button__icon">
+										<svg>
+											<use xlink:href="./images/sprites.svg#more"></use>
+										</svg>
+									</div></a></div>
+						</div>
+					</div>
+				</div>
+				<div class="header__menu">
+					<div class="container">
+						<div class="header__menu-body">
+							<div class="header__menu-top">
+								<div class="header__menu-top-items"><a class="header__menu-top-item button-16" href="#">Красим металл</a><a class="header__menu-top-item button-16" href="#">Защита и декор древесины</a><a class="header__menu-top-item button-16" href="#">Декоративные покрытия</a><a class="header__menu-top-item button-16" href="#">Фасады и интерьеры</a><a class="header__menu-top-item button-16" href="#">Декоративные покрытия и арт</a><a class="header__menu-top-item button-16" href="#">Для городской среды</a><a class="header__menu-top-item header__menu-top-more"><span>
 											<svg>
-												<use xlink:href="./images/sprites.svg#compare"></use>
-											</svg>
-										</div></a>
+												<use xlink:href="./images/sprites.svg#more"></use>
+											</svg></span></a></div>
+								<div class="header__menu-top-more-block menu__more">
+									<ul class="menu__more-list">
+										<li class="menu__more-item"><a class="text-14" href="#">Другая категория</a></li>
+										<li class="menu__more-item"><a class="text-14" href="#">Ещё категория</a></li>
+										<li class="menu__more-item"><a class="text-14" href="#">Новая категория</a></li>
+										<li class="menu__more-item"><a class="text-14" href="#">Категория про другое</a></li>
+									</ul>
 								</div>
-								<div class="header__bottom-item">
-									<!--header button--><a class="header-button">
-										<div class="header-button__icon">
-											<svg>
-												<use xlink:href="./images/sprites.svg#heart"></use>
-											</svg>
-										</div></a>
-								</div>
-								<div class="header__bottom-item">
-									<!--header button--><a class="header-button">
-										<div class="header-button__icon">
-											<svg>
-												<use xlink:href="./images/sprites.svg#shopping-cart"></use>
-											</svg>
-										</div>
-										<div class="header-button__counter"><span class="h5">12</span></div></a>
+							</div>
+							<div class="header__menu-bottom">
+								<div class="header__menu-grid">
+									<div class="header__menu-categories"></div>
+									<div class="header__menu-brands"></div>
+									<div class="header__menu-coloring">
+										<!--+coloring()-->
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1671,7 +1702,7 @@
 				</div>
 			</div>
 		</div>
-		<script src="./js/vendor.js?v=1698589490637"></script>
-		<script src="./js/main.js?v=1698589490637"></script>
+		<script src="./js/vendor.js?v=1698677399292"></script>
+		<script src="./js/main.js?v=1698677399292"></script>
 	</body>
 </html>

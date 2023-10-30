@@ -189,13 +189,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-document.addEventListener('DOMContentLoaded', function () {
-  var button = document.querySelector('.catalog-button');
-  button.addEventListener('click', function (event) {
-    event.preventDefault();
-    button.classList.toggle('active');
-  });
-});
+document.addEventListener('DOMContentLoaded', function () {});
 
 /***/ }),
 
@@ -260,7 +254,32 @@ document.addEventListener('DOMContentLoaded', function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
+document.addEventListener('DOMContentLoaded', function () {
+  var menuButton = document.querySelector('.catalog-button');
+  var menuBlock = document.querySelector('.header__menu');
+  var menuTopMoreButton = document.querySelector('.header__menu-top-more');
+  var menuTopMore = document.querySelector('.menu__more');
+  menuButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    menuButton.classList.toggle('active');
+    if (menuButton.classList.contains('active')) {
+      menuBlock.classList.add('active');
+    } else {
+      menuBlock.classList.remove('active');
+      menuTopMoreButton.classList.remove('active');
+      menuTopMore.classList.remove('active');
+    }
+  });
+  menuTopMoreButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    menuTopMoreButton.classList.toggle('active');
+    if (menuTopMoreButton.classList.contains('active')) {
+      menuTopMore.classList.add('active');
+    } else {
+      menuTopMore.classList.remove('active');
+    }
+  });
+});
 
 /***/ }),
 
@@ -288,7 +307,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var filterClose = document.querySelector('.modal-filter__close');
   var bg = document.querySelector('.modal-bg');
   mobileFilterBtns.forEach(function (mobileFilterBtn) {
-    mobileFilterBtn.addEventListener('click', function () {
+    mobileFilterBtn.addEventListener('click', function (e) {
+      e.preventDefault();
       document.body.classList.add('noscroll');
       filter.classList.add('opened');
       bg.classList.add('active');
