@@ -61,4 +61,33 @@ mixin header()
 							a.header-button.header-button-more
 								.header-button__icon
 									+svg('more')
-
+			.header__menu
+				.container
+					.header__menu-body
+						.header__menu-top
+							.header__menu-top-items
+								a.header__menu-top-item.button-16(href="#") Красим металл
+								a.header__menu-top-item.button-16(href="#") Защита и декор древесины
+								a.header__menu-top-item.button-16(href="#") Декоративные покрытия
+								a.header__menu-top-item.button-16(href="#") Фасады и интерьеры
+								a.header__menu-top-item.button-16(href="#") Декоративные покрытия и арт
+								a.header__menu-top-item.button-16(href="#") Для городской среды
+								a.header__menu-top-item.header__menu-top-more
+									span
+										+svg("more")
+							.header__menu-top-more-block.menu__more
+								ul.menu__more-list
+									li.menu__more-item
+										a.text-14(href="#") Другая категория
+									li.menu__more-item
+										a.text-14(href="#") Ещё категория
+									li.menu__more-item
+										a.text-14(href="#") Новая категория
+									li.menu__more-item
+										a.text-14(href="#") Категория про другое
+						.header__menu-bottom
+							.header__menu-grid
+								.header__menu-categories
+								.header__menu-brands
+								.header__menu-coloring
+									//+coloring()

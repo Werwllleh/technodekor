@@ -1,6 +1,7 @@
 .header {
-
+	position: relative;
 	padding: 40px 0 24px;
+	z-index: 20;
 
 	@media (max-width: 992px) {
 		padding: 20px 0;
@@ -267,6 +268,136 @@
 		}
 	}
 
+	&__menu {
+
+		position: absolute;
+		bottom: -115px;
+		left: 0;
+		width: 100%;
+		background-color: $color-white;
+		transform: scaleY(0);
+		opacity: 0;
+		visibility: hidden;
+		transform-origin: top;
+		transition: opacity $duration-normal, visibility $duration-normal, transform $duration-normal;
+
+		&.active {
+			transform: scaleY(1);
+			opacity: 1;
+			visibility: visible;
+		}
+
+		&-body {
+
+		}
+
+		&-top {
+			position: relative;
+			padding: 8px 16px;
+			border-radius: 12px;
+			background: #F3F4F6;
+			margin: 0 0 40px 0;
+
+			&-items {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 12px;
+			}
+
+			&-item {
+				padding: 16px 24px;
+				color: #717C8D;
+
+				&:hover {
+					color: $color-brand-purple;
+					border-radius: 8px;
+					background: rgba(57, 49, 133, 0.10);
+				}
+			}
+
+			&-more {
+				width: 132px;
+
+				&.active {
+					border-radius: 8px;
+					background: rgba(57, 49, 133, 0.10);
+					span {
+						svg {
+							fill: $color-brand-purple;
+						}
+					}
+				}
+
+				&:hover {
+
+					span {
+						svg {
+							fill: $color-brand-purple;
+						}
+					}
+				}
+
+				span {
+					display: block;
+
+					svg {
+						margin: 0 auto;
+						width: 27px;
+						height: 20px;
+						transform: rotate(-90deg);
+						fill: #7D8899;
+						transition: fill $duration-normal;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+.menu__more {
+	position: absolute;
+	width: 280px;
+	height: 200px;
+	top: 64px;
+	right: 16px;
+	z-index: 21;
+	transform: scaleY(0);
+	opacity: 0;
+	visibility: hidden;
+	transform-origin: top;
+	transition: opacity $duration-normal, visibility $duration-normal, transform $duration-normal;
+
+	&.active {
+		transform: scaleY(1);
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&-list {
+		display: flex;
+		flex-direction: column;
+		padding: 4px 0;
+		background-color: $color-white;
+		border-radius: 8px;
+		box-shadow: 0 4px 20px 0 rgba(45, 47, 56, 0.08);
+	}
+	&-item {
+
+		a {
+			display: block;
+			padding: 16px;
+			color: $color-txt-primary;
+
+			&:hover {
+				color: $color-brand-purple;
+				background-color: #F3F4F6;
+			}
+		}
+	}
+
 }
 
 .header-button {
@@ -288,7 +419,7 @@
 		margin: auto;
 
 		svg {
-
+			fill: #7D8899;
 		}
 	}
 
@@ -323,3 +454,4 @@
 		display: block;
 	}
 }
+
