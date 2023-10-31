@@ -872,8 +872,8 @@ new swiper__WEBPACK_IMPORTED_MODULE_0__["Swiper"]('.main-page__banner-slider', {
   },
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
+    nextEl: '.main-page__banner-arrow-next',
+    prevEl: '.main-page__banner-arrow-prev'
   },
   // And if we need scrollbar
   scrollbar: {
@@ -894,8 +894,8 @@ new swiper__WEBPACK_IMPORTED_MODULE_0__["Swiper"]('.products__slider', {
   },
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
+    nextEl: '.products__slider-arrow-next',
+    prevEl: '.products__slider-arrow-prev'
   },
   // And if we need scrollbar
   scrollbar: {
