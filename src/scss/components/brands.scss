@@ -74,7 +74,7 @@
 	}
 }
 
-.brands--column {
+.brands--menu {
 
 	.brands__items {
 		flex-direction: column !important;
@@ -82,5 +82,12 @@
 
 	.brands__item {
 		flex: 0 0 72px;
+	}
+
+	.brands__all-brands {
+
+		p {
+			color: $color-txt-primary;
+		}
 	}
 }

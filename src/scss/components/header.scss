@@ -4,6 +4,11 @@
 	z-index: 20;
 
 	@media (max-width: 992px) {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		background-color: $color-white;
+		box-shadow: 0 8px 32px 0 rgba(45, 47, 56, 0.08);
 		padding: 20px 0;
 	}
 
@@ -85,12 +90,20 @@
 		}
 
 		&-elem {
-			color: $color-txt-secondary;
-			font-size: 14px;
-			font-style: normal;
-			font-weight: 500;
-			line-height: 1.14;
-			letter-spacing: 0.28px;
+
+			a {
+				color: $color-txt-secondary;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 1.14;
+				letter-spacing: 0.28px;
+
+				&:hover {
+					color: $color-brand-purple;
+				}
+			}
+
 		}
 	}
 
@@ -134,6 +147,15 @@
 		align-items: center;
 		gap: 10px;
 		padding: 4px;
+		color: $color-brand-purple;
+
+		&:hover &-logo {
+
+			svg {
+				fill: #596476;
+			}
+		}
+
 
 		&-logo {
 
@@ -141,11 +163,12 @@
 				width: 24px;
 				height: 24px;
 				fill: #7D8899;
+				transition: fill $duration-normal;
 			}
 		}
 
-		&-text {
-			color: $color-brand-purple;
+		&:hover {
+			color: $color-brand-purple-dark;
 		}
 	}
 
@@ -223,24 +246,35 @@
 
 	&__search {
 		position: relative;
-		border-radius: 12px;
-		background: #F3F4F6;
+
 		width: 100%;
 		max-width: 720px;
-		padding: 14px 48px 14px 24px;
+		//padding: 14px 48px 14px 24px;
 
 		@include mobile() {
 			display: none;
 		}
 
-
 		input {
+			border-radius: 12px;
+			padding: 14px 48px 14px 24px;
+			background: #F3F4F6;
+			border: 1px solid #F3F4F6;
 			width: 100%;
-			border: none;
 			outline: none;
-			background-color: transparent;
+			transition: background $duration-normal, border $duration-normal;
 
+			&:hover {
+				background: #E5E7EA;
+			}
+
+			&:focus {
+				border: 1px solid #C5CAD3;
+				background: $color-white;
+				box-shadow: 0 4px 20px 0 rgba(45, 47, 56, 0.08);
+			}
 		}
+
 
 		&-icon {
 			cursor: pointer;
@@ -274,7 +308,7 @@
 		top: 210px;
 		left: 0;
 		width: 100%;
-		height: 100%;
+		height: calc(100vh - 210px);
 		overflow-y: scroll;
 		background-color: $color-white;
 		transform: scaleY(0);
@@ -282,6 +316,11 @@
 		visibility: hidden;
 		transform-origin: top;
 		transition: opacity $duration-normal, visibility $duration-normal, transform $duration-normal;
+
+		&::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+		}
 
 		&.active {
 			transform: scaleY(1);
@@ -466,7 +505,14 @@
 	width: 48px;
 	height: 48px;
 	border-radius: 40px;
-	background: #F3F4F6;
+	background-color: #F3F4F6;
+
+	&:hover &__icon {
+
+		svg {
+			fill: $color-brand-purple;
+		}
+	}
 
 	&__icon {
 		position: absolute;
@@ -480,6 +526,7 @@
 
 		svg {
 			fill: #7D8899;
+			transition: fill $duration-normal;
 		}
 	}
 

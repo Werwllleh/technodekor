@@ -205,15 +205,26 @@ iframe {
 .slider--hover-arrows {
 	opacity: 0;
 	visibility: hidden;
-	transition: opacity $duration-normal, visibility $duration-normal;
+	//transition: opacity $duration-normal, visibility $duration-normal;
 }
 
-.main-page__banner-slider {
-	&:hover .slider--hover-arrows{
-		visibility: visible;
-		opacity: 1;
-	}
+.main-page__banner-body:hover .slider--hover-arrows{
+	visibility: visible;
+	opacity: 1;
 }
+
+.swiper-button-next:hover + .main-page__banner-slider::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(57, 49, 133, 0.2);
+	z-index: 1;
+}
+
+
 
 .products__slider {
 

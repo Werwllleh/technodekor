@@ -135,3 +135,15 @@ new Swiper('.products__slider', {
 		},
 	},
 });
+
+// document.addEventListener('DOMContentLoaded', () => {
+// 	const mainBanner = document.querySelector('.swiper-container');
+//
+// 	swiperContainer.addEventListener('mouseenter', function () {
+// 		swiperContainer.classList.add('darken'); // Добавляем класс при наведении
+// 	});
+//
+// 	swiperContainer.addEventListener('mouseleave', function () {
+// 		swiperContainer.classList.remove('darken'); // Удаляем класс при снятии наведения
+// 	});
+// })

@@ -1,27 +1,14 @@
-mixin brands()
+
+
+mixin brands(data)
 	//brands
 	.brands&attributes(attributes)
 		.brands__items
-			a.brands__item(href='./#')
-				.brands__item-logo
-					img(src="./images/brands/tikkurila.png" alt="tikkurila")
-				.brands__item-name.text-14 Tikkurila
-			a.brands__item(href='./#')
-				.brands__item-logo
-					img(src="./images/brands/vgt.png" alt="vgt")
-				.brands__item-name.text-14 VGT-ecology material
-			a.brands__item(href='./#')
-				.brands__item-logo
-					img(src="./images/brands/ferumprotect.png" alt="ferumprotect")
-				.brands__item-name.text-14 ferumprotect
-			a.brands__item(href='./#')
-				.brands__item-logo
-					img(src="./images/brands/tikkurila.png" alt="tikkurila")
-				.brands__item-name.text-14 Tikkurila
-			a.brands__item(href='./#')
-				.brands__item-logo
-					img(src="./images/brands/vgt.png" alt="vgt")
-				.main-page__brands-item-name.text-14 VGT-ecology material
+			each brand in data
+				a.brands__item(href= brand.link)
+					.brands__item-logo
+						img(src="./images/brands/" + brand.logo alt= brand.name)
+					.brands__item-name.text-14= brand.name
 			a.brands__all-brands.brands__item(href='./#')
 				p.button-16 Все бренды
 				span.h3 82

@@ -11,6 +11,10 @@
 		padding: 0 10px;
 	}
 
+	&:hover {
+		background-color: #E5E7EA;
+	}
+
 	&.active {
 		background-color: $color-brand-purple;
 

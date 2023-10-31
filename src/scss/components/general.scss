@@ -68,3 +68,59 @@ body.noscroll {
 	opacity: 1;
 	visibility: visible;
 }
+
+.custom--slider-arrows {
+
+	.swiper-button-next, {
+		right: -20px;
+	}
+
+	.swiper-button-prev, {
+		left: -20px;
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		width: 46px;
+		height: 48px;
+		border-radius: 50%;
+		border: 2px solid #F3F4F6;
+		background-color: #F3F4F6;
+		transition: background-color $duration-normal;
+	}
+
+	.swiper-button-prev:hover,
+	.swiper-button-next:hover {
+		border: 2px solid $color-white;
+		background-color: $color-brand-purple;
+	}
+
+	.swiper-button-prev::after,
+	.swiper-button-next::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: 24px;
+		height: 24px;
+		background-repeat: no-repeat;
+		background-image: url("../images/sprites/svg/arrow-slider.svg");
+		background-position: center;
+		background-size: contain;
+		transition: background-color $duration-normal;
+	}
+
+	.swiper-button-prev:hover::after,
+	.swiper-button-next:hover::after {
+		background-image: url("../images/sprites/svg/arrow-slider-hover.svg");
+	}
+
+	.swiper-button-next::after,
+	.swiper-button-next:hover::after,{
+		transform: rotate(-180deg);
+	}
+
+}

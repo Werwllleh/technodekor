@@ -55,6 +55,33 @@
 			link: '#'
 		},
 	]
+	var brands = [
+		{
+			name: 'Tikkurila',
+			logo: "tikkurila.png",
+			link: "#"
+		},
+		{
+			name: 'VGT-ecology material',
+			logo: "vgt.png",
+			link: "#"
+		},
+		{
+			name: 'ferumprotect',
+			logo: "ferumprotect.png",
+			link: "#"
+		},
+		{
+			name: 'Tikkurila',
+			logo: "tikkurila.png",
+			link: "#"
+		},
+		{
+			name: 'VGT-ecology material',
+			logo: "vgt.png",
+			link: "#"
+		},
+	]
 .container
 	.main-page
 		.main-page__banner
@@ -85,10 +112,10 @@
 									h2.main-page__banner-slide-title.h1 Началась распродажа!
 									p.main-page__banner-slide-text.text-16-long Успейте купить ушедшие из ассортимента бренды по баснословной скидке в Чебоксарах!Официальный дилер!
 									a.main-page__banner-slide-btn.btn.btn-light.btn-l.button-16 Купить сейчас
-					.swiper-pagination
-					.slider--hover-arrows
-						.swiper-button-prev
-						.swiper-button-next
+					.swiper-pagination.banner--pagination
+				.slider--hover-arrows.custom--slider-arrows
+					.swiper-button-prev
+					.swiper-button-next
 		.main-page__popular
 			h2.main-page__popular-title.h2 Популярное
 			.main-page__popular-items.popular__slider.swiper
@@ -165,11 +192,12 @@
 					each product in products
 						.swiper-slide
 							+product-card(product.discount, product.newStatus, product.image, product.name, product.price, product.oldPrice, product.link)
+			.custom--slider-arrows
 				.swiper-button-prev
 				.swiper-button-next
 		.main-page__brands
 			h2.main-page__brands-title.h2 Бренды
-			+brands()
+			+brands(brands)
 		.main-page__about
 			.main-page__about-header
 				.main-page__about-logo
@@ -183,7 +211,7 @@
 						+svg("compare2")
 					.main-page__about-card-about
 						h4.h4 Бесплатный подбор цвета
-						p.text-14 Бесплатный подбор цвета
+						p.text-14 И колеровка в подарок
 				.main-page__about-card
 					.main-page__about-card-icon
 						+svg("car")
