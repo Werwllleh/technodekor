@@ -190,9 +190,11 @@
 			border-radius: 12px;
 			background: #F3F4F6;
 			padding: 24px;
+			color: $color-brand-purple;
 
-			p {
-				color: $color-brand-purple;
+
+			&:hover {
+				color: $color-brand-purple-dark;
 			}
 
 			span {

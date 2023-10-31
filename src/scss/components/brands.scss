@@ -77,11 +77,23 @@
 .brands--menu {
 
 	.brands__items {
-		flex-direction: column !important;
+		flex-direction: column;
+
+		@media (max-width: 1200px) {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
 	}
 
 	.brands__item {
 		flex: 0 0 72px;
+
+		@media (max-width: 1200px) {
+			flex: 1 1 320px;
+		}
+		@media (max-width: 992px) {
+
+		}
 	}
 
 	.brands__all-brands {
