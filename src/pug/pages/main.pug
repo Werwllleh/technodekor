@@ -114,8 +114,8 @@
 									a.main-page__banner-slide-btn.btn.btn-light.btn-l.button-16 Купить сейчас
 					.swiper-pagination.banner--pagination
 				.slider--hover-arrows.custom--slider-arrows
-					.swiper-button-prev
-					.swiper-button-next
+					.swiper-button-prev.main-page__banner-arrow-prev
+					.swiper-button-next.main-page__banner-arrow-next
 		.main-page__popular
 			h2.main-page__popular-title.h2 Популярное
 			.main-page__popular-items.popular__slider.swiper
@@ -193,8 +193,8 @@
 						.swiper-slide
 							+product-card(product.discount, product.newStatus, product.image, product.name, product.price, product.oldPrice, product.link)
 			.custom--slider-arrows
-				.swiper-button-prev
-				.swiper-button-next
+				.swiper-button-prev.products__slider-arrow-prev
+				.swiper-button-next.products__slider-arrow-next
 		.main-page__brands
 			h2.main-page__brands-title.h2 Бренды
 			+brands(brands)
