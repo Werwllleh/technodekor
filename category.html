@@ -4,16 +4,16 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width">
-		<meta name="description" content="Главная технодекор">
+		<meta name="description" content="Каталог">
 		<meta property="og:type" content="website">
 		<meta property="og:locale" content="ru_RU">
-		<meta property="og:title" content="ТЕХНОДЕКОР">
-		<meta property="og:description" content="Главная технодекор">
+		<meta property="og:title" content="Каталог">
+		<meta property="og:description" content="Каталог">
 		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content="ТЕХНОДЕКОР">
-		<meta name="twitter:description" content="Главная технодекор">
-		<title>ТЕХНОДЕКОР</title>
-		<link rel="stylesheet" href="./css/main.css?v=1698849295024">
+		<meta name="twitter:title" content="Каталог">
+		<meta name="twitter:description" content="Каталог">
+		<title>Каталог</title>
+		<link rel="stylesheet" href="./css/main.css?v=1698849477057">
 	</head>
 	<body>
 		<!--header-->
@@ -357,403 +357,875 @@
 		</div>
 		<main class="main">
 			<div class="container">
-				<div class="main-page">
-					<div class="main-page__banner">
-						<div class="main-page__banner-body">
-							<div class="main-page__banner-slider swiper">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<div class="main-page__banner-slide color-indigo">
-											<div class="main-page__banner-slide-image"><img src="./images/main-banner/1.png" alt="banner slide"></div>
-											<div class="main-page__banner-slide-about">
-												<h2 class="main-page__banner-slide-title h1">Началась распродажа!</h2>
-												<p class="main-page__banner-slide-text text-16-long">Успейте купить ушедшие из ассортимента бренды по баснословной скидке в Чебоксарах!Официальный дилер!</p><a class="main-page__banner-slide-btn btn btn-light btn-l button-16">Купить сейчас</a>
+				<div class="category page">
+					<!-- Breadcrumbs-->
+					<div class="breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item button-14">
+								<!-- if breadcrumb is single--><a class="breadcrumbs__link" href="#" title="[&quot;Главная&quot;]">Главная</a>
+								<div class="breadcrumbs__devider"></div>
+							</li>
+							<li class="breadcrumbs__item button-14">
+								<!-- if breadcrumb is single--><a class="breadcrumbs__link" href="#" title="Каталог">Каталог</a>
+								<div class="breadcrumbs__devider"></div>
+							</li>
+						</ul>
+					</div>
+					<h1 class="category__title page--title h1">Лакокрасочные материалы</h1>
+					<div class="category__content page--grid">
+						<div class="category__left page--grid-left">
+							<div class="category__left-filter">
+								<!--filter-->
+								<div class="filter">
+									<div class="filter__body">
+										<form>
+											<div class="filter__body-category filter__category">
+												<div class="filter__category-header">
+													<div class="filter__category-title"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#arrow"></use>
+															</svg></span>
+														<h4 class="h4">Цена, ₽</h4>
+													</div>
+													<div class="filter__category-separator"></div>
+												</div>
+												<div class="filter__category-data">
+													<div class="filter__category-slider">
+														<!--range-slider-->
+														<div class="range-slider">
+															<div class="range-slider__wrapper">
+																<div class="range-slider__priceInput">
+																	<div class="range-slider__field text-14"><span>от</span>
+																		<input class="range-slider__field-minInput" type="number" value="100"/>
+																	</div>
+																	<div class="range-slider__separator"></div>
+																	<div class="range-slider__field text-14"><span>до</span>
+																		<input class="range-slider__field-maxInput" type="number" value="56000"/>
+																	</div>
+																</div>
+																<div class="range-slider__slider">
+																	<div class="range-slider__slider-progress"></div>
+																</div>
+																<div class="range-slider__rangeInput">
+																	<input class="range-slider__rangeInput-minRange" type="range" min="0" max="56000" value="100" step="10"/>
+																	<input class="range-slider__rangeInput-maxRange" type="range" min="0" max="56000" value="56000" step="10"/>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="filter__category-separator"></div>
+												</div>
 											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="main-page__banner-slide color-fuchsia">
-											<div class="main-page__banner-slide-image"><img src="./images/main-banner/1.png" alt="banner slide"></div>
-											<div class="main-page__banner-slide-about">
-												<h2 class="main-page__banner-slide-title h1">Началась распродажа!</h2>
-												<p class="main-page__banner-slide-text text-16-long">Успейте купить ушедшие из ассортимента бренды по баснословной скидке в Чебоксарах!Официальный дилер!</p><a class="main-page__banner-slide-btn btn btn-light btn-l button-16">Купить сейчас</a>
+											<div class="filter__body-category filter__category">
+												<div class="filter__category-header">
+													<div class="filter__category-title"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#arrow"></use>
+															</svg></span>
+														<h4 class="h4">Тип ЛКМ</h4>
+													</div>
+													<div class="filter__category-separator"></div>
+												</div>
+												<div class="filter__category-data">
+													<ul class="filter__category-list">
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Тип ЛКМ" value="Антисептик"/><span class="text-14">Антисептик</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">110</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Тип ЛКМ" value="Аэрозоль"/><span class="text-14">Аэрозоль</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">87</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Тип ЛКМ" value="Воск"/><span class="text-14">Воск</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">56</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Тип ЛКМ" value="Гель"/><span class="text-14">Гель</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">22</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Тип ЛКМ" value="Герметик"/><span class="text-14">Герметик</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">16</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Тип ЛКМ" value="Гидроизоляция"/><span class="text-14">Гидроизоляция</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">4</span></div>
+														</li>
+													</ul>
+													<div class="filter__category-link"><a class="button-14" href="#">Посмотреть все</a></div>
+													<div class="filter__category-separator"></div>
+												</div>
 											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="main-page__banner-slide color-green">
-											<div class="main-page__banner-slide-image"><img src="./images/main-banner/1.png" alt="banner slide"></div>
-											<div class="main-page__banner-slide-about">
-												<h2 class="main-page__banner-slide-title h1">Началась распродажа!</h2>
-												<p class="main-page__banner-slide-text text-16-long">Успейте купить ушедшие из ассортимента бренды по баснословной скидке в Чебоксарах!Официальный дилер!</p><a class="main-page__banner-slide-btn btn btn-light btn-l button-16">Купить сейчас</a>
+											<div class="filter__body-category filter__category">
+												<div class="filter__category-header">
+													<div class="filter__category-title"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#arrow"></use>
+															</svg></span>
+														<h4 class="h4">Материал обработки</h4>
+													</div>
+													<div class="filter__category-separator"></div>
+												</div>
+												<div class="filter__category-data">
+													<ul class="filter__category-list">
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Материал обработки" value="Антисептик"/><span class="text-14">Антисептик</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">110</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Материал обработки" value="Аэрозоль"/><span class="text-14">Аэрозоль</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">87</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Материал обработки" value="Воск"/><span class="text-14">Воск</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">56</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Материал обработки" value="Гель"/><span class="text-14">Гель</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">22</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Материал обработки" value="Герметик"/><span class="text-14">Герметик</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">16</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Материал обработки" value="Гидроизоляция"/><span class="text-14">Гидроизоляция</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">4</span></div>
+														</li>
+													</ul>
+													<div class="filter__category-link"><a class="button-14" href="#">Посмотреть все</a></div>
+													<div class="filter__category-separator"></div>
+												</div>
 											</div>
-										</div>
+											<div class="filter__body-category filter__category">
+												<div class="filter__category-header">
+													<div class="filter__category-title"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#arrow"></use>
+															</svg></span>
+														<h4 class="h4">Бренд</h4>
+													</div>
+													<div class="filter__category-separator"></div>
+												</div>
+												<div class="filter__category-data">
+													<ul class="filter__category-list">
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Бренд" value="Антисептик"/><span class="text-14">Антисептик</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">110</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Бренд" value="Аэрозоль"/><span class="text-14">Аэрозоль</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">87</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Бренд" value="Воск"/><span class="text-14">Воск</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">56</span></div>
+														</li>
+													</ul>
+													<div class="filter__category-separator"></div>
+												</div>
+											</div>
+											<div class="filter__body-category filter__category">
+												<div class="filter__category-header">
+													<div class="filter__category-title"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#arrow"></use>
+															</svg></span>
+														<h4 class="h4">Марка</h4>
+													</div>
+													<div class="filter__category-separator"></div>
+												</div>
+												<div class="filter__category-data">
+													<ul class="filter__category-list">
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="radio" name="Марка" value="Все"/><span class="text-14">Все</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">110</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="radio" name="Марка" value="3 в 1"/><span class="text-14">3 в 1</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">87</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="radio" name="Марка" value="БТ"/><span class="text-14">БТ</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">56</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="radio" name="Марка" value="ВД АК"/><span class="text-14">ВД АК</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">22</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="radio" name="Марка" value="ГФ"/><span class="text-14">ГФ</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">16</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="radio" name="Марка" value="КО"/><span class="text-14">КО</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">4</span></div>
+														</li>
+													</ul>
+													<div class="filter__category-link"><a class="button-14" href="#">Посмотреть все</a></div>
+													<div class="filter__category-separator"></div>
+												</div>
+											</div>
+											<div class="filter__body-category filter__category">
+												<div class="filter__category-header">
+													<div class="filter__category-title"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#arrow"></use>
+															</svg></span>
+														<h4 class="h4">Основа краски</h4>
+													</div>
+													<div class="filter__category-separator"></div>
+												</div>
+												<div class="filter__category-data">
+													<ul class="filter__category-list">
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Основа краски" value="Антисептик"/><span class="text-14">Антисептик</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">110</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Основа краски" value="Аэрозоль"/><span class="text-14">Аэрозоль</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">87</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Основа краски" value="Воск"/><span class="text-14">Воск</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">56</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Основа краски" value="Гель"/><span class="text-14">Гель</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">22</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Основа краски" value="Герметик"/><span class="text-14">Герметик</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">16</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Основа краски" value="Гидроизоляция"/><span class="text-14">Гидроизоляция</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">4</span></div>
+														</li>
+													</ul>
+													<div class="filter__category-link"><a class="button-14" href="#">Посмотреть все</a></div>
+													<div class="filter__category-separator"></div>
+												</div>
+											</div>
+											<div class="filter__body-category filter__category">
+												<div class="filter__category-header">
+													<div class="filter__category-title"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#arrow"></use>
+															</svg></span>
+														<h4 class="h4">Выбор цветов</h4>
+													</div>
+													<div class="filter__category-separator"></div>
+												</div>
+												<div class="filter__category-data">
+													<ul class="filter__category-list">
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Выбор цветов" value="Антисептик"/><span class="text-14">Антисептик</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">110</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Выбор цветов" value="Аэрозоль"/><span class="text-14">Аэрозоль</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">87</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Выбор цветов" value="Воск"/><span class="text-14">Воск</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">56</span></div>
+														</li>
+													</ul>
+													<div class="filter__category-link"><a class="button-14" href="#">Посмотреть все</a></div>
+													<div class="filter__category-separator"></div>
+												</div>
+											</div>
+											<div class="filter__body-category filter__category">
+												<div class="filter__category-header">
+													<div class="filter__category-title"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#arrow"></use>
+															</svg></span>
+														<h4 class="h4">Тип упаковки</h4>
+													</div>
+													<div class="filter__category-separator"></div>
+												</div>
+												<div class="filter__category-data">
+													<ul class="filter__category-list">
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Тип упаковки" value="Антисептик"/><span class="text-14">Антисептик</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">110</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Тип упаковки" value="Аэрозоль"/><span class="text-14">Аэрозоль</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">87</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Тип упаковки" value="Воск"/><span class="text-14">Воск</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">56</span></div>
+														</li>
+													</ul>
+													<div class="filter__category-link"><a class="button-14" href="#">Посмотреть все</a></div>
+													<div class="filter__category-separator"></div>
+												</div>
+											</div>
+											<div class="filter__body-category filter__category">
+												<div class="filter__category-header">
+													<div class="filter__category-title"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#arrow"></use>
+															</svg></span>
+														<h4 class="h4">Назначение</h4>
+													</div>
+													<div class="filter__category-separator"></div>
+												</div>
+												<div class="filter__category-data">
+													<ul class="filter__category-list">
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="radio" name="Назначение" value="Все"/><span class="text-14">Все</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">110</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="radio" name="Назначение" value="Антисептик"/><span class="text-14">Антисептик</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">110</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="radio" name="Назначение" value="Аэрозоль"/><span class="text-14">Аэрозоль</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">87</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="radio" name="Назначение" value="Воск"/><span class="text-14">Воск</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">56</span></div>
+														</li>
+													</ul>
+													<div class="filter__category-link"><a class="button-14" href="#">Посмотреть все</a></div>
+													<div class="filter__category-separator"></div>
+												</div>
+											</div>
+											<div class="filter__body-category filter__category">
+												<div class="filter__category-header">
+													<div class="filter__category-title"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#arrow"></use>
+															</svg></span>
+														<h4 class="h4">Эффект</h4>
+													</div>
+													<div class="filter__category-separator"></div>
+												</div>
+												<div class="filter__category-data">
+													<ul class="filter__category-list">
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Эффект" value="Антисептик"/><span class="text-14">Антисептик</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">110</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Эффект" value="Аэрозоль"/><span class="text-14">Аэрозоль</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">87</span></div>
+														</li>
+														<li class="filter__category-elem">
+															<div class="filter__category-elem-name">
+																<label class="filter__category-elem-checkbox">
+																	<input type="checkbox" name="Эффект" value="Воск"/><span class="text-14">Воск</span>
+																</label>
+															</div>
+															<div class="filter__category-elem-count"><span class="text-14">56</span></div>
+														</li>
+													</ul>
+													<div class="filter__category-separator"></div>
+												</div>
+											</div>
+											<div class="filter__footer">
+												<button class="filter__footer-btn filter__footer-btn-show btn btn-dark btn-m">Показать<span class="filter__footer-btn-show-count">321</span></button>
+												<input class="filter__footer-btn filter__footer-btn-reset btn btn-light btn-m" type="reset" value="Сбросить"/>
+											</div>
+										</form>
 									</div>
 								</div>
-								<div class="swiper-pagination banner--pagination"></div>
 							</div>
-							<div class="slider--hover-arrows custom--slider-arrows">
-								<div class="swiper-button-prev main-page__banner-arrow-prev"></div>
-								<div class="swiper-button-next main-page__banner-arrow-next"></div>
-							</div>
-						</div>
-					</div>
-					<div class="main-page__popular">
-						<h2 class="main-page__popular-title h2">Популярное</h2>
-						<div class="main-page__popular-items popular__slider swiper">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide"><a class="main-page__popular-item" href="./#">
-										<div class="main-page__popular-item-text">
-											<h3 class="main-page__popular-item-name h3">Краски по металлу</h3>
-											<p class="main-page__popular-item-count text-16">700 товаров</p>
-										</div><img class="main-page__popular-item-image" src="./images/popular/1.png" alt=""></a></div>
-								<div class="swiper-slide"><a class="main-page__popular-item" href="./#">
-										<div class="main-page__popular-item-text">
-											<h3 class="main-page__popular-item-name h3">Краски с колеровкой</h3>
-											<p class="main-page__popular-item-count text-16">1000 товаров</p>
-										</div><img class="main-page__popular-item-image" src="./images/popular/2.png" alt=""></a></div>
-								<div class="swiper-slide"><a class="main-page__popular-item" href="./#">
-										<div class="main-page__popular-item-text">
-											<h3 class="main-page__popular-item-name h3">Аэрозольные краски</h3>
-											<p class="main-page__popular-item-count text-16">650 товаров</p>
-										</div><img class="main-page__popular-item-image" src="./images/popular/3.png" alt=""></a></div>
-								<div class="swiper-slide"><a class="main-page__popular-item" href="./#">
-										<div class="main-page__popular-item-text">
-											<h3 class="main-page__popular-item-name h3">Интерьерные краски</h3>
-											<p class="main-page__popular-item-count text-16">320 товаров</p>
-										</div><img class="main-page__popular-item-image" src="./images/popular/4.png" alt=""></a></div>
-								<div class="swiper-slide"><a class="main-page__popular-item" href="./#">
-										<div class="main-page__popular-item-text">
-											<h3 class="main-page__popular-item-name h3">Краски ВГТ (VGT)</h3>
-											<p class="main-page__popular-item-count text-16">480 товаров</p>
-										</div><img class="main-page__popular-item-image" src="./images/popular/5.png" alt=""></a></div>
-							</div>
-						</div>
-					</div>
-					<div class="main-page__stocks">
-						<h2 class="main-page__stocks-title h2">Акции</h2>
-						<div class="main-page__stocks-items stocks__slider swiper">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide"><a class="main-page__stocks-item color-indigo" href="./#">
-										<div class="main-page__stocks-item-image">
+							<div class="category__left-coloring">
+								<!--coloring-stock-->
+								<div class="coloring">
+									<div class="coloring__body">
+										<div class="coloring__image">
 											<svg>
-												<use xlink:href="./images/sprites.svg#bag"></use>
+												<use xlink:href="./images/sprites.svg#bag2"></use>
 											</svg>
 										</div>
-										<h3 class="main-page__stocks-item-text h3">Знакомимся с красками OLSTA! Приветственная скидка 20% весь сезон!</h3>
-										<p class="main-page__stocks-item-date text-16">1 июня 2023</p></a></div>
-								<div class="swiper-slide"><a class="main-page__stocks-item color-soft-red" href="./#">
-										<div class="main-page__stocks-item-image">
+										<div class="coloring__text">
+											<h2 class="h2">Колеровка в подарок</h2>
+											<h5 class="h5">Скидка 100%</h5>
+										</div><a class="coloring__link" href="#">
+											<p class="button-14">Об акции</p><span>
+												<svg>
+													<use xlink:href="./images/sprites.svg#arrow"></use>
+												</svg></span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="category__right page--grid-right">
+							<div class="category__right-header">
+								<div class="category__catalog-cloud">
+									<!--categories-->
+									<div class="categories-cloud">
+										<div class="categories-cloud__body">
+											<div class="categories-cloud__items"><a class="categories-cloud__item btn btn-light btn-m" href="#">
+													<p class="text-14">Краски по дереву</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
+													<p class="text-14">Масла и воски</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
+													<p class="text-14">Грунтовки</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
+													<p class="text-14">Растворители</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
+													<p class="text-14">Грунт-эмали</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
+													<p class="text-14">Эмали</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
+													<p class="text-14">Краски для внутренних работ</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
+													<p class="text-14">Лаки</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
+													<p class="text-14">Краски для внешних работ</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
+													<p class="text-14">Автомобильные</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
+													<p class="text-14">Для ограды</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
+													<p class="text-14">Против влаги</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
+													<p class="text-14">Для смешивания</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
+													<p class="text-14">Художественные</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
+													<p class="text-14">Для кирпичей</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
+													<p class="text-14">Поверх ламината</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
+													<p class="text-14">Для пластика</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
+													<p class="text-14">Не выгарающие</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
+													<p class="text-14">Яркие</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
+													<p class="text-14">Тусклые</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
+													<p class="text-14">Комплементарные</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
+													<p class="text-14">Для ванны и туалета</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
+													<p class="text-14">По плитке</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
+													<p class="text-14">Краски по обоям</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
+													<p class="text-14">Влагостойкие</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
+													<p class="text-14">Огеупорные</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
+													<p class="text-14">Все краски</p></a><a class="categories-cloud__item btn btn-m btn-light categories-cloud__item-all">
+													<p class="text-14">Все категории</p><span>
+														<svg>
+															<use xlink:href="./images/sprites.svg#arrow"></use>
+														</svg></span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="brand__right-header-text">
+									<div class="brand__right-header-info page--header-text">
+										<p class="text-16-long">Краска — это общее название всех лакокрасочных материалов. Технодекор предлагает покупателям широчайший ассортимент красок в Чебоксарах.</p>
+										<p class="text-16-long">В нашем магазине вы можете купить краски практически для любых целей: от обновления внешнего вида мебели дома до антикоррозионной защиты промышленных конструкций.</p>
+										<p class="text-16-long">Воспользуйтесь фильтром слева для того, чтобы выбрать краску, наилучшим образом соответствующую вашим потребностям.</p>
+									</div>
+									<div class="brand__right-header-more"><a class="button-16">Подробнее</a><span>
 											<svg>
-												<use xlink:href="./images/sprites.svg#sale"></use>
-											</svg>
-										</div>
-										<h3 class="main-page__stocks-item-text h3">Распродажа красок в Чебоксарах</h3>
-										<p class="main-page__stocks-item-date text-16">1 июня 2023</p></a></div>
-								<div class="swiper-slide"><a class="main-page__stocks-item color-aquamarine" href="./#">
-										<div class="main-page__stocks-item-image">
-											<svg>
-												<use xlink:href="./images/sprites.svg#bonus"></use>
-											</svg>
-										</div>
-										<h3 class="main-page__stocks-item-text h3">Акция на краску Тиккурила в Чебоксарах</h3>
-										<p class="main-page__stocks-item-date text-16">1 июня 2023</p></a></div>
-								<div class="swiper-slide"><a class="main-page__stocks-item color-purple" href="./#">
-										<div class="main-page__stocks-item-image">
-											<svg>
-												<use xlink:href="./images/sprites.svg#bag"></use>
-											</svg>
-										</div>
-										<h3 class="main-page__stocks-item-text h3">МОDНОЕ ПРЕОБРАЖЕНИЕ - краска MODA в Чебоксарах</h3>
-										<p class="main-page__stocks-item-date text-16">1 июня 2023</p></a></div>
-							</div>
-						</div><a class="main-page__stocks-all-stocks" href="./#">
-							<p class="button-16">Все акциии</p><span>
-								<svg>
-									<use xlink:href="./images/sprites.svg#arrow"></use>
-								</svg></span></a>
-					</div>
-					<div class="main-page__sale">
-						<h2 class="main-page__sale-title h2">Распродажа</h2>
-						<div class="main-page__cards mobile--products-cards">
-							<!--product-card-->
-							<div class="product-card"><a class="product-card__body" href="#">
-									<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-									<div class="product-card__name">
-										<p class="text-16">Краска с воском IQ 130 для ванн</p>
-									</div>
-									<div class="product-card__price">
-										<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old"></span>
-									</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-								<div class="product-card__labels">
-									<label class="product-card__label-discount text-14">-25 %</label>
-									<label class="product-card__label-status text-14">Новинка</label>
+												<use xlink:href="./images/sprites.svg#arrow"></use>
+											</svg></span></div>
+									<div class="brand__right-header-hide"><a class="button-16">скрыть текст</a></div>
 								</div>
 							</div>
-							<!--product-card-->
-							<div class="product-card"><a class="product-card__body" href="#">
-									<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
-									<div class="product-card__name">
-										<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </p>
+							<div class="category__right-catalog category__catalog page-catalog">
+								<div class="category__catalog-header">
+									<div class="category__catalog-sort">
+										<select class="select category__catalog-select">
+											<option value="Сначала популярные" selected>Сначала популярные</option>
+											<option value="Сначала дешевые">Сначала дешевые</option>
+											<option value="Сначала дорогие">Сначала дорогие</option>
+											<option value="Еще какие-то">Еще какие-то</option>
+										</select>
 									</div>
-									<div class="product-card__price">
-										<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-									</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-								<div class="product-card__labels">
-									<label class="product-card__label-discount text-14">-25 %</label>
 								</div>
-							</div>
-							<!--product-card-->
-							<div class="product-card"><a class="product-card__body" href="#">
-									<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-									<div class="product-card__name">
-										<p class="text-16">Краска с воском IQ 130 для ванн</p>
-									</div>
-									<div class="product-card__price">
-										<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-									</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-								<div class="product-card__labels">
-									<label class="product-card__label-status text-14">Новинка</label>
-								</div>
-							</div>
-							<!--product-card-->
-							<div class="product-card"><a class="product-card__body" href="#">
-									<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
-									<div class="product-card__name">
-										<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </p>
-									</div>
-									<div class="product-card__price">
-										<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old"></span>
-									</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-								<div class="product-card__labels">
-									<label class="product-card__label-discount text-14">-25 %</label>
-									<label class="product-card__label-status text-14">Новинка</label>
-								</div>
-							</div>
-							<!--product-card-->
-							<div class="product-card"><a class="product-card__body" href="#">
-									<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
-									<div class="product-card__name">
-										<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </p>
-									</div>
-									<div class="product-card__price">
-										<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-									</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-								<div class="product-card__labels">
-									<label class="product-card__label-discount text-14">-25 %</label>
-								</div>
-							</div>
-							<!--product-card-->
-							<div class="product-card"><a class="product-card__body" href="#">
-									<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-									<div class="product-card__name">
-										<p class="text-16">Краска с воском IQ 130 для ванн</p>
-									</div>
-									<div class="product-card__price">
-										<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-									</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-								<div class="product-card__labels">
-									<label class="product-card__label-status text-14">Новинка</label>
-								</div>
-							</div>
-						</div>
-						<div class="main-page__sale-cards desctop--products-cards products__slider swiper">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<!--product-card-->
-									<div class="product-card"><a class="product-card__body" href="#">
-											<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-											<div class="product-card__name">
-												<p class="text-16">Краска с воском IQ 130 для ванн</p>
+								<div class="brand__catalog-filters-mobile-btn">
+									<!--mobile-filter-btn-->
+									<div class="mobile-filter-btn">
+										<div class="mobile-filter-btn__body"><a class="mobile-filter-btn__left"><span>
+													<svg>
+														<use xlink:href="./images/sprites.svg#compare"></use>
+													</svg></span>
+												<p class="button-14">Фильтры</p></a>
+											<div class="mobile-filter-btn__right">
+												<div class="mobile-filter-btn__right-count">
+													<h3 class="h3">5</h3>
+												</div><span class="mobile-filter-btn__right-clear">
+													<svg>
+														<use xlink:href="./images/sprites.svg#close"></use>
+													</svg></span>
 											</div>
-											<div class="product-card__price">
-												<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old"></span>
-											</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-										<div class="product-card__labels">
-											<label class="product-card__label-discount text-14">-25 %</label>
-											<label class="product-card__label-status text-14">Новинка</label>
 										</div>
 									</div>
 								</div>
-								<div class="swiper-slide">
-									<!--product-card-->
-									<div class="product-card"><a class="product-card__body" href="#">
-											<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
-											<div class="product-card__name">
-												<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </p>
+								<div class="brand__catalog-content catalog--grid">
+									<div class="brand__catalog-card catalog--card">
+										<!--product-card-->
+										<div class="product-card"><a class="product-card__body" href="#">
+												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
+												<div class="product-card__name">
+													<p class="text-16">Краска с воском IQ 130 для ванн</p>
+												</div>
+												<div class="product-card__price">
+													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old"></span>
+												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											<div class="product-card__labels">
+												<label class="product-card__label-discount text-14">-25 %</label>
+												<label class="product-card__label-status text-14">Новинка</label>
 											</div>
-											<div class="product-card__price">
-												<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-											</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-										<div class="product-card__labels">
-											<label class="product-card__label-discount text-14">-25 %</label>
 										</div>
 									</div>
-								</div>
-								<div class="swiper-slide">
-									<!--product-card-->
-									<div class="product-card"><a class="product-card__body" href="#">
-											<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-											<div class="product-card__name">
-												<p class="text-16">Краска с воском IQ 130 для ванн</p>
+									<div class="brand__catalog-card catalog--card">
+										<!--product-card-->
+										<div class="product-card"><a class="product-card__body" href="#">
+												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
+												<div class="product-card__name">
+													<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </p>
+												</div>
+												<div class="product-card__price">
+													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
+												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											<div class="product-card__labels">
+												<label class="product-card__label-discount text-14">-25 %</label>
 											</div>
-											<div class="product-card__price">
-												<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-											</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-										<div class="product-card__labels">
-											<label class="product-card__label-status text-14">Новинка</label>
 										</div>
 									</div>
-								</div>
-								<div class="swiper-slide">
-									<!--product-card-->
-									<div class="product-card"><a class="product-card__body" href="#">
-											<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
-											<div class="product-card__name">
-												<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </p>
+									<div class="brand__catalog-card catalog--card">
+										<!--product-card-->
+										<div class="product-card"><a class="product-card__body" href="#">
+												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
+												<div class="product-card__name">
+													<p class="text-16">Краска с воском IQ 130 для ванн</p>
+												</div>
+												<div class="product-card__price">
+													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
+												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											<div class="product-card__labels">
+												<label class="product-card__label-status text-14">Новинка</label>
 											</div>
-											<div class="product-card__price">
-												<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old"></span>
-											</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-										<div class="product-card__labels">
-											<label class="product-card__label-discount text-14">-25 %</label>
-											<label class="product-card__label-status text-14">Новинка</label>
 										</div>
 									</div>
-								</div>
-								<div class="swiper-slide">
-									<!--product-card-->
-									<div class="product-card"><a class="product-card__body" href="#">
-											<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
-											<div class="product-card__name">
-												<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </p>
+									<div class="brand__catalog-card catalog--card">
+										<!--product-card-->
+										<div class="product-card"><a class="product-card__body" href="#">
+												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
+												<div class="product-card__name">
+													<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </p>
+												</div>
+												<div class="product-card__price">
+													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old"></span>
+												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											<div class="product-card__labels">
+												<label class="product-card__label-discount text-14">-25 %</label>
+												<label class="product-card__label-status text-14">Новинка</label>
 											</div>
-											<div class="product-card__price">
-												<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-											</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-										<div class="product-card__labels">
-											<label class="product-card__label-discount text-14">-25 %</label>
 										</div>
 									</div>
-								</div>
-								<div class="swiper-slide">
-									<!--product-card-->
-									<div class="product-card"><a class="product-card__body" href="#">
-											<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-											<div class="product-card__name">
-												<p class="text-16">Краска с воском IQ 130 для ванн</p>
+									<div class="brand__catalog-card catalog--card">
+										<!--product-card-->
+										<div class="product-card"><a class="product-card__body" href="#">
+												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
+												<div class="product-card__name">
+													<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </p>
+												</div>
+												<div class="product-card__price">
+													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
+												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											<div class="product-card__labels">
+												<label class="product-card__label-discount text-14">-25 %</label>
 											</div>
-											<div class="product-card__price">
-												<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-											</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-										<div class="product-card__labels">
-											<label class="product-card__label-status text-14">Новинка</label>
+										</div>
+									</div>
+									<div class="brand__catalog-card catalog--card">
+										<!--product-card-->
+										<div class="product-card"><a class="product-card__body" href="#">
+												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
+												<div class="product-card__name">
+													<p class="text-16">Краска с воском IQ 130 для ванн</p>
+												</div>
+												<div class="product-card__price">
+													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
+												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											<div class="product-card__labels">
+												<label class="product-card__label-status text-14">Новинка</label>
+											</div>
+										</div>
+									</div>
+									<div class="brand__catalog-card catalog--card">
+										<!--product-card-->
+										<div class="product-card"><a class="product-card__body" href="#">
+												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
+												<div class="product-card__name">
+													<p class="text-16">Краска с воском IQ 130 для ванн</p>
+												</div>
+												<div class="product-card__price">
+													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old"></span>
+												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											<div class="product-card__labels">
+												<label class="product-card__label-discount text-14">-25 %</label>
+												<label class="product-card__label-status text-14">Новинка</label>
+											</div>
+										</div>
+									</div>
+									<div class="brand__catalog-card catalog--card">
+										<!--product-card-->
+										<div class="product-card"><a class="product-card__body" href="#">
+												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
+												<div class="product-card__name">
+													<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </p>
+												</div>
+												<div class="product-card__price">
+													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
+												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											<div class="product-card__labels">
+												<label class="product-card__label-discount text-14">-25 %</label>
+											</div>
+										</div>
+									</div>
+									<div class="brand__catalog-card catalog--card">
+										<!--product-card-->
+										<div class="product-card"><a class="product-card__body" href="#">
+												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
+												<div class="product-card__name">
+													<p class="text-16">Краска с воском IQ 130 для ванн</p>
+												</div>
+												<div class="product-card__price">
+													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
+												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											<div class="product-card__labels">
+												<label class="product-card__label-status text-14">Новинка</label>
+											</div>
+										</div>
+									</div>
+									<div class="brand__catalog-card catalog--card">
+										<!--product-card-->
+										<div class="product-card"><a class="product-card__body" href="#">
+												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
+												<div class="product-card__name">
+													<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </p>
+												</div>
+												<div class="product-card__price">
+													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old"></span>
+												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											<div class="product-card__labels">
+												<label class="product-card__label-discount text-14">-25 %</label>
+												<label class="product-card__label-status text-14">Новинка</label>
+											</div>
+										</div>
+									</div>
+									<div class="brand__catalog-card catalog--card">
+										<!--product-card-->
+										<div class="product-card"><a class="product-card__body" href="#">
+												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
+												<div class="product-card__name">
+													<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </p>
+												</div>
+												<div class="product-card__price">
+													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
+												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											<div class="product-card__labels">
+												<label class="product-card__label-discount text-14">-25 %</label>
+											</div>
+										</div>
+									</div>
+									<div class="brand__catalog-card catalog--card">
+										<!--product-card-->
+										<div class="product-card"><a class="product-card__body" href="#">
+												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
+												<div class="product-card__name">
+													<p class="text-16">Краска с воском IQ 130 для ванн</p>
+												</div>
+												<div class="product-card__price">
+													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
+												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											<div class="product-card__labels">
+												<label class="product-card__label-status text-14">Новинка</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="brand__catalog-footer">
+									<div class="brand__catalog-footer-more">
+										<!--show-more-btn--><a class="show-more-btn">
+											<div class="show-more-btn__body"><span>
+													<svg>
+														<use xlink:href="./images/sprites.svg#reload"></use>
+													</svg></span>
+												<p class="text-14">Показать ещё</p>
+											</div></a>
+									</div>
+									<div class="brand__catalog-footer-pagination">
+										<!--product-card-->
+										<div class="pagination">
+											<ul class="pagination__list">
+												<li class="pagination__item pagination__btn pagination__btn-prev"><span>
+														<svg>
+															<use xlink:href="./images/sprites.svg#arrow"></use>
+														</svg></span></li>
+												<li class="pagination__item pagination--num active">1</li>
+												<li class="pagination__item pagination--num">2</li>
+												<li class="pagination__item pagination--num">3</li>
+												<li class="pagination__item pagination--num">4</li>
+												<li class="pagination__item pagination--num">5</li>
+												<li class="pagination__item pagination--separator"><span>
+														<svg>
+															<use xlink:href="./images/sprites.svg#more"></use>
+														</svg></span></li>
+												<li class="pagination__item pagination--num">25</li>
+												<li class="pagination__item pagination__btn pagination__btn-next"><span>
+														<svg>
+															<use xlink:href="./images/sprites.svg#arrow"></use>
+														</svg></span></li>
+											</ul>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="custom--slider-arrows">
-							<div class="swiper-button-prev products__slider-arrow-prev"></div>
-							<div class="swiper-button-next products__slider-arrow-next"></div>
-						</div>
-					</div>
-					<div class="main-page__brands">
-						<h2 class="main-page__brands-title h2">Бренды</h2>
-						<!--brands-->
-						<div class="brands">
-							<div class="brands__items"><a class="brands__item" href="#">
-									<div class="brands__item-logo"><img src="./images/brands/tikkurila.png" alt="Tikkurila"/></div>
-									<div class="brands__item-name text-14">Tikkurila</div></a><a class="brands__item" href="#">
-									<div class="brands__item-logo"><img src="./images/brands/vgt.png" alt="VGT-ecology material"/></div>
-									<div class="brands__item-name text-14">VGT-ecology material</div></a><a class="brands__item" href="#">
-									<div class="brands__item-logo"><img src="./images/brands/ferumprotect.png" alt="ferumprotect"/></div>
-									<div class="brands__item-name text-14">ferumprotect</div></a><a class="brands__item" href="#">
-									<div class="brands__item-logo"><img src="./images/brands/tikkurila.png" alt="Tikkurila"/></div>
-									<div class="brands__item-name text-14">Tikkurila</div></a><a class="brands__item" href="#">
-									<div class="brands__item-logo"><img src="./images/brands/vgt.png" alt="VGT-ecology material"/></div>
-									<div class="brands__item-name text-14">VGT-ecology material</div></a><a class="brands__all-brands brands__item" href="./#">
-									<p class="button-16">Все бренды</p><span class="h3">82
-										<svg>
-											<use xlink:href="./images/sprites.svg#arrow"></use>
-										</svg></span></a>
-							</div>
-						</div>
-					</div>
-					<div class="main-page__about">
-						<div class="main-page__about-header">
-							<div class="main-page__about-logo">
-								<svg>
-									<use xlink:href="./images/sprites.svg#logo-footer"></use>
-								</svg>
-							</div>
-							<div class="main-page__about-title">
-								<h2 class="h2">Центр красок Технодекор</h2>
-								<p class="h3">г. Чебоксары</p>
-							</div>
-						</div>
-						<div class="main-page__about-cards">
-							<div class="main-page__about-card">
-								<div class="main-page__about-card-icon">
-									<svg>
-										<use xlink:href="./images/sprites.svg#compare2"></use>
-									</svg>
-								</div>
-								<div class="main-page__about-card-about">
-									<h4 class="h4">Бесплатный подбор цвета</h4>
-									<p class="text-14">И колеровка в подарок</p>
-								</div>
-							</div>
-							<div class="main-page__about-card">
-								<div class="main-page__about-card-icon">
-									<svg>
-										<use xlink:href="./images/sprites.svg#car"></use>
-									</svg>
-								</div>
-								<div class="main-page__about-card-about">
-									<h4 class="h4">Бесплатная доставка</h4>
-									<p class="text-14">Даже если срочно</p>
-								</div>
-							</div>
-							<div class="main-page__about-card">
-								<div class="main-page__about-card-icon">
-									<svg>
-										<use xlink:href="./images/sprites.svg#gift"></use>
-									</svg>
-								</div>
-								<div class="main-page__about-card-about">
-									<h4 class="h4">Система лояльности</h4>
-									<p class="text-14">Клубные карты с бонусами</p>
-								</div>
-							</div>
-							<div class="main-page__about-card">
-								<div class="main-page__about-card-icon">
-									<svg>
-										<use xlink:href="./images/sprites.svg#shop"></use>
-									</svg>
-								</div>
-								<div class="main-page__about-card-about">
-									<h4 class="h4">Декор-студия</h4>
-									<p class="text-14">Обучение мастеров, подбор материалов</p>
-								</div>
-							</div>
-						</div>
-						<div class="main-page__about-text">
-							<div class="main-page__about-text-description">
-								<p class="text-16-long">Наш сайт — это инструмент покупки и подбора краски и он отвечает на два наиболее частых вопроса: купить краску и чем покрасить? Если вы знаете марку краски, которая вам нужна, смело пользуйтесь поиском. Если Вы хотите узнать, какой краской покрасить ту или иную поверхность, читайте нашу базу знаний или смотрите проекты.</p>
-								<p class="text-16-long">Краски — это наша специализация. Мы знаем о Красках всё!</p>
-							</div><a class="main-page__about-btn btn btn-light btn-m button-14">Подробнее</a>
 						</div>
 					</div>
-					<!--.swiper-->
-					<!--	.swiper-wrapper-->
-					<!--		.swiper-slide 1-->
-					<!--		.swiper-slide 2-->
-					<!--		.swiper-slide 3-->
-					<!--	.swiper-pagination-->
-					<!--	.swiper-button-prev-->
-					<!--	.swiper-button-next-->
-					<!--	.swiper-scrollbar-->
 				</div>
 			</div>
 		</main>
@@ -1416,7 +1888,7 @@
 				</div>
 			</div>
 		</div>
-		<script src="./js/vendor.js?v=1698849295029"></script>
-		<script src="./js/main.js?v=1698849295029"></script>
+		<script src="./js/vendor.js?v=1698849477067"></script>
+		<script src="./js/main.js?v=1698849477067"></script>
 	</body>
 </html>
