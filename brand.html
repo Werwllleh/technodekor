@@ -13,7 +13,7 @@
 		<meta name="twitter:title" content="Бренд">
 		<meta name="twitter:description" content="Бренд">
 		<title>Бренд</title>
-		<link rel="stylesheet" href="./css/main.css?v=1698820154918">
+		<link rel="stylesheet" href="./css/main.css?v=1698840548367">
 	</head>
 	<body>
 		<!--header-->
@@ -72,6 +72,11 @@
 												<use xlink:href="./images/sprites.svg#menu"></use>
 											</svg>
 										</div>
+										<div class="catalog-button--mobile">
+											<svg>
+												<use xlink:href="./images/sprites.svg#menu"></use>
+											</svg>
+										</div>
 										<div class="catalog-button--active">
 											<svg>
 												<use xlink:href="./images/sprites.svg#close-large"></use>
@@ -122,7 +127,16 @@
 						</div>
 					</div>
 				</div>
+				<!--header-menu-->
 				<div class="header__menu">
+					<div class="header__menu-header">
+						<div class="header__menu-header-title">
+							<h2 class="h2">Каталог</h2>
+						</div><span class="header__menu-header-close">
+							<svg>
+								<use xlink:href="./images/sprites.svg#close-large"></use>
+							</svg></span>
+					</div>
 					<div class="container">
 						<div class="header__menu-body">
 							<div class="header__menu-top">
@@ -132,12 +146,20 @@
 												<use xlink:href="./images/sprites.svg#more"></use>
 											</svg></span></a>
 									<div class="header__menu-top-more-block menu__more">
-										<ul class="menu__more-list">
-											<li class="menu__more-item"><a class="text-14" href="#">Другая категория</a></li>
-											<li class="menu__more-item"><a class="text-14" href="#">Ещё категория</a></li>
-											<li class="menu__more-item"><a class="text-14" href="#">Новая категория</a></li>
-											<li class="menu__more-item"><a class="text-14" href="#">Категория про другое</a></li>
-										</ul>
+										<div class="menu__more-body">
+											<div class="menu__more-header">
+												<h3 class="h3">Ещё категории</h3><span class="menu__more-close">
+													<svg>
+														<use xlink:href="./images/sprites.svg#close"></use>
+													</svg></span>
+											</div>
+											<ul class="menu__more-list">
+												<li class="menu__more-item"><a class="text-14" href="#">Другая категория</a></li>
+												<li class="menu__more-item"><a class="text-14" href="#">Ещё категория</a></li>
+												<li class="menu__more-item"><a class="text-14" href="#">Новая категория</a></li>
+												<li class="menu__more-item"><a class="text-14" href="#">Категория про другое</a></li>
+											</ul>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -1351,12 +1373,12 @@
 		</div>
 		<div class="modal-bg"></div>
 		<!-- Modal Filter-->
-		<div class="modal-filter" id="modal-filter">
+		<div class="modal modal-filter" id="modal-filter">
 			<div class="modal-filter__body">
-				<div class="modal-filter__header">
-					<div class="modal-filter__header-title">
+				<div class="modal__header">
+					<div class="modal__title">
 						<h3 class="h3">Фильтры</h3>
-					</div><span class="modal-filter__close">
+					</div><span class="modal__close">
 						<svg>
 							<use xlink:href="./images/sprites.svg#close-large"></use>
 						</svg></span>
@@ -1882,7 +1904,7 @@
 				</div>
 			</div>
 		</div>
-		<script src="./js/vendor.js?v=1698820154924"></script>
-		<script src="./js/main.js?v=1698820154924"></script>
+		<script src="./js/vendor.js?v=1698840548373"></script>
+		<script src="./js/main.js?v=1698840548373"></script>
 	</body>
 </html>

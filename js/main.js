@@ -259,27 +259,40 @@ document.addEventListener('DOMContentLoaded', function () {
   var menuBlock = document.querySelector('.header__menu');
   var menuTopMoreButton = document.querySelector('.header__menu-top-more');
   var menuTopMore = document.querySelector('.menu__more');
-  menuButton.addEventListener('click', function (event) {
-    event.preventDefault();
+  var menuMobileCLose = document.querySelector('.header__menu-header-close');
+  var menuMoreCLose = document.querySelector('.menu__more-close');
+  menuButton.addEventListener('click', function (e) {
+    e.preventDefault();
     menuButton.classList.toggle('active');
     if (menuButton.classList.contains('active')) {
       menuBlock.classList.add('active');
-      document.body.classList.add('noscroll');
+      document.documentElement.style.overflow = "hidden";
     } else {
-      document.body.classList.remove('noscroll');
+      document.documentElement.style.overflow = "auto";
       menuBlock.classList.remove('active');
       menuTopMoreButton.classList.remove('active');
       menuTopMore.classList.remove('active');
     }
   });
-  menuTopMoreButton.addEventListener('click', function (event) {
-    event.preventDefault();
+  menuMobileCLose.addEventListener('click', function () {
+    menuButton.classList.remove('active');
+    menuTopMore.classList.remove('active');
+    menuBlock.classList.remove('active');
+    menuTopMoreButton.classList.remove('active');
+    document.documentElement.style.overflow = "auto";
+  });
+  menuTopMoreButton.addEventListener('click', function (e) {
+    e.preventDefault();
     menuTopMoreButton.classList.toggle('active');
     if (menuTopMoreButton.classList.contains('active')) {
       menuTopMore.classList.add('active');
     } else {
       menuTopMore.classList.remove('active');
     }
+  });
+  menuMoreCLose.addEventListener('click', function () {
+    menuTopMore.classList.remove('active');
+    menuTopMoreButton.classList.remove('active');
   });
 });
 
@@ -306,25 +319,44 @@ document.addEventListener('DOMContentLoaded', function () {});
 document.addEventListener('DOMContentLoaded', function () {
   var mobileFilterBtns = document.querySelectorAll('.mobile-filter-btn__left');
   var filter = document.querySelector('.modal-filter');
-  var filterClose = document.querySelector('.modal-filter__close');
   var bg = document.querySelector('.modal-bg');
   mobileFilterBtns.forEach(function (mobileFilterBtn) {
     mobileFilterBtn.addEventListener('click', function (e) {
       e.preventDefault();
-      document.body.classList.add('noscroll');
+      document.documentElement.style.overflowY = "hidden";
       filter.classList.add('opened');
       bg.classList.add('active');
     });
   });
-  bg.addEventListener('click', function (e) {
-    document.body.classList.remove('noscroll');
-    filter.classList.remove('opened');
-    bg.classList.remove('active');
-  });
-  filterClose.addEventListener('click', function (e) {
-    document.body.classList.remove('noscroll');
-    filter.classList.remove('opened');
-    bg.classList.remove('active');
+});
+
+/***/ }),
+
+/***/ "./src/js/components/modals.js":
+/*!*************************************!*\
+  !*** ./src/js/components/modals.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var modalCloseButtons = document.querySelectorAll('.modal__close');
+  var bg = document.querySelector('.modal-bg');
+  modalCloseButtons.forEach(function (modalCloseButton) {
+    modalCloseButton.addEventListener('click', function (e) {
+      modalCloseButton.closest('.modal').classList.remove('opened');
+      // document.html.classList.remove('noscroll');
+      // document.html.style.overflowY = 'auto';
+      document.documentElement.style.overflowY = "auto";
+      bg.classList.remove('active');
+    });
+    bg.addEventListener('click', function (e) {
+      // document.html.classList.remove('noscroll');
+      // document.html.style.overflowY = 'auto';
+      document.documentElement.style.overflowY = "auto";
+      modalCloseButton.closest('.modal').classList.remove('opened');
+      bg.classList.remove('active');
+    });
   });
 });
 
@@ -667,10 +699,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_filter__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_components_filter__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _components_range_slider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/range-slider */ "./src/js/components/range-slider.js");
 /* harmony import */ var _components_range_slider__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_components_range_slider__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _components_mobile_filter_btn__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/mobile-filter-btn */ "./src/js/components/mobile-filter-btn.js");
-/* harmony import */ var _components_mobile_filter_btn__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_mobile_filter_btn__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _modules_lazyLoading__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/lazyLoading */ "./src/js/modules/lazyLoading.js");
-/* harmony import */ var _modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/scrollToAnchor */ "./src/js/modules/scrollToAnchor.js");
+/* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/modals */ "./src/js/components/modals.js");
+/* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_modals__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _components_mobile_filter_btn__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/mobile-filter-btn */ "./src/js/components/mobile-filter-btn.js");
+/* harmony import */ var _components_mobile_filter_btn__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_components_mobile_filter_btn__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _modules_lazyLoading__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/lazyLoading */ "./src/js/modules/lazyLoading.js");
+/* harmony import */ var _modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/scrollToAnchor */ "./src/js/modules/scrollToAnchor.js");
 
 
 
@@ -685,8 +719,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-_modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_13__["default"].init();
-_modules_lazyLoading__WEBPACK_IMPORTED_MODULE_12__["default"].init();
+
+_modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_14__["default"].init();
+_modules_lazyLoading__WEBPACK_IMPORTED_MODULE_13__["default"].init();
 
 /***/ }),
 
