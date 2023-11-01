@@ -8,8 +8,9 @@ mixin product-card(discount, newStatus, image, name, price, oldPrice, link)
 				p.text-16= name
 			.product-card__price
 				p.price-s.product-card__price-current= price + " ₽ / шт"
-				if (oldPrice)
-					span.product-card__price-old= oldPrice + " ₽"
+				span.product-card__price-old
+					if (oldPrice)
+						= oldPrice + " ₽"
 		a.product-card__btn.btn-dark.btn.btn-m.button-14(href="#") В корзину
 		if (discount || newStatus)
 			.product-card__labels

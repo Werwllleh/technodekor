@@ -431,67 +431,62 @@
 			link: "#"
 		},
 	]
-mixin header()
-	//header
-	.header.header--desctop
+mixin header-menu()
+	//header-menu
+	.header__menu
+		.header__menu-header
+			.header__menu-header-title
+				h2.h2 Каталог
+			span.header__menu-header-close
+				+svg("close-large")
 		.container
-			.header__top
-				.header__top-body
-					.header__top-left
-						.header__city
-							p.header__city-name Чебоксары
-							span.header__city-arrow
-								+svg("arrow")
-						nav.header__nav
-							ul.header__nav-list
-								li.header__nav-elem
-									a(href="#") О нас
-								li.header__nav-elem
-									a(href="#") Контакты
-								li.header__nav-elem
-									a(href="#") Услуги
-								li.header__nav-elem
-									a(href="#") Как купить
-								li.header__nav-elem
-									a(href="#") Оплата и доставка
-					.header__top-right
-						.header__phone
-							.header__phone-tel
-								a.h4(href="tel:+78352551503") +7 (8352) 55-15-03
-								span Бесплатно по России
-							.header__phone-arrow
-								+svg("arrow")
-						a.header__user(href="#")
-							.header__user-logo
-								+svg("user")
-							p.header__user-text.button-16 Вход и регистрация
-			.header__bottom
-				.header__bottom-body
-					.header__bottom-left
-						.header__logo
-							+svg("logo")
-						+catalog-button()
-						.header__search-mobile
-							.header__search-icon
-								+svg("search")
-						.header__search
-							input(placeholder="Поиcк товаров")
-							.header__search-icon
-								+svg("search")
-					.header__bottom-right
-						.header__buttons
-							a.header-button.header-button-compare
-								.header-button__icon
-									+svg('compare')
-							a.header-button.header-button-favourites
-								.header-button__icon
-									+svg('heart')
-							a.header-button.header-button-cart
-								.header-button__icon
-									+svg('shopping-cart')
-								.header-button__counter
-									span.h5 12
-							a.header-button.header-button-more
-								.header-button__icon
-									+svg('more')
-			+header-menu()
+			.header__menu-body
+				.header__menu-top
+					.header__menu-top-items
+						.header__menu-top-items-links
+							a.header__menu-top-item.button-16(href="#") Красим металл
+							a.header__menu-top-item.button-16(href="#") Защита и декор древесины
+							a.header__menu-top-item.button-16(href="#") Декоративные покрытия
+							a.header__menu-top-item.button-16(href="#") Фасады и интерьеры
+							a.header__menu-top-item.button-16(href="#") Декоративные покрытия и арт
+							a.header__menu-top-item.button-16(href="#") Для городской среды
+						a.header__menu-top-item.header__menu-top-more
+							span
+								+svg("more")
+
+						.header__menu-top-more-block.menu__more
+							.menu__more-body
+								.menu__more-header
+									h3.h3 Ещё категории
+									span.menu__more-close
+										+svg("close")
+								ul.menu__more-list
+									li.menu__more-item
+										a.text-14(href="#") Другая категория
+									li.menu__more-item
+										a.text-14(href="#") Ещё категория
+									li.menu__more-item
+										a.text-14(href="#") Новая категория
+									li.menu__more-item
+										a.text-14(href="#") Категория про другое
+				.header__menu-bottom
+					.header__menu-grid
+						.header__menu-categories
+							each menuCategory in menuCategories
+								.header__menu-category
+									each category in menuCategory.category
+										a.header__menu-category-title.h3(href= category.link)= category.name
+									if (menuCategory.list)
+										ul.header__menu-category-list
+											each item in menuCategory.list
+												li.header__menu-category-item
+													a.text-14(href= item.link)= item.name
+											li.header__menu-category-item.header__menu-category-item-more
+												a.text-14(href="#")
+													p Ещё
+													span
+														+svg("arrow")
+						.header__menu-brands
+							+brands(brands).brands--menu
+						.header__menu-coloring
+							+coloring()

@@ -84,12 +84,15 @@
 		}
 
 		&-old {
+			display: flex;
+			align-items: center;
 			padding: 4px 0;
 			color: #717C8D;
 			font-family: $font-family-montserrat;
 			font-size: 14px;
 			font-style: normal;
 			font-weight: 500;
+			height: 25px;
 			line-height: 1.14;
 			text-decoration: line-through;
 		}

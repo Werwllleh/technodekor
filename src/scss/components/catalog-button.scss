@@ -60,6 +60,23 @@
 	}
 
 	&--default {
+		display: block;
+
+		@include mobile() {
+			display: none;
+		}
+	}
+
+	&--mobile {
+		display: none;
+
+		@include mobile() {
+			display: block;
+		}
+	}
+
+	&--default,
+	&--mobile {
 		opacity: 1;
 
 		svg {
@@ -80,7 +97,8 @@
 		color: $color-white;
 	}
 
-	&.active &--default {
+	&.active &--default,
+	&.active &--mobile{
 		opacity: 0;
 	}
 	&.active &--active {

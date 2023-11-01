@@ -46,11 +46,6 @@
 
 }
 
-body.noscroll {
-	height: 100vh;
-	overflow-y: hidden
-}
-
 .modal-bg {
 	opacity: 0;
 	visibility: hidden;
@@ -70,6 +65,10 @@ body.noscroll {
 }
 
 .custom--slider-arrows {
+
+	@include tablet() {
+		display: none;
+	}
 
 	.swiper-button-next, {
 		right: -20px;

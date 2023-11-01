@@ -1,0 +1,19 @@
+.modal {
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 16px;
+		box-shadow: 0 8px 32px 0 rgba(45, 47, 56, 0.08);
+
+		span {
+
+			svg {
+				width: 24px;
+				height: 24px;
+				fill: #7D8899;
+			}
+		}
+	}
+}

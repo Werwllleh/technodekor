@@ -11,6 +11,7 @@ import './components/categories';
 import './components/select';
 import './components/filter';
 import './components/range-slider';
+import './components/modals';
 import './components/mobile-filter-btn';
 
 
