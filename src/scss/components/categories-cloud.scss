@@ -1,0 +1,59 @@
+.categories-cloud {
+
+	&__body {
+
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 12px;
+	}
+
+	&__item {
+		max-width: none;
+		width: auto;
+
+		&.hidden {
+			display: none;
+		}
+	}
+
+	&__item-all {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		background-color: #E5E7EA;
+
+		&:hover {
+
+		}
+
+		&.active span {
+
+			svg {
+				transform: rotate(90deg);
+			}
+		}
+
+		p {
+			color: $color-brand-purple;
+		}
+		&:hover p {
+			color: $color-brand-purple-dark;
+		}
+
+
+		span {
+
+			svg {
+				width: 10px;
+				height: 10px;
+				fill: $color-brand-purple;
+				transform: rotate(-90deg);
+				transition: transform $duration-normal;
+			}
+		}
+	}
+}

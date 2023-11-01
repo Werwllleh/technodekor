@@ -1,0 +1,39 @@
+.category {
+
+	padding: 0 0 115px 0;
+
+
+	&__left {
+
+		@media (max-width: 992px) {
+			display: none;
+		}
+
+		&-filter {
+			@include desktop() {
+				display: none;
+			}
+		}
+		&-coloring {
+			@include desktop() {
+				display: none;
+			}
+		}
+	}
+
+	&__right {
+
+	}
+
+	&__catalog {
+
+		&-cloud {
+			margin: 0 0 32px 0;
+		}
+
+		&-sort {
+			max-width: 320px;
+			margin: 0 0 32px 0;
+		}
+	}
+}

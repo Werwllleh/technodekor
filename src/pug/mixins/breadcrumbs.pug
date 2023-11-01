@@ -4,19 +4,18 @@
 
 mixin breadcrumbs(items, last)
 	// Breadcrumbs
-	.container
-		.breadcrumbs&attributes(attributes)
-			ul.breadcrumbs__list
-				each item in items
-					li.breadcrumbs__item.button-14
-						// if breadcrumb is single
-						if (items.length === 0)
-							span.breadcrumbs__link= item
-						else
-							a(href="#" title=item).breadcrumbs__link= item
-							.breadcrumbs__devider
+	.breadcrumbs&attributes(attributes)
+		ul.breadcrumbs__list
+			each item in items
+				li.breadcrumbs__item.button-14
+					// if breadcrumb is single
+					if (items.length === 0)
+						span.breadcrumbs__link= item
+					else
+						a(href="#" title=item).breadcrumbs__link= item
+						.breadcrumbs__devider
 
-				if last
-					li.breadcrumbs__item.button-14
-						span.breadcrumbs__current= last
-				else
+			if last
+				li.breadcrumbs__item.button-14
+					span.breadcrumbs__current= last
+			else

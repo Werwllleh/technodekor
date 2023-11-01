@@ -109,39 +109,145 @@
 			link: '#'
 		},
 	]
+	var categories = [
+		{
+			name: 'Краски по дереву',
+			link: '#'
+		},
+		{
+			name: 'Масла и воски',
+			link: '#'
+		},
+		{
+			name: 'Грунтовки',
+			link: '#'
+		},
+		{
+			name: 'Растворители',
+			link: '#'
+		},
+		{
+			name: 'Грунт-эмали',
+			link: '#'
+		},
+		{
+			name: 'Эмали',
+			link: '#'
+		},
+		{
+			name: 'Краски для внутренних работ',
+			link: '#'
+		},
+		{
+			name: 'Лаки',
+			link: '#'
+		},
+		{
+			name: 'Краски для внешних работ',
+			link: '#'
+		},
+		{
+			name: 'Автомобильные',
+			link: '#'
+		},
+		{
+			name: 'Для ограды',
+			link: '#'
+		},
+		{
+			name: 'Против влаги',
+			link: '#'
+		},
+		{
+			name: 'Для смешивания',
+			link: '#'
+		},
+		{
+			name: 'Художественные',
+			link: '#'
+		},
+		{
+			name: 'Для кирпичей',
+			link: '#'
+		},
+		{
+			name: 'Поверх ламината',
+			link: '#'
+		},
+		{
+			name: 'Для пластика',
+			link: '#'
+		},
+		{
+			name: 'Не выгарающие',
+			link: '#'
+		},
+		{
+			name: 'Яркие',
+			link: '#'
+		},
+		{
+			name: 'Тусклые',
+			link: '#'
+		},
+		{
+			name: 'Комплементарные',
+			link: '#'
+		},
+		{
+			name: 'Для ванны и туалета',
+			link: '#'
+		},
+		{
+			name: 'По плитке',
+			link: '#'
+		},
+		{
+			name: 'Краски по обоям',
+			link: '#'
+		},
+		{
+			name: 'Влагостойкие',
+			link: '#'
+		},
+		{
+			name: 'Огеупорные',
+			link: '#'
+		},
+		{
+			name: 'Все краски',
+			link: '#'
+		},
+	]
 .container
-	.brand.page
-		+breadcrumbs({pagesBefore:['Главная', 'Бренды'], pagesCurrent:'Тиккурила'})
-		h1.brand__title.page--title.h1 Тиккурила
-		.brand__content.page--grid
-			.brand__left
-				.brand__left-categories
-					+categories()
-				.brand__left-filter
+	.category.page
+		+breadcrumbs({pagesBefore:['Главная'], pagesCurrent:'Каталог'})
+		h1.category__title.page--title.h1 Лакокрасочные материалы
+		.category__content.page--grid
+			.category__left.page--grid-left
+				.category__left-filter
 					+filter()
-				.brand__left-coloring
+				.category__left-coloring
 					+coloring()
-			.brand__right
-				.brand__right-header
-					.brand__right-header-image
-						img(src="./images/brands/tikkurila.png")
+			.category__right.page--grid-right
+				.category__right-header
+					.category__catalog-cloud
+						+categories-cloud(categories)
 					.brand__right-header-text
-						.brand__right-header-info
-							p.text-16-long Лидер рынка РФ. Производство в Финляндии и в России.Финскому бренду Tikkurila уже более 150 лет. С 1862 года компания реализует по всему миру высокоэкологичные и удобные решения для оформления и защиты поверхностей.Сегодня Tikkurila заслуженно признана лидирующей лакокрасочной компанией в Северной Европе, России и ряде других стран Восточной Европы.
-							p.text-16-long Бренд имеет репутацию надежного и проверенного производителя декоративных лакокрасочных изделий.Продукция Tikkurila в...
+						.brand__right-header-info.page--header-text
+							p.text-16-long Краска — это общее название всех лакокрасочных материалов. Технодекор предлагает покупателям широчайший ассортимент красок в Чебоксарах.
+							p.text-16-long В нашем магазине вы можете купить краски практически для любых целей: от обновления внешнего вида мебели дома до антикоррозионной защиты промышленных конструкций.
+							p.text-16-long Воспользуйтесь фильтром слева для того, чтобы выбрать краску, наилучшим образом соответствующую вашим потребностям.
 						.brand__right-header-more
 							a.button-16 Подробнее
 							span
 								+svg("arrow")
 						.brand__right-header-hide
 							a.button-16 скрыть текст
-				.brand____right-catalog.brand__catalog
-					.brand__catalog-categories
-						+categories()
-					.brand__catalog-header
-						h2.h2 Товары Tikkurila в нашем магазине
-						.brand__catalog-sort
-							select.select.brand__catalog-select
+				.category__right-catalog.category__catalog.page-catalog
+					.category__catalog-header
+						.category__catalog-sort
+							select.select.category__catalog-select
 								option(value='Сначала популярные', selected) Сначала популярные
 								option(value="Сначала дешевые") Сначала дешевые
 								option(value="Сначала дорогие") Сначала дорогие

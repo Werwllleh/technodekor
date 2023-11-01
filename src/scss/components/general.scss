@@ -1,3 +1,11 @@
+.page {
+
+	@media (max-width: 992px) {
+		margin: 120px 0 0 0;
+	}
+
+}
+
 .page--title {
 	color: $color-txt-primary;
 	margin: 0 0 24px 0;
@@ -13,7 +21,20 @@
 		flex-direction: column;
 		gap: 32px;
 	}
+
+	&-left {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+	}
+
+	&-right {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+	}
 }
+
 
 .grid--reverse {
 	@include desktop() {
@@ -123,3 +144,5 @@
 	}
 
 }
+
+

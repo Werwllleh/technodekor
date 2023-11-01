@@ -13,6 +13,7 @@ import './components/filter';
 import './components/range-slider';
 import './components/modals';
 import './components/mobile-filter-btn';
+import './components/categories-cloud';
 
 
 import lazyLoading from './modules/lazyLoading';

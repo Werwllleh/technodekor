@@ -609,7 +609,6 @@
 		right: 0;
 		left: 0;
 		margin: 0 auto;
-		transform-origin: bottom;
 	}
 
 	@include mobile() {
@@ -621,6 +620,7 @@
 		height: 100vh;
 		background-color: rgba(57, 49, 133, 0.75);
 		z-index: 5;
+		transform-origin: bottom;
 	}
 
 	&.active {

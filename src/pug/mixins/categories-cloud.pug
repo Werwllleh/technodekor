@@ -1,0 +1,16 @@
+mixin categories-cloud(data)
+	//categories
+	.categories-cloud&attributes(attributes)
+		.categories-cloud__body
+			.categories-cloud__items
+				each category, index in data
+					if index >= 14
+						a.categories-cloud__item.hidden.btn.btn-light.btn-m(href= category.link)
+							p.text-14= category.name
+					else
+						a.categories-cloud__item.btn.btn-light.btn-m(href= category.link)
+							p.text-14= category.name
+				a.categories-cloud__item.btn.btn-m.btn-light.categories-cloud__item-all
+					p.text-14 Все категории
+					span
+						+svg("arrow")
