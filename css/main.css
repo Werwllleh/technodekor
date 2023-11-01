@@ -2747,12 +2747,19 @@ iframe {
     .product-card__price-current {
       color: #000C1A; }
     .product-card__price-old {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       padding: 4px 0;
       color: #717C8D;
       font-family: "Montserrat", sans-serif;
       font-size: 14px;
       font-style: normal;
       font-weight: 500;
+      height: 25px;
       line-height: 1.14;
       text-decoration: line-through; }
   .product-card__btn {
@@ -2931,6 +2938,10 @@ body.noscroll {
 .modal-bg.active {
   opacity: 1;
   visibility: visible; }
+
+@media (max-width: 768px) {
+  .custom--slider-arrows {
+    display: none; } }
 
 .custom--slider-arrows .swiper-button-next {
   right: -20px; }
