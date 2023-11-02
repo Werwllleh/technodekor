@@ -295,6 +295,7 @@
 
 		&-title {
 			margin: 0 0 24px 0;
+			font-size: 32px;
 		}
 
 		&-items {
@@ -500,7 +501,7 @@
 		height: 12px;
 		border-radius: 12px;
 		border: 3px solid $color-white;
-		opacity: 0.4;
+		//opacity: 0.4;
 	}
 	.swiper-pagination-bullet-active {
 		background-color: $color-white;

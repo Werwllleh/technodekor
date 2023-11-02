@@ -111,8 +111,10 @@
 	]
 .container
 	.brand.page
-		+breadcrumbs({pagesBefore:['Главная', 'Бренды'], pagesCurrent:'Тиккурила'})
-		h1.brand__title.page--title.h1 Тиккурила
+		+breadcrumbs(['Главная', 'Бренды'], 'Тиккурила')
+		.page--title
+			h1.brand__title.h1 Тиккурила
+			+switch-buttons()
 		.brand__content.page--grid
 			.brand__left
 				.brand__left-categories
@@ -127,14 +129,19 @@
 						img(src="./images/brands/tikkurila.png")
 					.brand__right-header-text
 						.brand__right-header-info
-							p.text-16-long Лидер рынка РФ. Производство в Финляндии и в России.Финскому бренду Tikkurila уже более 150 лет. С 1862 года компания реализует по всему миру высокоэкологичные и удобные решения для оформления и защиты поверхностей.Сегодня Tikkurila заслуженно признана лидирующей лакокрасочной компанией в Северной Европе, России и ряде других стран Восточной Европы.
-							p.text-16-long Бренд имеет репутацию надежного и проверенного производителя декоративных лакокрасочных изделий.Продукция Tikkurila в...
-						.brand__right-header-more
-							a.button-16 Подробнее
-							span
-								+svg("arrow")
-						.brand__right-header-hide
-							a.button-16 скрыть текст
+							.text__block
+								p.text-16-long.text__block-hiddenText
+									| Лидер рынка РФ. Производство в Финляндии и в России.Финскому бренду Tikkurila уже более 150 лет. С 1862 года компания реализует по всему миру высокоэкологичные и удобные решения для оформления и защиты поверхностей.Сегодня Tikkurila заслуженно признана лидирующей лакокрасочной компанией в Северной Европе, России и ряде других стран Восточной Европы.
+								p.text-16-long.text__block-hiddenText.active
+									| Лидер рынка РФ. Производство в Финляндии и в России.Финскому бренду Tikkurila уже более 150 лет. С 1862 года компания реализует по всему миру высокоэкологичные и удобные решения для оформления и защиты поверхностей.Сегодня Tikkurila заслуженно признана лидирующей лакокрасочной компанией в Северной Европе, России и ряде других стран Восточной Европы.
+								p.text-16-long.text__block-hiddenText.active
+									| Лидер рынка РФ. Производство в Финляндии и в России.Финскому бренду Tikkurila уже более 150 лет. С 1862 года компания реализует по всему миру высокоэкологичные и удобные решения для оформления и защиты поверхностей.Сегодня Tikkurila заслуженно признана лидирующей лакокрасочной компанией в Северной Европе, России и ряде других стран Восточной Европы.
+								p.text-16-long.text__block-hiddenText.active
+									| Бренд имеет репутацию надежного и проверенного производителя декоративных лакокрасочных изделий.
+								a.button-16.text__block-btn
+									p Подробнее
+									span
+										+svg("arrow")
 				.brand____right-catalog.brand__catalog
 					.brand__catalog-categories
 						+categories()
@@ -146,7 +153,7 @@
 								option(value="Сначала дешевые") Сначала дешевые
 								option(value="Сначала дорогие") Сначала дорогие
 								option(value="Еще какие-то") Еще какие-то
-					.brand__catalog-filters-mobile-btn
+					.brand__catalog-filters-mobile-btn.page-mobile-filter
 						+mobile-filter-btn()
 					.brand__catalog-content.catalog--grid
 						each product in products

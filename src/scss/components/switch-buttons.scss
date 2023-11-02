@@ -1,0 +1,30 @@
+.switch-buttons {
+	&__body {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+	&__button {
+		outline: none;
+		border-radius: 8px;
+		border: 1px solid #E5E7EA;
+		background-color: $color-white;
+		padding: 8px;
+		transition: background-color $duration-normal, border $duration-normal;
+
+		&.active {
+			background-color: $color-brand-purple;
+			border: 1px solid $color-brand-purple;
+			svg {
+				fill: $color-white;
+			}
+		}
+
+		svg {
+			width: 24px;
+			height: 24px;
+			fill: #7D8899;
+			transition: fill $duration-normal;
+		}
+	}
+}

@@ -522,7 +522,7 @@
 			display: grid;
 			grid-template-columns: repeat(4, 248px);
 			column-gap: 40px;
-			row-gap: 48px;
+			row-gap: 40px;
 
 			@include desktop-xl() {
 				grid-template-columns: repeat(3, 248px);

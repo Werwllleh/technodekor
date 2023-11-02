@@ -222,7 +222,9 @@
 .container
 	.category.page
 		+breadcrumbs({pagesBefore:['Главная'], pagesCurrent:'Каталог'})
-		h1.category__title.page--title.h1 Лакокрасочные материалы
+		.page--title
+			h1.category__title.h1 Лакокрасочные материалы
+			+switch-buttons()
 		.category__content.page--grid
 			.category__left.page--grid-left
 				.category__left-filter
@@ -233,17 +235,18 @@
 				.category__right-header
 					.category__catalog-cloud
 						+categories-cloud(categories)
-					.brand__right-header-text
-						.brand__right-header-info.page--header-text
-							p.text-16-long Краска — это общее название всех лакокрасочных материалов. Технодекор предлагает покупателям широчайший ассортимент красок в Чебоксарах.
-							p.text-16-long В нашем магазине вы можете купить краски практически для любых целей: от обновления внешнего вида мебели дома до антикоррозионной защиты промышленных конструкций.
-							p.text-16-long Воспользуйтесь фильтром слева для того, чтобы выбрать краску, наилучшим образом соответствующую вашим потребностям.
-						.brand__right-header-more
-							a.button-16 Подробнее
-							span
-								+svg("arrow")
-						.brand__right-header-hide
-							a.button-16 скрыть текст
+					.category__right-header-text.page--header-text
+							.text__block
+								p.text-16-long.text__block-hiddenText
+									| Краска — это общее название всех лакокрасочных материалов. Технодекор предлагает покупателям широчайший ассортимент красок в Чебоксарах.
+								p.text-16-long.text__block-hiddenText.active
+									| В нашем магазине вы можете купить краски практически для любых целей: от обновления внешнего вида мебели дома до антикоррозионной защиты промышленных конструкций.
+								p.text-16-long.text__block-hiddenText.active
+									| Воспользуйтесь фильтром слева для того, чтобы выбрать краску, наилучшим образом соответствующую вашим потребностям.
+								a.button-16.text__block-btn
+									p Подробнее
+									span
+										+svg("arrow")
 				.category__right-catalog.category__catalog.page-catalog
 					.category__catalog-header
 						.category__catalog-sort
@@ -252,14 +255,14 @@
 								option(value="Сначала дешевые") Сначала дешевые
 								option(value="Сначала дорогие") Сначала дорогие
 								option(value="Еще какие-то") Еще какие-то
-					.brand__catalog-filters-mobile-btn
+					.category__catalog-filters-mobile-btn.page-mobile-filter
 						+mobile-filter-btn()
-					.brand__catalog-content.catalog--grid
+					.category__catalog-content.catalog--grid.default--view
 						each product in products
-							.brand__catalog-card.catalog--card
+							.category__catalog-card.catalog--card
 								+product-card(product.discount, product.newStatus, product.image, product.name, product.price, product.oldPrice, product.link)
-					.brand__catalog-footer
-						.brand__catalog-footer-more
+					.category__catalog-footer
+						.category__catalog-footer-more
 							+show-more-btn()
-						.brand__catalog-footer-pagination
+						.category__catalog-footer-pagination
 							+pagination()

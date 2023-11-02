@@ -1,7 +1,8 @@
 .mobile--products-cards {
 	display: none;
 	flex-wrap: wrap;
-	gap: 16px;
+	column-gap: 16px;
+	row-gap: 36px;
 
 	@include tablet() {
 		display: flex;
@@ -16,12 +17,11 @@
 }
 
 .product-card {
-	position: relative;
 	display: flex;
-	flex-direction: column;
+	position: relative;
 	height: 100%;
 	padding: 24px;
-	transition: box-shadow $duration-normal, background-color $duration-normal, border-radius $duration-normal,;
+	transition: box-shadow $duration-normal, background-color $duration-normal, border-radius $duration-normal;
 
 	@include mobile() {
 		padding: 0;
@@ -36,7 +36,6 @@
 
 	&__body {
 		display: flex;
-		flex-direction: column;
 		gap: 16px;
 	}
 
@@ -139,5 +138,25 @@
 		@include mobile() {
 			padding: 8px 10px;
 		}
+	}
+}
+
+.card-column--view {
+	.product-card {
+		flex-direction: column;
+	}
+	.product-card__body {
+		flex-direction: column;
+	}
+
+}
+
+.card-row--view {
+
+	.product-card {
+		flex-direction: row;
+	}
+	.product-card__body {
+		flex-direction: row;
 	}
 }

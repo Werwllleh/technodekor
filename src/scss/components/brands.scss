@@ -1,9 +1,9 @@
-.brands {
-	margin: 0 !important;
+.brands-block {
+	//margin: 0 !important;
 
-	//&-title {
-	//	margin: 0 0 24px 0;
-	//}
+	&-title {
+		margin: 0 0 24px 0;
+	}
 
 	&__items {
 		display: flex;

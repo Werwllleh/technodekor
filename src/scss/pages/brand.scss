@@ -1,6 +1,9 @@
 .brand {
 
-	padding: 0 0 115px 0;
+
+	@include mobile() {
+		padding: 0 0 24px 0;
+	}
 
 	&__content {
 
@@ -59,30 +62,7 @@
 
 			&-info {
 
-				p {
-					&:not(:last-child) {
-						margin: 0 0 15px 0;
-					}
-				}
-			}
 
-			&-more {
-				margin: 8px 0 0 0;
-				display: inline-flex;
-				align-items: center;
-				gap: 8px;
-
-				a {
-					color: $color-brand-purple;
-				}
-				span {
-					svg {
-						width: 10px;
-						height: 10px;
-						transform: rotate(-90deg);
-						fill: #C5CAD3;
-					}
-				}
 			}
 
 			&-hide {
@@ -115,12 +95,7 @@
 			}
 		}
 		&-filters-mobile-btn {
-			display: none;
-			margin: 0 0 24px 0;
 
-			@include desktop() {
-				display: block;
-			}
 		}
 		&-sort {
 			max-width: 320px;
@@ -131,7 +106,7 @@
 			}
 		}
 		&-content {
-			margin: 0 0 32px 0;
+
 		}
 		&-card {
 

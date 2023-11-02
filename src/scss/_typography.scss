@@ -8,9 +8,9 @@
 	@include laptop() {
 		font-size: 32px;
 	}
-	@include mobile() {
-		font-size: 18px;
-	}
+	//@include mobile() {
+	//	font-size: 18px;
+	//}
 }
 
 .h2 {

@@ -5,11 +5,15 @@
 	opacity: 0;
 	left: -999%;
 	width: 360px;
-	height: 100vh;
+	height: 100%;
 	overflow-y: hidden;
 	z-index: 45;
 	background-color: $color-white;
 	transition: left $duration-normal, opacity $duration-normal;
+
+	@include mobile() {
+		width: 100%;
+	}
 
 	&.opened {
 		opacity: 1;

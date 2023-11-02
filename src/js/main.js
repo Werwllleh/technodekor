@@ -2,6 +2,7 @@
 import './vendor';
 import './helpers';
 import './sliders';
+import './general';
 import './components/social';
 
 import './components/catalog-button';
@@ -14,6 +15,7 @@ import './components/range-slider';
 import './components/modals';
 import './components/mobile-filter-btn';
 import './components/categories-cloud';
+import './components/switch-buttons';
 
 
 import lazyLoading from './modules/lazyLoading';

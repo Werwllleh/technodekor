@@ -2,14 +2,14 @@
 
 mixin brands(data)
 	//brands
-	.brands&attributes(attributes)
-		.brands__items
+	.brands-block&attributes(attributes)
+		.brands-block__items
 			each brand in data
-				a.brands__item(href= brand.link)
-					.brands__item-logo
+				a.brands-block__item(href= brand.link)
+					.brands-block__item-logo
 						img(src="./images/brands/" + brand.logo alt= brand.name)
-					.brands__item-name.text-14= brand.name
-			a.brands__all-brands.brands__item(href='./#')
+					.brands-block__item-name.text-14= brand.name
+			a.brands-block__all-brands.brands-block__item(href='./#')
 				p.button-16 Все бренды
 				span.h3 82
 					+svg("arrow")
