@@ -13,7 +13,7 @@
 		<meta name="twitter:title" content="Каталог">
 		<meta name="twitter:description" content="Каталог">
 		<title>Каталог</title>
-		<link rel="stylesheet" href="./css/main.css?v=1698915910060">
+		<link rel="stylesheet" href="./css/main.css?v=1698957391284">
 	</head>
 	<body>
 		<!--header-->
@@ -371,7 +371,24 @@
 							</li>
 						</ul>
 					</div>
-					<h1 class="category__title page--title h1">Лакокрасочные материалы</h1>
+					<div class="page--title">
+						<h1 class="category__title h1">Лакокрасочные материалы</h1>
+						<!--brands-->
+						<div class="switch-buttons">
+							<div class="switch-buttons__body">
+								<button class="switch-buttons__button active" data-view="view1">
+									<svg>
+										<use xlink:href="./images/sprites.svg#view_1"></use>
+									</svg>
+								</button>
+								<button class="switch-buttons__button" data-view="view2">
+									<svg>
+										<use xlink:href="./images/sprites.svg#view_2"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
 					<div class="category__content page--grid">
 						<div class="category__left page--grid-left">
 							<div class="category__left-filter">
@@ -958,17 +975,16 @@
 										</div>
 									</div>
 								</div>
-								<div class="brand__right-header-text">
-									<div class="brand__right-header-info page--header-text">
-										<p class="text-16-long">Краска — это общее название всех лакокрасочных материалов. Технодекор предлагает покупателям широчайший ассортимент красок в Чебоксарах.</p>
-										<p class="text-16-long">В нашем магазине вы можете купить краски практически для любых целей: от обновления внешнего вида мебели дома до антикоррозионной защиты промышленных конструкций.</p>
-										<p class="text-16-long">Воспользуйтесь фильтром слева для того, чтобы выбрать краску, наилучшим образом соответствующую вашим потребностям.</p>
+								<div class="category__right-header-text page--header-text">
+									<div class="text__block">
+										<p class="text-16-long text__block-hiddenText">Краска — это общее название всех лакокрасочных материалов. Технодекор предлагает покупателям широчайший ассортимент красок в Чебоксарах.</p>
+										<p class="text-16-long text__block-hiddenText active">В нашем магазине вы можете купить краски практически для любых целей: от обновления внешнего вида мебели дома до антикоррозионной защиты промышленных конструкций.</p>
+										<p class="text-16-long text__block-hiddenText active">Воспользуйтесь фильтром слева для того, чтобы выбрать краску, наилучшим образом соответствующую вашим потребностям.</p><a class="button-16 text__block-btn">
+											<p>Подробнее</p><span>
+												<svg>
+													<use xlink:href="./images/sprites.svg#arrow"></use>
+												</svg></span></a>
 									</div>
-									<div class="brand__right-header-more"><a class="button-16">Подробнее</a><span>
-											<svg>
-												<use xlink:href="./images/sprites.svg#arrow"></use>
-											</svg></span></div>
-									<div class="brand__right-header-hide"><a class="button-16">скрыть текст</a></div>
 								</div>
 							</div>
 							<div class="category__right-catalog category__catalog page-catalog">
@@ -982,7 +998,7 @@
 										</select>
 									</div>
 								</div>
-								<div class="brand__catalog-filters-mobile-btn">
+								<div class="category__catalog-filters-mobile-btn page-mobile-filter">
 									<!--mobile-filter-btn-->
 									<div class="mobile-filter-btn">
 										<div class="mobile-filter-btn__body"><a class="mobile-filter-btn__left"><span>
@@ -1001,8 +1017,8 @@
 										</div>
 									</div>
 								</div>
-								<div class="brand__catalog-content catalog--grid">
-									<div class="brand__catalog-card catalog--card">
+								<div class="category__catalog-content catalog--grid default--view">
+									<div class="category__catalog-card catalog--card">
 										<!--product-card-->
 										<div class="product-card"><a class="product-card__body" href="#">
 												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
@@ -1018,7 +1034,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="brand__catalog-card catalog--card">
+									<div class="category__catalog-card catalog--card">
 										<!--product-card-->
 										<div class="product-card"><a class="product-card__body" href="#">
 												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
@@ -1033,7 +1049,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="brand__catalog-card catalog--card">
+									<div class="category__catalog-card catalog--card">
 										<!--product-card-->
 										<div class="product-card"><a class="product-card__body" href="#">
 												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
@@ -1048,7 +1064,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="brand__catalog-card catalog--card">
+									<div class="category__catalog-card catalog--card">
 										<!--product-card-->
 										<div class="product-card"><a class="product-card__body" href="#">
 												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
@@ -1064,7 +1080,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="brand__catalog-card catalog--card">
+									<div class="category__catalog-card catalog--card">
 										<!--product-card-->
 										<div class="product-card"><a class="product-card__body" href="#">
 												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
@@ -1079,7 +1095,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="brand__catalog-card catalog--card">
+									<div class="category__catalog-card catalog--card">
 										<!--product-card-->
 										<div class="product-card"><a class="product-card__body" href="#">
 												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
@@ -1094,7 +1110,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="brand__catalog-card catalog--card">
+									<div class="category__catalog-card catalog--card">
 										<!--product-card-->
 										<div class="product-card"><a class="product-card__body" href="#">
 												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
@@ -1110,7 +1126,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="brand__catalog-card catalog--card">
+									<div class="category__catalog-card catalog--card">
 										<!--product-card-->
 										<div class="product-card"><a class="product-card__body" href="#">
 												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
@@ -1125,7 +1141,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="brand__catalog-card catalog--card">
+									<div class="category__catalog-card catalog--card">
 										<!--product-card-->
 										<div class="product-card"><a class="product-card__body" href="#">
 												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
@@ -1140,7 +1156,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="brand__catalog-card catalog--card">
+									<div class="category__catalog-card catalog--card">
 										<!--product-card-->
 										<div class="product-card"><a class="product-card__body" href="#">
 												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
@@ -1156,7 +1172,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="brand__catalog-card catalog--card">
+									<div class="category__catalog-card catalog--card">
 										<!--product-card-->
 										<div class="product-card"><a class="product-card__body" href="#">
 												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
@@ -1171,7 +1187,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="brand__catalog-card catalog--card">
+									<div class="category__catalog-card catalog--card">
 										<!--product-card-->
 										<div class="product-card"><a class="product-card__body" href="#">
 												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
@@ -1187,8 +1203,8 @@
 										</div>
 									</div>
 								</div>
-								<div class="brand__catalog-footer">
-									<div class="brand__catalog-footer-more">
+								<div class="category__catalog-footer">
+									<div class="category__catalog-footer-more">
 										<!--show-more-btn--><a class="show-more-btn">
 											<div class="show-more-btn__body"><span>
 													<svg>
@@ -1197,7 +1213,7 @@
 												<p class="text-14">Показать ещё</p>
 											</div></a>
 									</div>
-									<div class="brand__catalog-footer-pagination">
+									<div class="category__catalog-footer-pagination">
 										<!--product-card-->
 										<div class="pagination">
 											<ul class="pagination__list">
@@ -1888,7 +1904,7 @@
 				</div>
 			</div>
 		</div>
-		<script src="./js/vendor.js?v=1698915910063"></script>
-		<script src="./js/main.js?v=1698915910063"></script>
+		<script src="./js/vendor.js?v=1698957391288"></script>
+		<script src="./js/main.js?v=1698957391288"></script>
 	</body>
 </html>
