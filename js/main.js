@@ -295,6 +295,10 @@ document.addEventListener('DOMContentLoaded', function () {
   var menuTopMore = document.querySelector('.menu__more');
   var menuMobileCLose = document.querySelector('.header__menu-header-close');
   var menuMoreCLose = document.querySelector('.menu__more-close');
+  var headerMore = document.querySelector('.header-button-more');
+  var modalHeaderMore = document.querySelector('.modal-header-more');
+  var modalHeaderMoreButtons = document.querySelectorAll('.modal-header-more__footer-about-header');
+  var modalHeaderMoreCitySelect = document.querySelector('.city--select');
   menuButton.addEventListener('click', function (e) {
     e.preventDefault();
     menuButton.classList.toggle('active');
@@ -327,6 +331,40 @@ document.addEventListener('DOMContentLoaded', function () {
   menuMoreCLose.addEventListener('click', function () {
     menuTopMore.classList.remove('active');
     menuTopMoreButton.classList.remove('active');
+  });
+  headerMore.addEventListener('click', function () {
+    modalHeaderMore.classList.add('active');
+    document.documentElement.style.overflow = "hidden";
+  });
+  modalHeaderMoreButtons.forEach(function (btn) {
+    var bottomBlock = btn.parentNode.children[1];
+    var list = btn.parentNode.children[1].children[0];
+    btn.addEventListener('click', function (e) {
+      btn.classList.toggle('active');
+      if (btn.classList.contains('active')) {
+        bottomBlock.style.maxHeight = "".concat(list.clientHeight, "px");
+      } else {
+        bottomBlock.style.maxHeight = 0;
+      }
+      if (btn.classList.contains('active') && btn.classList.contains('city--select')) {
+        var cityList = btn.parentNode.children[1].children[0];
+        var _loop = function _loop() {
+          var city = cityList.children[i].children[0];
+          var titleBtn = btn.children[0].children[0];
+          city.addEventListener('click', function (e) {
+            e.preventDefault();
+            cityList.children.forEach(function (li) {
+              li.classList.remove('active');
+            });
+            city.parentNode.classList.add('active');
+            titleBtn.innerHTML = city.innerHTML;
+          });
+        };
+        for (var i = 0; i < cityList.children.length; i++) {
+          _loop();
+        }
+      }
+    });
   });
 });
 
@@ -376,21 +414,25 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
   var modalCloseButtons = document.querySelectorAll('.modal__close');
   var bg = document.querySelector('.modal-bg');
-  modalCloseButtons.forEach(function (modalCloseButton) {
-    modalCloseButton.addEventListener('click', function (e) {
-      modalCloseButton.closest('.modal').classList.remove('opened');
-      // document.html.classList.remove('noscroll');
-      // document.html.style.overflowY = 'auto';
-      document.documentElement.style.overflowY = "auto";
-      bg.classList.remove('active');
+  modalCloseButtons.forEach(function (btn) {
+    var modalBody = btn.parentNode.parentNode.parentNode;
+    btn.addEventListener('click', function () {
+      if (modalBody.classList.contains('active')) {
+        modalBody.classList.remove('active');
+        document.documentElement.style.overflow = "auto";
+      }
     });
-    bg.addEventListener('click', function (e) {
-      // document.html.classList.remove('noscroll');
-      // document.html.style.overflowY = 'auto';
-      document.documentElement.style.overflowY = "auto";
-      modalCloseButton.closest('.modal').classList.remove('opened');
-      bg.classList.remove('active');
-    });
+    // modalCloseButton.addEventListener('click', (e) => {
+    // 	modalCloseButton.closest('.modal').classList.remove('opened')
+    // 	document.documentElement.style.overflowY = "auto";
+    // 	bg.classList.remove('active');
+    // })
+    //
+    // bg.addEventListener( 'click', (e) => {
+    // 	document.documentElement.style.overflowY = "auto";
+    // 	modalCloseButton.closest('.modal').classList.remove('opened')
+    // 	bg.classList.remove('active');
+    // })
   });
 });
 
