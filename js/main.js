@@ -297,8 +297,42 @@ document.addEventListener('DOMContentLoaded', function () {
   var menuMoreCLose = document.querySelector('.menu__more-close');
   var headerMore = document.querySelector('.header-button-more');
   var modalHeaderMore = document.querySelector('.modal-header-more');
+  var headerSelectCity = document.querySelector('.header__city');
+  var headerSelectPhone = document.querySelector('.header__phone-arrow');
   var modalHeaderMoreButtons = document.querySelectorAll('.modal-header-more__footer-about-header');
   var modalHeaderMoreCitySelect = document.querySelector('.city--select');
+  headerSelectCity.addEventListener('click', function (e) {
+    var cityTitle = headerSelectCity.children[0];
+    var cityListBlock = headerSelectCity.children[2];
+    var cityList = cityListBlock.children[0].children;
+    headerSelectCity.classList.toggle('active');
+    if (headerSelectCity.classList.contains('active')) {
+      cityListBlock.classList.add('show');
+      cityList.forEach(function (item) {
+        item.addEventListener('click', function (e) {
+          e.stopPropagation();
+          cityList.forEach(function (li) {
+            li.classList.remove('active');
+          });
+          item.classList.add('active');
+          cityTitle.innerHTML = item.innerHTML;
+          headerSelectCity.classList.remove('active');
+          cityListBlock.classList.remove('show');
+        });
+      });
+    } else {
+      cityListBlock.classList.remove('show');
+    }
+  });
+  headerSelectPhone.addEventListener('click', function () {
+    var phoneListBlock = headerSelectPhone.parentNode.children[2];
+    headerSelectPhone.classList.toggle('active');
+    if (headerSelectPhone.classList.contains('active')) {
+      phoneListBlock.classList.add('show');
+    } else {
+      phoneListBlock.classList.remove('show');
+    }
+  });
   menuButton.addEventListener('click', function (e) {
     e.preventDefault();
     menuButton.classList.toggle('active');
@@ -396,7 +430,7 @@ document.addEventListener('DOMContentLoaded', function () {
     mobileFilterBtn.addEventListener('click', function (e) {
       e.preventDefault();
       document.documentElement.style.overflowY = "hidden";
-      filter.classList.add('opened');
+      filter.classList.add('active');
       bg.classList.add('active');
     });
   });
@@ -420,6 +454,9 @@ document.addEventListener('DOMContentLoaded', function () {
       if (modalBody.classList.contains('active')) {
         modalBody.classList.remove('active');
         document.documentElement.style.overflow = "auto";
+        if (bg.classList.contains('active')) {
+          bg.classList.remove('active');
+        }
       }
     });
     // modalCloseButton.addEventListener('click', (e) => {
@@ -428,11 +465,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // 	bg.classList.remove('active');
     // })
     //
-    // bg.addEventListener( 'click', (e) => {
-    // 	document.documentElement.style.overflowY = "auto";
-    // 	modalCloseButton.closest('.modal').classList.remove('opened')
-    // 	bg.classList.remove('active');
-    // })
+    bg.addEventListener('click', function (e) {
+      if (bg.classList.contains('active')) {
+        document.documentElement.style.overflowY = "auto";
+        btn.closest('.modal').classList.remove('active');
+        bg.classList.remove('active');
+      }
+    });
   });
 });
 
@@ -557,46 +596,45 @@ if (document.querySelector('[data-social]')) {
 /***/ (function(module, exports) {
 
 document.addEventListener('DOMContentLoaded', function () {
-  var view1 = 'default--view';
-  var view2 = 'row--view';
   var switchButtons = document.querySelectorAll('.switch-buttons__button');
   var catalogs = document.querySelectorAll('.catalog--grid');
   switchButtons.forEach(function (switchButton, index) {
-    switchButton.addEventListener('click', function () {
-      if (switchButton.classList.contains('active')) {
-        switchButton.classList.remove('active');
-        // Если кнопка была активной, делаем другую активной
+    window.addEventListener('resize', function (e) {
+      var windowWidth = e.currentTarget.innerWidth;
+      if (windowWidth <= 1200) {
+        switchButtons[0].classList.add('active');
+        switchButtons[1].classList.remove('active');
+        catalogs.forEach(function (catalog) {
+          if (catalog.classList.contains('row--view')) {
+            catalog.classList.remove('row--view');
+            catalog.classList.add('default--view');
+          }
+        });
+      }
+    });
+    switchButton.addEventListener('click', function (e) {
+      if (e.target.getAttribute('data-view') === 'default--view') {
+        e.target.classList.add('active');
         var otherButton = switchButtons[(index + 1) % switchButtons.length];
-        otherButton.classList.add('active');
-      } else {
-        switchButton.classList.add('active');
-        // Если кнопка была неактивной, делаем другую неактивной
+        otherButton.classList.remove('active');
+        catalogs.forEach(function (catalog) {
+          if (catalog.classList.contains('row--view')) {
+            catalog.classList.remove('row--view');
+            catalog.classList.add('default--view');
+          }
+        });
+      }
+      if (e.target.getAttribute('data-view') === 'row--view') {
+        e.target.classList.add('active');
         var _otherButton = switchButtons[(index + 1) % switchButtons.length];
         _otherButton.classList.remove('active');
-      }
-      catalogs.forEach(function (catalog) {
-        var catalogCards = catalog.children;
-        var switchCatalogCardsView = function switchCatalogCardsView(view) {
-          for (var i = 0; i < catalogCards.length; i++) {
-            if (view === view1) {
-              catalogCards[i].classList.add('card-column--view');
-              catalogCards[i].classList.remove('card-row--view');
-            } else {
-              catalogCards[i].classList.remove('card-column--view');
-              catalogCards[i].classList.add('card-row--view');
-            }
+        catalogs.forEach(function (catalog) {
+          if (catalog.classList.contains('default--view')) {
+            catalog.classList.remove('default--view');
+            catalog.classList.add('row--view');
           }
-        };
-        if (catalog.classList.contains(view1)) {
-          catalog.classList.remove(view1);
-          catalog.classList.add(view2);
-          switchCatalogCardsView(view2);
-        } else {
-          catalog.classList.add(view1);
-          catalog.classList.remove(view2);
-          switchCatalogCardsView(view1);
-        }
-      });
+        });
+      }
     });
   });
 });
