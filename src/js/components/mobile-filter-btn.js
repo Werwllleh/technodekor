@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		mobileFilterBtn.addEventListener('click', (e) => {
 			e.preventDefault();
 			document.documentElement.style.overflowY = "hidden";
-			filter.classList.add('opened');
+			filter.classList.add('active');
 			bg.classList.add('active');
 		});
 	});

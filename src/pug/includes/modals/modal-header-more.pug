@@ -1,0 +1,64 @@
+// Modal Filter
+#modal-header-more.modal.modal-header-more
+	.modal-header-more__body
+		.modal-header-more__header
+			.modal-header-more__title
+				h3.h3 Личный кабинет
+			span.modal__close
+				+svg("close")
+		.modal-header-more__info
+			.modal-header-more__info-buttons
+				a.modal-header-more__info-button(href="#")
+					span
+						+svg("user")
+					p.text-14 Вход и регистрация
+				a.modal-header-more__info-button(href="#")
+					span
+						+svg("heart")
+					p.text-14 Избранное
+					.modal-header-more__info-button-counter
+						span.h5 5
+				a.modal-header-more__info-button(href="#")
+					span
+						+svg("compare")
+					p.text-14 Список на сравнение
+					.modal-header-more__info-button-counter
+						span.h5 5
+		.modal-header-more__footer
+			.modal-header-more__footer-about
+				.modal-header-more__footer-about-header
+					.modal-header-more__footer-about-header-text
+						a.h4(href="tel:+78352551503") +7 (8352) 55-15-03
+						span.text-14 Бесплатно по России
+					span.modal-header-more__footer-about-header-arrow
+						+svg("arrow")
+				.modal-header-more__footer-about-bottom
+					ul.modal-header-more__footer-about-list
+						li
+							a.h4(href="tel:+79271551522") +7 (927) 155-15-22
+							span.text-14 В Чебоксарах
+						li
+							a.h4(href="tel:+78003551590") +7 (800) 355-15-90
+							span.text-14 Склад
+			.modal-header-more__footer-about
+				.modal-header-more__footer-about-header.city--select
+					.modal-header-more__footer-about-header-text
+						a.h4 Чебоксары
+						span.text-14 Бесплатно по России
+					span.modal-header-more__footer-about-header-arrow
+						+svg("arrow")
+				.modal-header-more__footer-about-bottom
+					ul.modal-header-more__footer-about-list
+						li
+							a.h4 Абакан
+							span
+						li
+							a.h4 Владимир
+							span
+						li
+							a.h4 Кострома
+							span
+						li
+							a.h4 Ярославль
+							span
+

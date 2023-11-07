@@ -1,4 +1,9 @@
 .switch-buttons {
+
+	@media (max-width: 1200px) {
+		display: none;
+	}
+
 	&__body {
 		display: flex;
 		align-items: center;
@@ -21,6 +26,7 @@
 		}
 
 		svg {
+			pointer-events: none;
 			width: 24px;
 			height: 24px;
 			fill: #7D8899;

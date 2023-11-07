@@ -442,6 +442,12 @@ mixin header()
 							p.header__city-name Чебоксары
 							span.header__city-arrow
 								+svg("arrow")
+							.header__city-choise
+								ul.header__city-choise-list
+									li.text-14 Абакан
+									li.text-14 Владимир
+									li.text-14 Кострома
+									li.text-14 Ярославль
 						nav.header__nav
 							ul.header__nav-list
 								li.header__nav-elem
@@ -461,6 +467,14 @@ mixin header()
 								span Бесплатно по России
 							.header__phone-arrow
 								+svg("arrow")
+							.header__phone-choise
+								ul.header__phone-choise-list
+									li
+										a.h4(href="tel:+78352551503") +7 (8352) 55-15-03
+										span.text-14 В Чебоксарах
+									li
+										a.h4(href="tel:+78003551590") +7 (800) 355-15-90
+										span.text-14 Склад
 						a.header__user(href="#")
 							.header__user-logo
 								+svg("user")
@@ -494,4 +508,6 @@ mixin header()
 							a.header-button.header-button-more
 								.header-button__icon
 									+svg('more')
+								.header-button__counter
+									span.h5 10
 			+header-menu()

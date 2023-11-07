@@ -1,6 +1,6 @@
 mixin brand-mini-card(name, about, count, image, link, statusNew, statusSale)
-	//product-card
-	.brand-mini-card&attributes(attributes)
+	//product-mini-card
+	a.brand-mini-card&attributes(attributes)(href= link)
 		.brand-mini-card__body
 			.brand-mini-card__image
 				img(src="./images/brands/" + image + ".png", alt=name)
@@ -11,6 +11,6 @@ mixin brand-mini-card(name, about, count, image, link, statusNew, statusSale)
 			.brand-mini-card__column
 				h3.brand-mini-card__name.h3= name
 				p.brand-mini-card__about.text-16= about
-				a.brand-mini-card__count(href= link)
+				.brand-mini-card__count
 					p.button-16= count
 					+svg("arrow-crumbs")

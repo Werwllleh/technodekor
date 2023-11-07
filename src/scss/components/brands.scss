@@ -76,7 +76,7 @@
 
 .brands--menu {
 
-	.brands__items {
+	.brands-block__items {
 		flex-direction: column;
 
 		@media (max-width: 1200px) {
@@ -85,7 +85,7 @@
 		}
 	}
 
-	.brands__item {
+	.brands-block__item {
 		flex: 0 0 72px;
 
 		@media (max-width: 1200px) {
@@ -96,7 +96,7 @@
 		}
 	}
 
-	.brands__all-brands {
+	.brands-block__all-brands {
 
 		p {
 			color: $color-txt-primary;

@@ -53,24 +53,63 @@
 	}
 }
 
-.catalog--grid {
-	//display: grid;
-	//grid-template-columns: repeat(3, 1fr);
-	//column-gap: 40px;
-	//row-gap: 32px;
-	//margin: 0 0 32px 0;
-	//
-	//@media (min-width: 1026px) and (max-width: 1650px) {
-	//	grid-template-columns: repeat(2, 1fr);
+.default--view {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 40px;
+	row-gap: 32px;
+	margin: 0 0 32px 0;
+
+	@media (min-width: 1026px) and (max-width: 1650px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include desktop() {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	//@include tablet() {
+	//	grid-template-columns: repeat(1, 400px);
 	//}
-	//
-	//@include desktop() {
-	//	grid-template-columns: repeat(2, 1fr);
-	//}
-	//
-	////@include tablet() {
-	////	grid-template-columns: repeat(1, 400px);
-	////}
+}
+
+.row--view {
+	display: grid;
+
+	@media (min-width: 1200px) {
+		grid-template-columns: 1fr;
+		row-gap: 32px;
+	}
+
+	@include desktop() {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.catalog--card {
+
+		.product-card {
+			flex-direction: row;
+			justify-content: space-between;
+
+			.product-card__body {
+				flex-direction: row;
+
+				.product-card__name p {
+					font-size: 18px;
+					font-style: normal;
+					font-weight: 600;
+					line-height: 24px; /* 133.333% */
+				}
+
+				.product-card__image {
+					max-width: 180px;
+					max-height: 180px;
+					object-fit: contain;
+				}
+
+			}
+		}
+	}
 }
 
 .catalog--grid-default {

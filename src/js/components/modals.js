@@ -4,21 +4,30 @@ document.addEventListener('DOMContentLoaded', () => {
 	const bg = document.querySelector('.modal-bg');
 
 
-	modalCloseButtons.forEach((modalCloseButton) => {
-		modalCloseButton.addEventListener('click', (e) => {
-			modalCloseButton.closest('.modal').classList.remove('opened')
-			// document.html.classList.remove('noscroll');
-			// document.html.style.overflowY = 'auto';
-			document.documentElement.style.overflowY = "auto";
-			bg.classList.remove('active');
-		})
+	modalCloseButtons.forEach((btn) => {
+		let modalBody = btn.parentNode.parentNode.parentNode;
+		btn.addEventListener('click', () => {
+			if (modalBody.classList.contains('active')) {
+				modalBody.classList.remove('active');
+				document.documentElement.style.overflow = "auto";
+				if (bg.classList.contains('active')) {
+					bg.classList.remove('active');
+				}
+			}
 
+		})
+		// modalCloseButton.addEventListener('click', (e) => {
+		// 	modalCloseButton.closest('.modal').classList.remove('opened')
+		// 	document.documentElement.style.overflowY = "auto";
+		// 	bg.classList.remove('active');
+		// })
+		//
 		bg.addEventListener( 'click', (e) => {
-			// document.html.classList.remove('noscroll');
-			// document.html.style.overflowY = 'auto';
-			document.documentElement.style.overflowY = "auto";
-			modalCloseButton.closest('.modal').classList.remove('opened')
-			bg.classList.remove('active');
+			if (bg.classList.contains('active')) {
+				document.documentElement.style.overflowY = "auto";
+				btn.closest('.modal').classList.remove('active')
+				bg.classList.remove('active');
+			}
 		})
 	})
 
