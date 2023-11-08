@@ -1,19 +1,20 @@
-<!DOCTYPE html>
+
+<!-- - breadcrumbs = {pagesBefore:['Главная', 'wefwef'], pagesCurrent:'Бренды'}--><!DOCTYPE html>
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width">
-		<meta name="description" content="Каталог">
+		<meta name="description" content="Карточка товара">
 		<meta property="og:type" content="website">
 		<meta property="og:locale" content="ru_RU">
-		<meta property="og:title" content="Каталог">
-		<meta property="og:description" content="Каталог">
+		<meta property="og:title" content="Карточка товара">
+		<meta property="og:description" content="Карточка товара">
 		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content="Каталог">
-		<meta name="twitter:description" content="Каталог">
-		<title>Каталог</title>
-		<link rel="stylesheet" href="./css/main.css?v=1699444930781">
+		<meta name="twitter:title" content="Карточка товара">
+		<meta name="twitter:description" content="Карточка товара">
+		<title>Карточка товара</title>
+		<link rel="stylesheet" href="./css/main.css?v=1699454516610">
 	</head>
 	<body>
 		<!--header-->
@@ -351,889 +352,244 @@
 		</div>
 		<main class="main">
 			<div class="container">
-				<div class="category page">
+				<div class="product">
 					<!-- Breadcrumbs-->
 					<div class="breadcrumbs">
 						<ul class="breadcrumbs__list">
 							<li class="breadcrumbs__item button-14">
-								<!-- if breadcrumb is single--><a class="breadcrumbs__link" href="#" title="[&quot;Главная&quot;]">Главная</a>
+								<!-- if breadcrumb is single--><a class="breadcrumbs__link" href="#" title="Главная">Главная</a>
 								<div class="breadcrumbs__devider"></div>
 							</li>
 							<li class="breadcrumbs__item button-14">
 								<!-- if breadcrumb is single--><a class="breadcrumbs__link" href="#" title="Каталог">Каталог</a>
 								<div class="breadcrumbs__devider"></div>
 							</li>
+							<li class="breadcrumbs__item button-14"><span class="breadcrumbs__current">Резиновые краски</span></li>
 						</ul>
 					</div>
-					<div class="page--title">
-						<h1 class="category__title h1">Лакокрасочные материалы</h1>
-						<!--brands-->
-						<div class="switch-buttons">
-							<div class="switch-buttons__body">
-								<button class="switch-buttons__button active" data-view="default--view">
-									<svg>
-										<use xlink:href="./images/sprites.svg#view_1"></use>
-									</svg>
-								</button>
-								<button class="switch-buttons__button" data-view="row--view">
-									<svg>
-										<use xlink:href="./images/sprites.svg#view_2"></use>
-									</svg>
-								</button>
-							</div>
-						</div>
-					</div>
-					<div class="category__content page--grid">
-						<div class="category__left page--grid-left">
-							<div class="category__left-filter">
-								<!--filter-->
-								<div class="filter">
-									<div class="filter__body">
-										<form>
-											<div class="filter__body-category filter__category">
-												<div class="filter__category-header">
-													<div class="filter__category-title"><span>
-															<svg>
-																<use xlink:href="./images/sprites.svg#arrow"></use>
-															</svg></span>
-														<h4 class="h4">Цена, ₽</h4>
-													</div>
-													<div class="filter__category-separator"></div>
-												</div>
-												<div class="filter__category-data">
-													<div class="filter__category-slider">
-														<!--range-slider-->
-														<div class="range-slider">
-															<div class="range-slider__wrapper">
-																<div class="range-slider__priceInput">
-																	<div class="range-slider__field text-14"><span>от</span>
-																		<input class="range-slider__field-minInput" type="number" value="100"/>
-																	</div>
-																	<div class="range-slider__separator"></div>
-																	<div class="range-slider__field text-14"><span>до</span>
-																		<input class="range-slider__field-maxInput" type="number" value="56000"/>
-																	</div>
-																</div>
-																<div class="range-slider__slider">
-																	<div class="range-slider__slider-progress"></div>
-																</div>
-																<div class="range-slider__rangeInput">
-																	<input class="range-slider__rangeInput-minRange" type="range" min="0" max="56000" value="100" step="10"/>
-																	<input class="range-slider__rangeInput-maxRange" type="range" min="0" max="56000" value="56000" step="10"/>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="filter__category-separator"></div>
-												</div>
-											</div>
-											<div class="filter__body-category filter__category">
-												<div class="filter__category-header">
-													<div class="filter__category-title"><span>
-															<svg>
-																<use xlink:href="./images/sprites.svg#arrow"></use>
-															</svg></span>
-														<h4 class="h4">Тип ЛКМ</h4>
-													</div>
-													<div class="filter__category-separator"></div>
-												</div>
-												<div class="filter__category-data">
-													<ul class="filter__category-list">
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Тип ЛКМ" value="Антисептик"/><span class="text-14">Антисептик</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">110</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Тип ЛКМ" value="Аэрозоль"/><span class="text-14">Аэрозоль</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">87</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Тип ЛКМ" value="Воск"/><span class="text-14">Воск</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">56</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Тип ЛКМ" value="Гель"/><span class="text-14">Гель</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">22</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Тип ЛКМ" value="Герметик"/><span class="text-14">Герметик</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">16</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Тип ЛКМ" value="Гидроизоляция"/><span class="text-14">Гидроизоляция</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">4</span></div>
-														</li>
-													</ul>
-													<div class="filter__category-link"><a class="button-14" href="#">Посмотреть все</a></div>
-													<div class="filter__category-separator"></div>
-												</div>
-											</div>
-											<div class="filter__body-category filter__category">
-												<div class="filter__category-header">
-													<div class="filter__category-title"><span>
-															<svg>
-																<use xlink:href="./images/sprites.svg#arrow"></use>
-															</svg></span>
-														<h4 class="h4">Материал обработки</h4>
-													</div>
-													<div class="filter__category-separator"></div>
-												</div>
-												<div class="filter__category-data">
-													<ul class="filter__category-list">
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Материал обработки" value="Антисептик"/><span class="text-14">Антисептик</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">110</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Материал обработки" value="Аэрозоль"/><span class="text-14">Аэрозоль</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">87</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Материал обработки" value="Воск"/><span class="text-14">Воск</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">56</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Материал обработки" value="Гель"/><span class="text-14">Гель</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">22</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Материал обработки" value="Герметик"/><span class="text-14">Герметик</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">16</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Материал обработки" value="Гидроизоляция"/><span class="text-14">Гидроизоляция</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">4</span></div>
-														</li>
-													</ul>
-													<div class="filter__category-link"><a class="button-14" href="#">Посмотреть все</a></div>
-													<div class="filter__category-separator"></div>
-												</div>
-											</div>
-											<div class="filter__body-category filter__category">
-												<div class="filter__category-header">
-													<div class="filter__category-title"><span>
-															<svg>
-																<use xlink:href="./images/sprites.svg#arrow"></use>
-															</svg></span>
-														<h4 class="h4">Бренд</h4>
-													</div>
-													<div class="filter__category-separator"></div>
-												</div>
-												<div class="filter__category-data">
-													<ul class="filter__category-list">
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Бренд" value="Антисептик"/><span class="text-14">Антисептик</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">110</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Бренд" value="Аэрозоль"/><span class="text-14">Аэрозоль</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">87</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Бренд" value="Воск"/><span class="text-14">Воск</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">56</span></div>
-														</li>
-													</ul>
-													<div class="filter__category-separator"></div>
-												</div>
-											</div>
-											<div class="filter__body-category filter__category">
-												<div class="filter__category-header">
-													<div class="filter__category-title"><span>
-															<svg>
-																<use xlink:href="./images/sprites.svg#arrow"></use>
-															</svg></span>
-														<h4 class="h4">Марка</h4>
-													</div>
-													<div class="filter__category-separator"></div>
-												</div>
-												<div class="filter__category-data">
-													<ul class="filter__category-list">
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="radio" name="Марка" value="Все"/><span class="text-14">Все</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">110</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="radio" name="Марка" value="3 в 1"/><span class="text-14">3 в 1</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">87</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="radio" name="Марка" value="БТ"/><span class="text-14">БТ</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">56</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="radio" name="Марка" value="ВД АК"/><span class="text-14">ВД АК</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">22</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="radio" name="Марка" value="ГФ"/><span class="text-14">ГФ</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">16</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="radio" name="Марка" value="КО"/><span class="text-14">КО</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">4</span></div>
-														</li>
-													</ul>
-													<div class="filter__category-link"><a class="button-14" href="#">Посмотреть все</a></div>
-													<div class="filter__category-separator"></div>
-												</div>
-											</div>
-											<div class="filter__body-category filter__category">
-												<div class="filter__category-header">
-													<div class="filter__category-title"><span>
-															<svg>
-																<use xlink:href="./images/sprites.svg#arrow"></use>
-															</svg></span>
-														<h4 class="h4">Основа краски</h4>
-													</div>
-													<div class="filter__category-separator"></div>
-												</div>
-												<div class="filter__category-data">
-													<ul class="filter__category-list">
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Основа краски" value="Антисептик"/><span class="text-14">Антисептик</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">110</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Основа краски" value="Аэрозоль"/><span class="text-14">Аэрозоль</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">87</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Основа краски" value="Воск"/><span class="text-14">Воск</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">56</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Основа краски" value="Гель"/><span class="text-14">Гель</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">22</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Основа краски" value="Герметик"/><span class="text-14">Герметик</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">16</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Основа краски" value="Гидроизоляция"/><span class="text-14">Гидроизоляция</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">4</span></div>
-														</li>
-													</ul>
-													<div class="filter__category-link"><a class="button-14" href="#">Посмотреть все</a></div>
-													<div class="filter__category-separator"></div>
-												</div>
-											</div>
-											<div class="filter__body-category filter__category">
-												<div class="filter__category-header">
-													<div class="filter__category-title"><span>
-															<svg>
-																<use xlink:href="./images/sprites.svg#arrow"></use>
-															</svg></span>
-														<h4 class="h4">Выбор цветов</h4>
-													</div>
-													<div class="filter__category-separator"></div>
-												</div>
-												<div class="filter__category-data">
-													<ul class="filter__category-list">
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Выбор цветов" value="Антисептик"/><span class="text-14">Антисептик</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">110</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Выбор цветов" value="Аэрозоль"/><span class="text-14">Аэрозоль</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">87</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Выбор цветов" value="Воск"/><span class="text-14">Воск</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">56</span></div>
-														</li>
-													</ul>
-													<div class="filter__category-link"><a class="button-14" href="#">Посмотреть все</a></div>
-													<div class="filter__category-separator"></div>
-												</div>
-											</div>
-											<div class="filter__body-category filter__category">
-												<div class="filter__category-header">
-													<div class="filter__category-title"><span>
-															<svg>
-																<use xlink:href="./images/sprites.svg#arrow"></use>
-															</svg></span>
-														<h4 class="h4">Тип упаковки</h4>
-													</div>
-													<div class="filter__category-separator"></div>
-												</div>
-												<div class="filter__category-data">
-													<ul class="filter__category-list">
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Тип упаковки" value="Антисептик"/><span class="text-14">Антисептик</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">110</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Тип упаковки" value="Аэрозоль"/><span class="text-14">Аэрозоль</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">87</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Тип упаковки" value="Воск"/><span class="text-14">Воск</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">56</span></div>
-														</li>
-													</ul>
-													<div class="filter__category-link"><a class="button-14" href="#">Посмотреть все</a></div>
-													<div class="filter__category-separator"></div>
-												</div>
-											</div>
-											<div class="filter__body-category filter__category">
-												<div class="filter__category-header">
-													<div class="filter__category-title"><span>
-															<svg>
-																<use xlink:href="./images/sprites.svg#arrow"></use>
-															</svg></span>
-														<h4 class="h4">Назначение</h4>
-													</div>
-													<div class="filter__category-separator"></div>
-												</div>
-												<div class="filter__category-data">
-													<ul class="filter__category-list">
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="radio" name="Назначение" value="Все"/><span class="text-14">Все</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">110</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="radio" name="Назначение" value="Антисептик"/><span class="text-14">Антисептик</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">110</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="radio" name="Назначение" value="Аэрозоль"/><span class="text-14">Аэрозоль</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">87</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="radio" name="Назначение" value="Воск"/><span class="text-14">Воск</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">56</span></div>
-														</li>
-													</ul>
-													<div class="filter__category-link"><a class="button-14" href="#">Посмотреть все</a></div>
-													<div class="filter__category-separator"></div>
-												</div>
-											</div>
-											<div class="filter__body-category filter__category">
-												<div class="filter__category-header">
-													<div class="filter__category-title"><span>
-															<svg>
-																<use xlink:href="./images/sprites.svg#arrow"></use>
-															</svg></span>
-														<h4 class="h4">Эффект</h4>
-													</div>
-													<div class="filter__category-separator"></div>
-												</div>
-												<div class="filter__category-data">
-													<ul class="filter__category-list">
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Эффект" value="Антисептик"/><span class="text-14">Антисептик</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">110</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Эффект" value="Аэрозоль"/><span class="text-14">Аэрозоль</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">87</span></div>
-														</li>
-														<li class="filter__category-elem">
-															<div class="filter__category-elem-name">
-																<label class="filter__category-elem-checkbox">
-																	<input type="checkbox" name="Эффект" value="Воск"/><span class="text-14">Воск</span>
-																</label>
-															</div>
-															<div class="filter__category-elem-count"><span class="text-14">56</span></div>
-														</li>
-													</ul>
-													<div class="filter__category-separator"></div>
-												</div>
-											</div>
-											<div class="filter__footer">
-												<button class="filter__footer-btn filter__footer-btn-show btn btn-dark btn-m">Показать<span class="filter__footer-btn-show-count">321</span></button>
-												<input class="filter__footer-btn filter__footer-btn-reset btn btn-light btn-m" type="reset" value="Сбросить"/>
-											</div>
-										</form>
-									</div>
-								</div>
-							</div>
-							<div class="category__left-coloring">
-								<!--coloring-stock-->
-								<div class="coloring">
-									<div class="coloring__body">
-										<div class="coloring__image">
-											<svg>
-												<use xlink:href="./images/sprites.svg#bag2"></use>
-											</svg>
-										</div>
-										<div class="coloring__text">
-											<h2 class="h2">Колеровка в подарок</h2>
-											<h5 class="h5">Скидка 100%</h5>
-										</div><a class="coloring__link" href="#">
-											<p class="button-14">Об акции</p><span>
+					<div class="product__body">
+						<div class="product__info">
+							<div class="product__info-top">
+								<div class="product__info-top-left">
+									<div class="product__gallery"></div>
+									<div class="product__links"><a class="product__link">
+											<div class="product__link-img"><img class="product__link-img" src="./images/brands/masterbit.png"></div>
+											<div class="product__link-text">
+												<p class="button-16">Мастербит</p><span class="text-14">Все товары производителя</span>
+											</div><span class="product__link-arrow">
 												<svg>
 													<use xlink:href="./images/sprites.svg#arrow"></use>
-												</svg></span></a>
+												</svg></span></a><a class="product__link">
+											<div class="product__link-img"><img src="./images/product/colors.png"></div>
+											<div class="product__link-text">
+												<p class="button-16">Резиновые краски</p><span class="text-14">Все товары категории</span>
+											</div><span class="product__link-arrow">
+												<svg>
+													<use xlink:href="./images/sprites.svg#arrow"></use>
+												</svg></span></a></div>
+									<div class="product__about">
+										<div class="product__about-buttons">
+											<button class="h4 product__about-button active">Характеристики</button>
+											<button class="h4 product__about-button">Спецификация</button>
+										</div>
+										<div class="product__about-text">
+											<div class="product__about-text-block">
+												<p class="text-16-long">Медиамикс экономит формат события. Восприятие марки, как следует из вышесказанного, ускоряет связанный маркетинг. Медиапланирование, как следует из вышесказанного, определяет комплексный показ баннера. А вот по мнению аналитиков психологическая среда по-прежнему востребована. Как предсказывают футурологи привлечение аудитории индуцирует анализ зарубежного опыта. Экспертиза выполненного проекта, как принято считать, спорадически отталкивает пул лояльных изданий.</p>
+												<p class="text-16-long">Ценовая стратегия, отбрасывая подробности, поддерживает баинг и селлинг. Потребительский рынок, безусловно, уравновешивает план размещения. Представляется логичным, что имидж предприятия многопланово экономит сублимированный социальный статус. Построение бренда масштабирует креативный потребительский рынок, осознав маркетинг как часть производства. По сути, традиционный канал многопланово специфицирует стиль менеджмента.</p>
+												<p class="text-16-long">Искусство медиапланирования парадоксально порождает из ряда вон выходящий анализ зарубежного опыта, отвоевывая рыночный сегмент. Реклама выражена наиболее полно. Селекция бренда существенно транслирует комплексный опрос.</p>
+											</div>
+											<div class="product__about-text-block hidden">
+												<p class="text-16-long">Ценовая стратегия, отбрасывая подробности, поддерживает баинг и селлинг. Потребительский рынок, безусловно, уравновешивает план размещения. Представляется логичным, что имидж предприятия многопланово экономит сублимированный социальный статус. Построение бренда масштабирует креативный потребительский рынок, осознав маркетинг как часть производства. По сути, традиционный канал многопланово специфицирует стиль менеджмента.</p>
+												<p class="text-16-long">Искусство медиапланирования парадоксально порождает из ряда вон выходящий анализ зарубежного опыта, отвоевывая рыночный сегмент. Реклама выражена наиболее полно. Селекция бренда существенно транслирует комплексный опрос.</p>
+												<p class="text-16-long">Медиамикс экономит формат события. Восприятие марки, как следует из вышесказанного, ускоряет связанный маркетинг. Медиапланирование, как следует из вышесказанного, определяет комплексный показ баннера. А вот по мнению аналитиков психологическая среда по-прежнему востребована. Как предсказывают футурологи привлечение аудитории индуцирует анализ зарубежного опыта. Экспертиза выполненного проекта, как принято считать, спорадически отталкивает пул лояльных изданий.</p>
+											</div>
+										</div>
 									</div>
 								</div>
-							</div>
-						</div>
-						<div class="category__right page--grid-right">
-							<div class="category__right-header">
-								<div class="category__catalog-cloud">
-									<!--categories-->
-									<div class="categories-cloud">
-										<div class="categories-cloud__body">
-											<div class="categories-cloud__items"><a class="categories-cloud__item btn btn-light btn-m" href="#">
-													<p class="text-14">Краски по дереву</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
-													<p class="text-14">Масла и воски</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
-													<p class="text-14">Грунтовки</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
-													<p class="text-14">Растворители</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
-													<p class="text-14">Грунт-эмали</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
-													<p class="text-14">Эмали</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
-													<p class="text-14">Краски для внутренних работ</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
-													<p class="text-14">Лаки</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
-													<p class="text-14">Краски для внешних работ</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
-													<p class="text-14">Автомобильные</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
-													<p class="text-14">Для ограды</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
-													<p class="text-14">Против влаги</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
-													<p class="text-14">Для смешивания</p></a><a class="categories-cloud__item btn btn-light btn-m" href="#">
-													<p class="text-14">Художественные</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
-													<p class="text-14">Для кирпичей</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
-													<p class="text-14">Поверх ламината</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
-													<p class="text-14">Для пластика</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
-													<p class="text-14">Не выгарающие</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
-													<p class="text-14">Яркие</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
-													<p class="text-14">Тусклые</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
-													<p class="text-14">Комплементарные</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
-													<p class="text-14">Для ванны и туалета</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
-													<p class="text-14">По плитке</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
-													<p class="text-14">Краски по обоям</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
-													<p class="text-14">Влагостойкие</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
-													<p class="text-14">Огеупорные</p></a><a class="categories-cloud__item hidden btn btn-light btn-m" href="#">
-													<p class="text-14">Все краски</p></a><a class="categories-cloud__item btn btn-m btn-light categories-cloud__item-all">
-													<p class="text-14">Все категории</p><span>
+								<div class="product__info-top-right">
+									<div class="product__header-buttons"><a class="product__header-button"><span>
+												<svg>
+													<use xlink:href="./images/sprites.svg#compare"></use>
+												</svg></span>
+											<p class="button-14">Сравнить</p></a><a class="product__header-button"><span>
+												<svg>
+													<use xlink:href="./images/sprites.svg#heart"></use>
+												</svg></span>
+											<p class="button-14">В избранное</p></a><a class="product__header-button"><span>
+												<svg>
+													<use xlink:href="./images/sprites.svg#share"></use>
+												</svg></span>
+											<p class="button-14">Поделиться</p></a></div>
+									<h1 class="product__info-title h1">Резиновая краска универсальная МБ-35 ELASTIQ</h1>
+									<div class="product__info-color">
+										<!--product-characteristics-->
+										<div class="product-characteristics">
+											<div class="product-characteristics__body">
+												<h5 class="h5 product-characteristics__category">Цвет</h5>
+												<div class="product-characteristics__items">
+													<label class="product-characteristics__item text-14 btn btn-light">Белый
+														<input type="checkbox" name="Цвет" value="Белый"/>
+													</label>
+													<label class="product-characteristics__item text-14 btn btn-light">Зелёный
+														<input type="checkbox" name="Цвет" value="Зелёный"/>
+													</label>
+													<label class="product-characteristics__item text-14 btn btn-light">Светло-серый
+														<input type="checkbox" name="Цвет" value="Светло-серый"/>
+													</label>
+													<label class="product-characteristics__item text-14 btn btn-light">Серый
+														<input type="checkbox" name="Цвет" value="Серый"/>
+													</label>
+													<label class="product-characteristics__item text-14 btn btn-light">Синий
+														<input type="checkbox" name="Цвет" value="Синий"/>
+													</label>
+													<label class="product-characteristics__item text-14 btn btn-light">Чёрный
+														<input type="checkbox" name="Цвет" value="Чёрный"/>
+													</label>
+													<label class="product-characteristics__item text-14 btn btn-light">Вишневый
+														<input type="checkbox" name="Цвет" value="Вишневый"/>
+													</label>
+													<label class="product-characteristics__item text-14 btn btn-light">Слоновая кость
+														<input type="checkbox" name="Цвет" value="Слоновая кость"/>
+													</label>
+													<label class="product-characteristics__item text-14 btn btn-light">Шоколадный
+														<input type="checkbox" name="Цвет" value="Шоколадный"/>
+													</label>
+													<label class="product-characteristics__item text-14 btn btn-light">Ярко-красный RAL 3020
+														<input type="checkbox" name="Цвет" value="Ярко-красный RAL 3020"/>
+													</label>
+													<label class="product-characteristics__item text-14 btn btn-light">Основа C - для колеровки в насыщенные тона
+														<input type="checkbox" name="Цвет" value="Основа C - для колеровки в насыщенные тона"/>
+													</label>
+													<label class="product-characteristics__item text-14 btn btn-light">Пудра
+														<input type="checkbox" name="Цвет" value="Пудра"/>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="product__info-packing">
+										<!--product-characteristics-->
+										<div class="product-characteristics">
+											<div class="product-characteristics__body">
+												<h5 class="h5 product-characteristics__category">Фасовка/упаковка</h5>
+												<div class="product-characteristics__items">
+													<label class="product-characteristics__item text-14 btn btn-light">3 кг
+														<input type="checkbox" name="Фасовка/упаковка" value="3 кг"/>
+													</label>
+													<label class="product-characteristics__item text-14 btn btn-light">12 кг
+														<input type="checkbox" name="Фасовка/упаковка" value="12 кг"/>
+													</label>
+													<label class="product-characteristics__item text-14 btn btn-light">0,6 кг
+														<input type="checkbox" name="Фасовка/упаковка" value="0,6 кг"/>
+													</label>
+													<label class="product-characteristics__item text-14 btn btn-light">1,2 кг
+														<input type="checkbox" name="Фасовка/упаковка" value="1,2 кг"/>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="product__info-available">
+										<h3 class="h3 product__info-available-now">В наличии<span class="product__info-available-now-count">8</span>шт.</h3>
+										<p class="product__info-available-future text-14">Можем привезти ещё<span class="product__info-available-future-count">5</span>до<span class="product__info-available-future-date">15</span><span class="product__info-available-future-mouth">августа</span></p>
+									</div>
+									<div class="product__info-price">
+										<div class="product__info-price-top">
+											<p class="product__info-price-current price-l">793,50 ₽ / шт.</p>
+											<div class="product__info-price-economy">
+												<p class="button-14">Экономия 2 539 ₽</p>
+											</div>
+										</div>
+										<div class="product__info-price-old">
+											<p>2 539 ₽</p>
+										</div>
+									</div>
+									<div class="product__info-basket-btn">
+										<button class="btn btn-l btn-dark button-16">В корзину</button>
+									</div>
+									<div class="product__info-payment">
+										<div class="payment-banner">
+											<div class="payment-banner__body">
+												<h3 class="h3 payment-banner__title">Оплата и доставка</h3>
+												<div class="payment-banner__row">
+													<div class="payment-banner__row-img">
+														<svg>
+															<use xlink:href="./images/sprites.svg#credit-card"></use>
+														</svg>
+													</div>
+													<div class="payment-banner__row-text">
+														<h4 class="h4">Оплата онлайн и наличными</h4>
+														<p class="text-14-long">Для юридических лиц доступна оплата по перечислению</p>
+													</div>
+												</div>
+												<div class="payment-banner__row">
+													<div class="payment-banner__row-img">
+														<svg>
+															<use xlink:href="./images/sprites.svg#car"></use>
+														</svg>
+													</div>
+													<div class="payment-banner__row-text">
+														<h4 class="h4">Доставка по России</h4>
+														<p class="text-14-long">Самовывоз в некоторых регионах</p>
+													</div>
+												</div>
+												<div class="payment-banner__row payment-banner__row--green">
+													<div class="payment-banner__row-img">
+														<svg>
+															<use xlink:href="./images/sprites.svg#check-circle"></use>
+														</svg>
+													</div>
+													<div class="payment-banner__row-text">
+														<h4 class="h4">Есть пункты выдачи в Чебоксарах</h4>
+													</div>
+												</div><a class="payment-banner__link" href="#">
+													<p class="button-16">Подробнее</p><span>
 														<svg>
 															<use xlink:href="./images/sprites.svg#arrow"></use>
 														</svg></span></a>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="category__right-header-text page--header-text">
-									<div class="text__block">
-										<p class="text-16-long text__block-hiddenText">Краска — это общее название всех лакокрасочных материалов. Технодекор предлагает покупателям широчайший ассортимент красок в Чебоксарах.</p>
-										<p class="text-16-long text__block-hiddenText active">В нашем магазине вы можете купить краски практически для любых целей: от обновления внешнего вида мебели дома до антикоррозионной защиты промышленных конструкций.</p>
-										<p class="text-16-long text__block-hiddenText active">Воспользуйтесь фильтром слева для того, чтобы выбрать краску, наилучшим образом соответствующую вашим потребностям.</p><a class="button-16 text__block-btn">
-											<p>Подробнее</p><span>
+									<div class="product__info-what-need">
+										<div class="product__info-what-need__row">
+											<div class="product__info-what-need__row-text">
+												<h4 class="h4">Нужен другой цвет или фасовка?</h4>
+												<p class="text-14-long">Соберите индивидуальный заказ</p>
+											</div><a class="product__info-what-need__row-link">
+												<p class="button-16">Напишите нам</p><span>
+													<svg>
+														<use xlink:href="./images/sprites.svg#arrow"></use>
+													</svg></span></a>
+										</div>
+										<div class="product__info-what-need__separator"></div>
+										<div class="product__info-what-need__row">
+											<div class="product__info-what-need__row-text">
+												<h4 class="h4">Нашли дешевле?</h4>
+												<p class="text-14-long">Сделаем скидку</p>
+											</div><a class="product__info-what-need__row-link">
+												<p class="button-16">Покажите</p><span>
+													<svg>
+														<use xlink:href="./images/sprites.svg#arrow"></use>
+													</svg></span></a>
+										</div>
+									</div>
+									<div class="product__info-discount">
+										<div class="product__info-discount__body">
+											<div class="product__info-discount__img">
 												<svg>
-													<use xlink:href="./images/sprites.svg#arrow"></use>
-												</svg></span></a>
-									</div>
-								</div>
-							</div>
-							<div class="category__right-catalog category__catalog page-catalog">
-								<div class="category__catalog-header">
-									<div class="category__catalog-sort">
-										<select class="select category__catalog-select">
-											<option value="Сначала популярные" selected>Сначала популярные</option>
-											<option value="Сначала дешевые">Сначала дешевые</option>
-											<option value="Сначала дорогие">Сначала дорогие</option>
-											<option value="Еще какие-то">Еще какие-то</option>
-										</select>
-									</div>
-								</div>
-								<div class="category__catalog-filters-mobile-btn page-mobile-filter">
-									<!--mobile-filter-btn-->
-									<div class="mobile-filter-btn">
-										<div class="mobile-filter-btn__body"><a class="mobile-filter-btn__left"><span>
-													<svg>
-														<use xlink:href="./images/sprites.svg#compare"></use>
-													</svg></span>
-												<p class="button-14">Фильтры</p></a>
-											<div class="mobile-filter-btn__right">
-												<div class="mobile-filter-btn__right-count">
-													<h3 class="h3">5</h3>
-												</div><span class="mobile-filter-btn__right-clear">
-													<svg>
-														<use xlink:href="./images/sprites.svg#close"></use>
-													</svg></span>
+													<use xlink:href="./images/sprites.svg#percentage"></use>
+												</svg>
 											</div>
-										</div>
-									</div>
-								</div>
-								<div class="category__catalog-content catalog--grid default--view">
-									<div class="category__catalog-card catalog--card">
-										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
-												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн</p>
-												</div>
-												<div class="product-card__price">
-													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old"></span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-											<div class="product-card__labels">
-												<label class="product-card__label-discount text-14">-25 %</label>
-												<label class="product-card__label-status text-14">Новинка</label>
+											<div class="product__info-discount__text">
+												<h4 class="h4">Скидка после оформления гарантирована!</h4>
+												<p class="text-14-long">Указана розничная цена для покупки через интернет-магазин</p>
 											</div>
-										</div>
-									</div>
-									<div class="category__catalog-card catalog--card">
-										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
-												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </p>
-												</div>
-												<div class="product-card__price">
-													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-											<div class="product-card__labels">
-												<label class="product-card__label-discount text-14">-25 %</label>
-											</div>
-										</div>
-									</div>
-									<div class="category__catalog-card catalog--card">
-										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
-												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн</p>
-												</div>
-												<div class="product-card__price">
-													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-											<div class="product-card__labels">
-												<label class="product-card__label-status text-14">Новинка</label>
-											</div>
-										</div>
-									</div>
-									<div class="category__catalog-card catalog--card">
-										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
-												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </p>
-												</div>
-												<div class="product-card__price">
-													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old"></span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-											<div class="product-card__labels">
-												<label class="product-card__label-discount text-14">-25 %</label>
-												<label class="product-card__label-status text-14">Новинка</label>
-											</div>
-										</div>
-									</div>
-									<div class="category__catalog-card catalog--card">
-										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
-												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </p>
-												</div>
-												<div class="product-card__price">
-													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-											<div class="product-card__labels">
-												<label class="product-card__label-discount text-14">-25 %</label>
-											</div>
-										</div>
-									</div>
-									<div class="category__catalog-card catalog--card">
-										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
-												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн</p>
-												</div>
-												<div class="product-card__price">
-													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-											<div class="product-card__labels">
-												<label class="product-card__label-status text-14">Новинка</label>
-											</div>
-										</div>
-									</div>
-									<div class="category__catalog-card catalog--card">
-										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
-												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн</p>
-												</div>
-												<div class="product-card__price">
-													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old"></span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-											<div class="product-card__labels">
-												<label class="product-card__label-discount text-14">-25 %</label>
-												<label class="product-card__label-status text-14">Новинка</label>
-											</div>
-										</div>
-									</div>
-									<div class="category__catalog-card catalog--card">
-										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
-												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </p>
-												</div>
-												<div class="product-card__price">
-													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-											<div class="product-card__labels">
-												<label class="product-card__label-discount text-14">-25 %</label>
-											</div>
-										</div>
-									</div>
-									<div class="category__catalog-card catalog--card">
-										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
-												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн</p>
-												</div>
-												<div class="product-card__price">
-													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-											<div class="product-card__labels">
-												<label class="product-card__label-status text-14">Новинка</label>
-											</div>
-										</div>
-									</div>
-									<div class="category__catalog-card catalog--card">
-										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
-												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </p>
-												</div>
-												<div class="product-card__price">
-													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old"></span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-											<div class="product-card__labels">
-												<label class="product-card__label-discount text-14">-25 %</label>
-												<label class="product-card__label-status text-14">Новинка</label>
-											</div>
-										</div>
-									</div>
-									<div class="category__catalog-card catalog--card">
-										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
-												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </p>
-												</div>
-												<div class="product-card__price">
-													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-											<div class="product-card__labels">
-												<label class="product-card__label-discount text-14">-25 %</label>
-											</div>
-										</div>
-									</div>
-									<div class="category__catalog-card catalog--card">
-										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
-												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн</p>
-												</div>
-												<div class="product-card__price">
-													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-											<div class="product-card__labels">
-												<label class="product-card__label-status text-14">Новинка</label>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="category__catalog-footer">
-									<div class="category__catalog-footer-more">
-										<!--show-more-btn--><a class="show-more-btn">
-											<div class="show-more-btn__body"><span>
-													<svg>
-														<use xlink:href="./images/sprites.svg#reload"></use>
-													</svg></span>
-												<p class="text-14">Показать ещё</p>
-											</div></a>
-									</div>
-									<div class="category__catalog-footer-pagination">
-										<!--product-card-->
-										<div class="pagination">
-											<ul class="pagination__list">
-												<li class="pagination__item pagination__btn pagination__btn-prev"><span>
-														<svg>
-															<use xlink:href="./images/sprites.svg#arrow"></use>
-														</svg></span></li>
-												<li class="pagination__item pagination--num active">1</li>
-												<li class="pagination__item pagination--num">2</li>
-												<li class="pagination__item pagination--num">3</li>
-												<li class="pagination__item pagination--num">4</li>
-												<li class="pagination__item pagination--num">5</li>
-												<li class="pagination__item pagination--separator"><span>
-														<svg>
-															<use xlink:href="./images/sprites.svg#more"></use>
-														</svg></span></li>
-												<li class="pagination__item pagination--num">25</li>
-												<li class="pagination__item pagination__btn pagination__btn-next"><span>
-														<svg>
-															<use xlink:href="./images/sprites.svg#arrow"></use>
-														</svg></span></li>
-											</ul>
 										</div>
 									</div>
 								</div>
 							</div>
+							<div class="product__info-left"></div>
+							<div class="product__info-right"></div>
 						</div>
 					</div>
 				</div>
@@ -1960,7 +1316,7 @@
 				</div>
 			</div>
 		</div>
-		<script src="./js/vendor.js?v=1699444930787"></script>
-		<script src="./js/main.js?v=1699444930787"></script>
+		<script src="./js/vendor.js?v=1699454516616"></script>
+		<script src="./js/main.js?v=1699454516616"></script>
 	</body>
 </html>
