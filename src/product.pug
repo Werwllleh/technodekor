@@ -1,0 +1,12 @@
+extends pug/base
+
+prepend vars
+	- title = 'Карточка товара'
+	- description = 'Карточка товара'
+
+append vars
+	// - breadcrumbs = {pagesBefore:['Главная', 'wefwef'], pagesCurrent:'Бренды'}
+
+block content
+	include pug/pages/product
+

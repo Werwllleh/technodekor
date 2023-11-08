@@ -301,6 +301,8 @@
 
 	&__logo {
 
+		display: block;
+
 		@include tablet() {
 			padding: 0 10px 0 0;
 		}
@@ -653,6 +655,20 @@
 			}
 
 			&-item-more {
+
+				&.active {
+					a {
+						color: $color-brand-purple-dark;
+
+						span {
+							svg {
+								transform: rotate(-270deg);
+								fill: $color-brand-purple-dark;
+							}
+						}
+					}
+				}
+
 				a {
 					display: flex;
 					align-items: center;
@@ -665,6 +681,7 @@
 							height: 10px;
 							transform: rotate(-90deg);
 							fill: #C5CAD3;
+							transition: fill $duration-normal, transform $duration-normal;
 						}
 					}
 				}

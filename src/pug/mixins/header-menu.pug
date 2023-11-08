@@ -36,6 +36,14 @@
 					name: 'Огнезащитные',
 					link: '#'
 				},
+				{
+					name: 'Еще категория',
+					link: '#'
+				},
+				{
+					name: 'Еще категория2',
+					link: '#'
+				},
 			]
 		},
 		{
@@ -72,6 +80,14 @@
 				},
 				{
 					name: 'По ржавчине',
+					link: '#'
+				},
+				{
+					name: 'Скрытая категория 1',
+					link: '#'
+				},
+				{
+					name: 'Скрытая категория 2',
 					link: '#'
 				},
 			]
@@ -224,6 +240,14 @@
 				},
 				{
 					name: 'Прозрачные',
+					link: '#'
+				},
+				{
+					name: 'Еще 1',
+					link: '#'
+				},
+				{
+					name: 'Еще 2',
 					link: '#'
 				},
 			]
@@ -393,42 +417,42 @@
 		{
 			name: 'Tikkurila',
 			logo: "tikkurila.png",
-			link: "#"
+			link: "./brand.html"
 		},
 		{
 			name: 'VGT-ecology material',
 			logo: "vgt.png",
-			link: "#"
+			link: "./brand.html"
 		},
 		{
 			name: 'ferumprotect',
 			logo: "ferumprotect.png",
-			link: "#"
+			link: "./brand.html"
 		},
 		{
 			name: 'Tikkurila',
 			logo: "tikkurila.png",
-			link: "#"
+			link: "./brand.html"
 		},
 		{
 			name: 'VGT-ecology material',
 			logo: "vgt.png",
-			link: "#"
+			link: "./brand.html"
 		},
 		{
 			name: 'ferumprotect',
 			logo: "ferumprotect.png",
-			link: "#"
+			link: "./brand.html"
 		},
 		{
 			name: 'Arton',
 			logo: "arton.png",
-			link: "#"
+			link: "./brand.html"
 		},
 		{
 			name: 'Neomid',
 			logo: "neomid.png",
-			link: "#"
+			link: "./brand.html"
 		},
 	]
 mixin header-menu()
@@ -478,14 +502,19 @@ mixin header-menu()
 										a.header__menu-category-title.h3(href= category.link)= category.name
 									if (menuCategory.list)
 										ul.header__menu-category-list
-											each item in menuCategory.list
-												li.header__menu-category-item
-													a.text-14(href= item.link)= item.name
-											li.header__menu-category-item.header__menu-category-item-more
-												a.text-14(href="#")
-													p Ещё
-													span
-														+svg("arrow")
+											each item, index in menuCategory.list
+												if (index >= 7)
+													li.header__menu-category-item.hidden
+														a.text-14(href= item.link)= item.name
+												else
+													li.header__menu-category-item
+														a.text-14(href= item.link)= item.name
+											if (menuCategory.list.length > 7)
+												li.header__menu-category-item.header__menu-category-item-more
+													a.text-14(href="#")
+														p Ещё
+														span
+															+svg("arrow")
 						.header__menu-brands
 							+brands(brands).brands--menu
 						.header__menu-coloring

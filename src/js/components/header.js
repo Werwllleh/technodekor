@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const headerMore = document.querySelector('.header-button-more');
 	const modalHeaderMore = document.querySelector('.modal-header-more');
 
+	const menuListMore = document.querySelectorAll('.header__menu-category-item-more');
+
 
 	const headerSelectCity = document.querySelector('.header__city');
 	const headerSelectPhone = document.querySelector('.header__phone-arrow');
@@ -16,8 +18,27 @@ document.addEventListener('DOMContentLoaded', () => {
 	const modalHeaderMoreButtons = document.querySelectorAll('.modal-header-more__footer-about-header');
 	const modalHeaderMoreCitySelect = document.querySelector('.city--select');
 
+	menuListMore.forEach((btn) => {
+		btn.addEventListener('click', () => {
 
-	headerSelectCity.addEventListener('click', (e) => {
+			btn.classList.toggle('active')
+
+			btn.parentNode.children.forEach((li, index) => {
+
+				if (btn.classList.contains('active') && li.classList.contains('hidden')) {
+					li.classList.remove('hidden')
+					li.classList.add('show')
+				} else {
+					if (li.classList.contains('show')) {
+						li.classList.remove('show')
+						li.classList.add('hidden')
+					}
+				}
+			})
+		})
+	})
+
+	headerSelectCity.addEventListener('click', () => {
 		const cityTitle = headerSelectCity.children[0];
 		const cityListBlock = headerSelectCity.children[2];
 		const cityList = cityListBlock.children[0].children;

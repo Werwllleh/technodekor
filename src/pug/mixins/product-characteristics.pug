@@ -1,0 +1,10 @@
+mixin product-characteristics(data)
+	//product-characteristics
+	.product-characteristics&attributes(attributes)
+		.product-characteristics__body
+			each item in data
+				h5.h5.product-characteristics__category= item.category
+				.product-characteristics__items
+					each attr in item.list
+						label.product-characteristics__item.text-14.btn.btn-light= attr
+							input(type="checkbox", name=item.category, value=attr)

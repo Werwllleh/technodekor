@@ -52,4 +52,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		})
 	})
+
+	const productAboutButtons = document.querySelectorAll('.product__about-button');
+
+	productAboutButtons.forEach((btn, index) => {
+		const text = btn.parentNode.parentNode.children[1].children;
+
+		btn.addEventListener('click', () => {
+			console.log(index)
+			btn.classList.add('active');
+			const otherButton = productAboutButtons[(index + 1) % productAboutButtons.length];
+			otherButton.classList.remove('active');
+
+			if (index === 0) {
+				text[0].classList.remove('hidden');
+				text[1].classList.add('hidden');
+			} else {
+				text[1].classList.remove('hidden');
+				text[0].classList.add('hidden');
+			}
+
+			// console.log(btn.parentNode.parentNode.children[1].children)
+		})
+
+	})
 })
