@@ -1956,16 +1956,18 @@ iframe {
       .header__bottom-left {
         padding: 12px;
         gap: 0; } }
-  @media (max-width: 768px) {
-    .header__logo {
-      padding: 0 10px 0 0; } }
-  .header__logo svg {
-    width: 140px;
-    height: 58px; }
+  .header__logo {
+    display: block; }
     @media (max-width: 768px) {
-      .header__logo svg {
-        width: 64px;
-        height: 27px; } }
+      .header__logo {
+        padding: 0 10px 0 0; } }
+    .header__logo svg {
+      width: 140px;
+      height: 58px; }
+      @media (max-width: 768px) {
+        .header__logo svg {
+          width: 64px;
+          height: 27px; } }
   .header__search-mobile {
     display: none;
     position: relative;
@@ -4670,17 +4672,9 @@ iframe {
     border-radius: 0; }
   .modal-filter .filter__body {
     height: 100%;
-    max-height: 700px;
+    max-height: 530px;
+    padding: 0 0 50px 0;
     overflow-y: scroll; }
-    @media (max-height: 800px) {
-      .modal-filter .filter__body {
-        max-height: 650px; } }
-    @media (max-height: 600px) {
-      .modal-filter .filter__body {
-        max-height: 450px; } }
-    @media (max-height: 500px) {
-      .modal-filter .filter__body {
-        max-height: 300px; } }
   .modal-filter .filter__footer {
     position: absolute;
     bottom: 0;
