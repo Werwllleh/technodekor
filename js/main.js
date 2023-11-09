@@ -763,6 +763,19 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   var productGallery = document.querySelector('#productGallery');
+  var productAboutMobile = document.querySelectorAll('.product__about-mobile-row');
+  productAboutMobile.forEach(function (btn) {
+    var textBlock = btn.children[1];
+    var textInner = btn.children[1].children[0];
+    btn.addEventListener('click', function () {
+      btn.classList.toggle('active');
+      if (btn.classList.contains('active')) {
+        textBlock.style.maxHeight = "".concat(textInner.clientHeight, "px");
+      } else {
+        textBlock.style.maxHeight = 0;
+      }
+    });
+  });
   Object(lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(productGallery, {
     plugins: [lightgallery_plugins_zoom__WEBPACK_IMPORTED_MODULE_2__["default"], lightgallery_plugins_thumbnail__WEBPACK_IMPORTED_MODULE_1__["default"]],
     licenseKey: 'your_license_key',
@@ -1358,14 +1371,13 @@ var productGallery = new swiper__WEBPACK_IMPORTED_MODULE_0__["Swiper"]('.product
   // spaceBetween: 40,
   // Optional parameters
   direction: 'horizontal',
+  autoHeight: true,
   loop: false,
   thumbs: {
     swiper: productGalleryThumbs
   },
   // If we need pagination
-  pagination: {
-    enabled: false
-  },
+
   navigation: true,
   // Navigation arrows
   // navigation: {
@@ -1377,10 +1389,18 @@ var productGallery = new swiper__WEBPACK_IMPORTED_MODULE_0__["Swiper"]('.product
     hide: true
   },
   breakpoints: {
-    320: {},
-    768: {},
-    1025: {},
-    1600: {}
+    320: {
+      pagination: {
+        enabled: true,
+        el: '.swiper-pagination',
+        clickable: true
+      }
+    },
+    564: {
+      pagination: {
+        enabled: false
+      }
+    }
   }
 });
 
