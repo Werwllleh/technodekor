@@ -686,8 +686,18 @@ document.addEventListener('DOMContentLoaded', function () {
 /*!***************************!*\
   !*** ./src/js/general.js ***!
   \***************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var lightgallery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lightgallery */ "./node_modules/lightgallery/lightgallery.es5.js");
+/* harmony import */ var lightgallery_plugins_thumbnail__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lightgallery/plugins/thumbnail */ "./node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.es5.js");
+/* harmony import */ var lightgallery_plugins_zoom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lightgallery/plugins/zoom */ "./node_modules/lightgallery/plugins/zoom/lg-zoom.es5.js");
+
+
+// Plugins
+
 
 document.addEventListener('DOMContentLoaded', function () {
   var showBtns = document.querySelectorAll('.text__block-btn');
@@ -737,7 +747,6 @@ document.addEventListener('DOMContentLoaded', function () {
   productAboutButtons.forEach(function (btn, index) {
     var text = btn.parentNode.parentNode.children[1].children;
     btn.addEventListener('click', function () {
-      console.log(index);
       btn.classList.add('active');
       var otherButton = productAboutButtons[(index + 1) % productAboutButtons.length];
       otherButton.classList.remove('active');
@@ -751,6 +760,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // console.log(btn.parentNode.parentNode.children[1].children)
     });
+  });
+
+  var productGallery = document.querySelector('#productGallery');
+  Object(lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(productGallery, {
+    plugins: [lightgallery_plugins_zoom__WEBPACK_IMPORTED_MODULE_2__["default"], lightgallery_plugins_thumbnail__WEBPACK_IMPORTED_MODULE_1__["default"]],
+    licenseKey: 'your_license_key',
+    speed: 300
   });
 });
 
@@ -969,7 +985,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers */ "./src/js/helpers.js");
 /* harmony import */ var _sliders__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sliders */ "./src/js/sliders.js");
 /* harmony import */ var _general__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./general */ "./src/js/general.js");
-/* harmony import */ var _general__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_general__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_social__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/social */ "./src/js/components/social.js");
 /* harmony import */ var _components_catalog_button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/catalog-button */ "./src/js/components/catalog-button.js");
 /* harmony import */ var _components_catalog_button__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_catalog_button__WEBPACK_IMPORTED_MODULE_5__);
