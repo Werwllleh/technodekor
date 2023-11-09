@@ -243,6 +243,11 @@
 		transform: rotate(-180deg);
 	}
 
+	.swiper-button-disabled {
+		opacity: 0;
+		visibility: hidden;
+	}
+
 }
 
 .text__block {

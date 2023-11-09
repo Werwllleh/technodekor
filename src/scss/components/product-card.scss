@@ -50,8 +50,22 @@
 
 	&__name {
 
+		overflow: hidden;
+		position: relative;
 		max-width: 330px;
-		height: 50px;
+		height: 60px;
+
+		&:after {
+			content: "";
+			text-align: right;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			height: 1.2em;
+			background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
+			pointer-events: none;
+		}
 
 		p {
 			color: $color-txt-primary;
@@ -103,6 +117,13 @@
 		display: block;
 		margin: auto 0 0 0;
 		color: $color-white;
+		border-radius: 8px;
+
+		@include mobile() {
+			padding: 8px 16px;
+			font-size: 12px;
+			max-width: 95px;
+		}
 	}
 
 	&__labels {

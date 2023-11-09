@@ -88,8 +88,8 @@
 			&-title {
 				color: $color-white;
 
-				@include laptop() {
-
+				@include mobile() {
+					font-size: 18px;
 				}
 			}
 
@@ -277,6 +277,10 @@
 
 		&-title {
 			margin: 0 0 5px 0;
+
+			@include tablet() {
+				margin: 0 0 24px 0;
+			}
 		}
 
 		&-cards {
@@ -456,6 +460,7 @@
 				svg {
 					height: 36px;
 					width: 36px;
+					fill: $color-white;
 				}
 			}
 

@@ -1,144 +1,354 @@
 -
-	var colors = [
-		{
-			category: 'Цвет',
-			list: ['Белый', 'Зелёный', 'Светло-серый', 'Серый', 'Синий', 'Чёрный', 'Вишневый', 'Слоновая кость', 'Шоколадный', 'Ярко-красный RAL 3020', 'Основа C - для колеровки в насыщенные тона', 'Пудра']
-		}
-	]
-	var packing = [
-		{
-			category: 'Фасовка/упаковка',
-			list: ['3 кг', '12 кг', '0,6 кг', '1,2 кг']
-		}
-	]
+    var products = [
+        {
+            discount: '-25 %',
+            newStatus: true,
+            image: 'product',
+            name: 'Краска с воском IQ 130 для ванн',
+            price: '793,50',
+            oldPrice: '',
+            link: '#'
+        },
+        {
+            discount: '-25 %',
+            newStatus: false,
+            image: 'product',
+            name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью',
+            price: '793,50',
+            oldPrice: '2 539',
+            link: '#'
+        },
+        {
+            discount: '',
+            newStatus: true,
+            image: 'product',
+            name: 'Краска с воском IQ 130 для ванн',
+            price: '793,50',
+            oldPrice: '2 539',
+            link: '#'
+        },
+        {
+            discount: '-25 %',
+            newStatus: true,
+            image: 'product',
+            name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью',
+            price: '793,50',
+            oldPrice: '',
+            link: '#'
+        },
+        {
+            discount: '-25 %',
+            newStatus: false,
+            image: 'product',
+            name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров ',
+            price: '793,50',
+            oldPrice: '2 539',
+            link: '#'
+        },
+        {
+            discount: '',
+            newStatus: true,
+            image: 'product',
+            name: 'Краска с воском IQ 130 для ванн',
+            price: '793,50',
+            oldPrice: '2 539',
+            link: '#'
+        },
+    ]
+    var products2 = [
+        {
+            discount: '-25 %',
+            newStatus: true,
+            image: 'product',
+            name: 'Краска с воском IQ 130 для ванн',
+            price: '793,50',
+            oldPrice: '',
+            link: '#'
+        },
+        {
+            discount: '-25 %',
+            newStatus: false,
+            image: 'product',
+            name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью',
+            price: '793,50',
+            oldPrice: '2 539',
+            link: '#'
+        },
+        {
+            discount: '',
+            newStatus: true,
+            image: 'product',
+            name: 'Краска с воском IQ 130 для ванн',
+            price: '793,50',
+            oldPrice: '2 539',
+            link: '#'
+        }
+    ]
+    var colors = [
+        {
+            category: 'Цвет',
+            list: ['Белый', 'Зелёный', 'Светло-серый', 'Серый', 'Синий', 'Чёрный', 'Вишневый', 'Слоновая кость', 'Шоколадный', 'Ярко-красный RAL 3020', 'Основа C - для колеровки в насыщенные тона', 'Пудра']
+        }
+    ]
+    var packing = [
+        {
+            category: 'Фасовка/упаковка',
+            list: ['3 кг', '12 кг', '0,6 кг', '1,2 кг']
+        }
+    ]
+
 .container
-	.product
-		+breadcrumbs(['Главная', 'Каталог'], 'Резиновые краски')
-		.product__body
-			.product__info
-				.product__info-top
-					.product__info-top-left
-						.product__gallery
-						.product__links
-							a.product__link
-								.product__link-img
-									img.product__link-img(src='./images/brands/masterbit.png')
-								.product__link-text
-									p.button-16 Мастербит
-									span.text-14 Все товары производителя
-								span.product__link-arrow
-									+svg("arrow")
-							a.product__link
-								.product__link-img
-									img(src='./images/product/colors.png')
-								.product__link-text
-									p.button-16 Резиновые краски
-									span.text-14 Все товары категории
-								span.product__link-arrow
-									+svg("arrow")
-						.product__about
-							.product__about-buttons
-								button.h4.product__about-button.active Характеристики
-								button.h4.product__about-button Спецификация
-							.product__about-text
-								.product__about-text-block
-									p.text-16-long Медиамикс экономит формат события. Восприятие марки, как следует из вышесказанного, ускоряет связанный маркетинг. Медиапланирование, как следует из вышесказанного, определяет комплексный показ баннера. А вот по мнению аналитиков психологическая среда по-прежнему востребована. Как предсказывают футурологи привлечение аудитории индуцирует анализ зарубежного опыта. Экспертиза выполненного проекта, как принято считать, спорадически отталкивает пул лояльных изданий.
-									p.text-16-long Ценовая стратегия, отбрасывая подробности, поддерживает баинг и селлинг. Потребительский рынок, безусловно, уравновешивает план размещения. Представляется логичным, что имидж предприятия многопланово экономит сублимированный социальный статус. Построение бренда масштабирует креативный потребительский рынок, осознав маркетинг как часть производства. По сути, традиционный канал многопланово специфицирует стиль менеджмента.
-									p.text-16-long Искусство медиапланирования парадоксально порождает из ряда вон выходящий анализ зарубежного опыта, отвоевывая рыночный сегмент. Реклама выражена наиболее полно. Селекция бренда существенно транслирует комплексный опрос.
-								.product__about-text-block.hidden
-									p.text-16-long Ценовая стратегия, отбрасывая подробности, поддерживает баинг и селлинг. Потребительский рынок, безусловно, уравновешивает план размещения. Представляется логичным, что имидж предприятия многопланово экономит сублимированный социальный статус. Построение бренда масштабирует креативный потребительский рынок, осознав маркетинг как часть производства. По сути, традиционный канал многопланово специфицирует стиль менеджмента.
-									p.text-16-long Искусство медиапланирования парадоксально порождает из ряда вон выходящий анализ зарубежного опыта, отвоевывая рыночный сегмент. Реклама выражена наиболее полно. Селекция бренда существенно транслирует комплексный опрос.
-									p.text-16-long Медиамикс экономит формат события. Восприятие марки, как следует из вышесказанного, ускоряет связанный маркетинг. Медиапланирование, как следует из вышесказанного, определяет комплексный показ баннера. А вот по мнению аналитиков психологическая среда по-прежнему востребована. Как предсказывают футурологи привлечение аудитории индуцирует анализ зарубежного опыта. Экспертиза выполненного проекта, как принято считать, спорадически отталкивает пул лояльных изданий.
+    .product
+        +breadcrumbs(['Главная', 'Каталог'], 'Резиновые краски')
+        .product__body
+            .product__info
+                .product__info-top
+                    .product__info-top-left
+                        .product__gallery
+                            .product__gallery-slider.swiper
+                                #productGallery.swiper-wrapper
+                                    a(href='./images/product/slider/1.jpg').swiper-slide
+                                        .product__gallery-slide
+                                            img(src='./images/product/slider/1.jpg')
+                                    a(href='./images/product/slider/2.jpg').swiper-slide
+                                        .product__gallery-slide
+                                            img(src='./images/product/slider/2.jpg')
+                                    a(href='./images/product/slider/3.jpg').swiper-slide
+                                        .product__gallery-slide
+                                            img(src='./images/product/slider/3.jpg')
+                                    a(href='./images/product/slider/1.jpg').swiper-slide
+                                        .product__gallery-slide
+                                            img(src='./images/product/slider/1.jpg')
+                                    a(href='./images/product/slider/2.jpg').swiper-slide
+                                        .product__gallery-slide
+                                            img(src='./images/product/slider/2.jpg')
+                                    a(href='./images/product/slider/3.jpg').swiper-slide
+                                        .product__gallery-slide
+                                            img(src='./images/product/slider/3.jpg')
+                                .swiper-pagination
+                            .product__gallery-thumbs.swiper
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        .product__gallery-thumbs-slide
+                                            img(src='./images/product/slider/1.jpg')
+                                    .swiper-slide
+                                        .product__gallery-thumbs-slide
+                                            img(src='./images/product/slider/2.jpg')
+                                    .swiper-slide
+                                        .product__gallery-thumbs-slide
+                                            img(src='./images/product/slider/3.jpg')
+                                    .swiper-slide
+                                        .product__gallery-thumbs-slide
+                                            img(src='./images/product/slider/1.jpg')
+                                    .swiper-slide
+                                        .product__gallery-thumbs-slide
+                                            img(src='./images/product/slider/2.jpg')
+                                    .swiper-slide
+                                        .product__gallery-thumbs-slide
+                                            img(src='./images/product/slider/3.jpg')
+                        .product__links.product__links--desctop
+                            a.product__link
+                                .product__link-img
+                                    img.product__link-img(src='./images/brands/masterbit.png')
+                                .product__link-text
+                                    p.button-16 Мастербит
+                                    span.text-14 Все товары производителя
+                                span.product__link-arrow
+                                    +svg("arrow")
+                            a.product__link
+                                .product__link-img
+                                    img(src='./images/product/colors.png')
+                                .product__link-text
+                                    p.button-16 Резиновые краски
+                                    span.text-14 Все товары категории
+                                span.product__link-arrow
+                                    +svg("arrow")
+                        .product__about
+                            .product__about-buttons
+                                button.h4.product__about-button.active Характеристики
+                                button.h4.product__about-button Спецификация
+                            .product__about-text
+                                .product__about-text-block
+                                    p.text-16-long Медиамикс экономит формат события. Восприятие марки, как следует из вышесказанного, ускоряет связанный маркетинг. Медиапланирование, как следует из вышесказанного, определяет комплексный показ баннера. А вот по мнению аналитиков психологическая среда по-прежнему востребована. Как предсказывают футурологи привлечение аудитории индуцирует анализ зарубежного опыта. Экспертиза выполненного проекта, как принято считать, спорадически отталкивает пул лояльных изданий.
+                                    p.text-16-long Ценовая стратегия, отбрасывая подробности, поддерживает баинг и селлинг. Потребительский рынок, безусловно, уравновешивает план размещения. Представляется логичным, что имидж предприятия многопланово экономит сублимированный социальный статус. Построение бренда масштабирует креативный потребительский рынок, осознав маркетинг как часть производства. По сути, традиционный канал многопланово специфицирует стиль менеджмента.
+                                    p.text-16-long Искусство медиапланирования парадоксально порождает из ряда вон выходящий анализ зарубежного опыта, отвоевывая рыночный сегмент. Реклама выражена наиболее полно. Селекция бренда существенно транслирует комплексный опрос.
+                                .product__about-text-block.hidden
+                                    p.text-16-long Ценовая стратегия, отбрасывая подробности, поддерживает баинг и селлинг. Потребительский рынок, безусловно, уравновешивает план размещения. Представляется логичным, что имидж предприятия многопланово экономит сублимированный социальный статус. Построение бренда масштабирует креативный потребительский рынок, осознав маркетинг как часть производства. По сути, традиционный канал многопланово специфицирует стиль менеджмента.
+                                    p.text-16-long Искусство медиапланирования парадоксально порождает из ряда вон выходящий анализ зарубежного опыта, отвоевывая рыночный сегмент. Реклама выражена наиболее полно. Селекция бренда существенно транслирует комплексный опрос.
+                                    p.text-16-long Медиамикс экономит формат события. Восприятие марки, как следует из вышесказанного, ускоряет связанный маркетинг. Медиапланирование, как следует из вышесказанного, определяет комплексный показ баннера. А вот по мнению аналитиков психологическая среда по-прежнему востребована. Как предсказывают футурологи привлечение аудитории индуцирует анализ зарубежного опыта. Экспертиза выполненного проекта, как принято считать, спорадически отталкивает пул лояльных изданий.
+                    .product__info-top-right
+                        .product__header-buttons
+                            a.product__header-button
+                                span
+                                    +svg("compare")
+                                p.button-14 Сравнить
+                            a.product__header-button
+                                span
+                                    +svg("heart")
+                                p.button-14 В избранное
+                            a.product__header-button
+                                span
+                                    +svg("share")
+                                p.button-14 Поделиться
+                        h1.product__info-title.h1 Резиновая краска универсальная МБ-35 ELASTIQ
+                        .product__info-color
+                            +product-characteristics(colors)
+                        .product__info-packing
+                            +product-characteristics(packing)
+                        .product__info-available
+                            h3.h3.product__info-available-now
+                                | В наличии
+                                span.product__info-available-now-count 8
+                                | шт.
+                            h3.h3.product__info-available-not
+                                | Нет наличии
+                            p.product__info-available-future.text-14
+                                | Можем привезти ещё
+                                span.product__info-available-future-count 5
+                                | до
+                                span.product__info-available-future-date 15
+                                span.product__info-available-future-mouth августа
 
-					.product__info-top-right
-						.product__header-buttons
-							a.product__header-button
-								span
-									+svg("compare")
-								p.button-14 Сравнить
-							a.product__header-button
-								span
-									+svg("heart")
-								p.button-14 В избранное
-							a.product__header-button
-								span
-									+svg("share")
-								p.button-14 Поделиться
-						h1.product__info-title.h1 Резиновая краска универсальная МБ-35 ELASTIQ
-						.product__info-color
-							+product-characteristics(colors)
-						.product__info-packing
-							+product-characteristics(packing)
-						.product__info-available
-							h3.h3.product__info-available-now
-								| В наличии
-								span.product__info-available-now-count 8
-								| шт.
-							p.product__info-available-future.text-14
-								| Можем привезти ещё
-								span.product__info-available-future-count 5
-								| до
-								span.product__info-available-future-date 15
-								span.product__info-available-future-mouth августа
-
-						.product__info-price
-							.product__info-price-top
-								p.product__info-price-current.price-l 793,50 ₽ / шт.
-								.product__info-price-economy
-									p.button-14 Экономия 2 539 ₽
-							.product__info-price-old
-								p 2 539 ₽
-						.product__info-basket-btn
-							button.btn.btn-l.btn-dark.button-16 В корзину
-						.product__info-payment
-							.payment-banner
-								.payment-banner__body
-									h3.h3.payment-banner__title Оплата и доставка
-									.payment-banner__row
-										.payment-banner__row-img
-											+svg("credit-card")
-										.payment-banner__row-text
-											h4.h4 Оплата онлайн и наличными
-											p.text-14-long Для юридических лиц доступна оплата по перечислению
-									.payment-banner__row
-										.payment-banner__row-img
-											+svg("car")
-										.payment-banner__row-text
-											h4.h4 Доставка по России
-											p.text-14-long Самовывоз в некоторых регионах
-									.payment-banner__row.payment-banner__row--green
-										.payment-banner__row-img
-											+svg("check-circle")
-										.payment-banner__row-text
-											h4.h4 Есть пункты выдачи в Чебоксарах
-									a.payment-banner__link(href="#")
-										p.button-16 Подробнее
-										span
-											+svg("arrow")
-						.product__info-what-need
-							.product__info-what-need__row
-								.product__info-what-need__row-text
-									h4.h4 Нужен другой цвет или фасовка?
-									p.text-14-long Соберите индивидуальный заказ
-								a.product__info-what-need__row-link
-									p.button-16 Напишите нам
-									span
-										+svg("arrow")
-							.product__info-what-need__separator
-							.product__info-what-need__row
-								.product__info-what-need__row-text
-									h4.h4 Нашли дешевле?
-									p.text-14-long Сделаем скидку
-								a.product__info-what-need__row-link
-									p.button-16 Покажите
-									span
-										+svg("arrow")
-						.product__info-discount
-							.product__info-discount__body
-								.product__info-discount__img
-									+svg("percentage")
-								.product__info-discount__text
-									h4.h4 Скидка после оформления гарантирована!
-									p.text-14-long Указана розничная цена для покупки через интернет-магазин
-				.product__info-left
-				.product__info-right
+                        .product__info-price
+                            .product__info-price-top
+                                p.product__info-price-current.price-l 793,50 ₽ / шт.
+                                .product__info-price-economy
+                                    p.button-14 Экономия 2 539 ₽
+                            .product__info-price-old
+                                p 2 539 ₽
+                            .product__info-price-discount
+                                h3.h3 Скидка до −35%
+                                span
+                                    +svg("info")
+                                .product__info-price-discount-note
+                                    .product__info-price-discount-note-body
+                                        .product__info-price-discount-note-title
+                                            h5.h5 Как получить?
+                                            span.product__info-price-discount-note-close
+                                                +svg("close")
+                                        .product__info-price-discount-note-text
+                                            p.text-14-long Приобретая все остатки со склада вы получите скидку 35%
+                        .product__info-basket-btn
+                            button.btn.btn-l.btn-dark.button-16 В корзину
+                        .product__info-payment
+                            .payment-banner
+                                .payment-banner__body
+                                    h3.h3.payment-banner__title Оплата и доставка
+                                    .payment-banner__row
+                                        .payment-banner__row-img
+                                            +svg("credit-card")
+                                        .payment-banner__row-text
+                                            h4.h4 Оплата онлайн и наличными
+                                            p.text-14-long Для юридических лиц доступна оплата по перечислению
+                                    .payment-banner__row
+                                        .payment-banner__row-img
+                                            +svg("car")
+                                        .payment-banner__row-text
+                                            h4.h4 Доставка по России
+                                            p.text-14-long Самовывоз в некоторых регионах
+                                    .payment-banner__row.payment-banner__row--green
+                                        .payment-banner__row-img
+                                            +svg("check-circle")
+                                        .payment-banner__row-text
+                                            h4.h4 Есть пункты выдачи в Чебоксарах
+                                    a.payment-banner__link(href="#")
+                                        p.button-16 Подробнее
+                                        span
+                                            +svg("arrow")
+                        .product__info-what-need
+                            .product__info-what-need__row
+                                .product__info-what-need__row-text
+                                    h4.h4 Нужен другой цвет или фасовка?
+                                    p.text-14-long Соберите индивидуальный заказ
+                                a.product__info-what-need__row-link
+                                    p.button-16 Напишите нам
+                                    span
+                                        +svg("arrow")
+                            .product__info-what-need__separator
+                            .product__info-what-need__row
+                                .product__info-what-need__row-text
+                                    h4.h4 Нашли дешевле?
+                                    p.text-14-long Сделаем скидку
+                                a.product__info-what-need__row-link
+                                    p.button-16 Покажите
+                                    span
+                                        +svg("arrow")
+                        .product__info-discount
+                            .product__info-discount__body
+                                .product__info-discount__img
+                                    +svg("percentage")
+                                .product__info-discount__text
+                                    h4.h4 Скидка после оформления гарантирована!
+                                    p.text-14-long Указана розничная цена для покупки через интернет-магазин
+                        .product__links.product__links--mobile
+                            a.product__link
+                                .product__link-img
+                                    img.product__link-img(src='./images/brands/masterbit.png')
+                                .product__link-text
+                                    p.button-16 Мастербит
+                                    span.text-14 Все товары производителя
+                                span.product__link-arrow
+                                    +svg("arrow")
+                            a.product__link
+                                .product__link-img
+                                    img(src='./images/product/colors.png')
+                                .product__link-text
+                                    p.button-16 Резиновые краски
+                                    span.text-14 Все товары категории
+                                span.product__link-arrow
+                                    +svg("arrow")
+                        .product__about-mobile
+                            .product__about-mobile-body
+                                .product__about-mobile-row
+                                    .product__about-mobile-row-title
+                                        h5.h5 Характеристики
+                                        span
+                                            +svg("arrow")
+                                    .product__about-mobile-row-text
+                                        .product__about-mobile-row-text-block
+                                            p.text-16-long Медиамикс экономит формат события. Восприятие марки, как следует из вышесказанного, ускоряет связанный маркетинг. Медиапланирование, как следует из вышесказанного, определяет комплексный показ баннера. А вот по мнению аналитиков психологическая среда по-прежнему востребована. Как предсказывают футурологи привлечение аудитории индуцирует анализ зарубежного опыта. Экспертиза выполненного проекта, как принято считать, спорадически отталкивает пул лояльных изданий.
+                                            p.text-16-long Ценовая стратегия, отбрасывая подробности, поддерживает баинг и селлинг. Потребительский рынок, безусловно, уравновешивает план размещения. Представляется логичным, что имидж предприятия многопланово экономит сублимированный социальный статус. Построение бренда масштабирует креативный потребительский рынок, осознав маркетинг как часть производства. По сути, традиционный канал многопланово специфицирует стиль менеджмента.
+                                            p.text-16-long Искусство медиапланирования парадоксально порождает из ряда вон выходящий анализ зарубежного опыта, отвоевывая рыночный сегмент. Реклама выражена наиболее полно. Селекция бренда существенно транслирует комплексный опрос.
+                                .product__about-mobile-separator
+                                .product__about-mobile-row
+                                    .product__about-mobile-row-title
+                                        h5.h5 Спецификация
+                                        span
+                                            +svg("arrow")
+                                    .product__about-mobile-row-text
+                                        .product__about-mobile-row-text-block
+                                            p.text-16-long Ценовая стратегия, отбрасывая подробности, поддерживает баинг и селлинг. Потребительский рынок, безусловно, уравновешивает план размещения. Представляется логичным, что имидж предприятия многопланово экономит сублимированный социальный статус. Построение бренда масштабирует креативный потребительский рынок, осознав маркетинг как часть производства. По сути, традиционный канал многопланово специфицирует стиль менеджмента.
+                                            p.text-16-long Искусство медиапланирования парадоксально порождает из ряда вон выходящий анализ зарубежного опыта, отвоевывая рыночный сегмент. Реклама выражена наиболее полно. Селекция бренда существенно транслирует комплексный опрос.
+                                            p.text-16-long Медиамикс экономит формат события. Восприятие марки, как следует из вышесказанного, ускоряет связанный маркетинг. Медиапланирование, как следует из вышесказанного, определяет комплексный показ баннера. А вот по мнению аналитиков психологическая среда по-прежнему востребована. Как предсказывают футурологи привлечение аудитории индуцирует анализ зарубежного опыта. Экспертиза выполненного проекта, как принято считать, спорадически отталкивает пул лояльных изданий.
+            .product__compare
+                .product__compare-header
+                    h2.h2.product__compare-title Сравните этот товар с аналогичными
+                    a.product__compare-link
+                        span
+                            +svg("compare")
+                        p.button-14 Сравнить все аналоги
+                .product__compare-slider.swiper
+                    .swiper-wrapper
+                        each product in products
+                            .swiper-slide
+                                +product-card(product.discount, product.newStatus, product.image, product.name, product.price, product.oldPrice, product.link)
+                .custom--slider-arrows
+                    .swiper-button-prev.product__compare-slider-arrow-prev
+                    .swiper-button-next.product__compare-slider-arrow-next
+                .product__compare-grid
+                    each product in products
+                        +product-card(product.discount, product.newStatus, product.image, product.name, product.price, product.oldPrice, product.link)
+            .product__viewed
+                .product__viewed-header
+                    h2.h2.product__viewed-title Недавно просмотренные
+                .product__viewed-slider.swiper
+                    .swiper-wrapper
+                        each product in products2
+                            .swiper-slide
+                                +product-card(product.discount, product.newStatus, product.image, product.name, product.price, product.oldPrice, product.link)
+                .custom--slider-arrows
+                    .swiper-button-prev.product__viewed-slider-arrow-prev
+                    .swiper-button-next.product__viewed-slider-arrow-next
+                .product__viewed-grid
+                    each product in products2
+                        +product-card(product.discount, product.newStatus, product.image, product.name, product.price, product.oldPrice, product.link)

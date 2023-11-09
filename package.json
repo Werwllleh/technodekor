@@ -74,6 +74,7 @@
 		"gulp-cli": "2.3.0",
 		"husky": "7.0.1",
 		"jquery": "3.6.0",
+		"lightgallery": "2.7.2",
 		"lozad": "1.16.0",
 		"ninelines-sharing": "1.5.8",
 		"ninelines-ua-parser": "1.1.6",
