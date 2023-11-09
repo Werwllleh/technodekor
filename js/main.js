@@ -1251,6 +1251,86 @@ new swiper__WEBPACK_IMPORTED_MODULE_0__["Swiper"]('.products__slider', {
     }
   }
 });
+new swiper__WEBPACK_IMPORTED_MODULE_0__["Swiper"]('.product__compare-slider', {
+  modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Navigation"], swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Pagination"], swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Scrollbar"]],
+  // slidesPerView: 4,
+  // spaceBetween: 40,
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
+  // If we need pagination
+  pagination: {
+    enabled: false
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.product__compare-slider-arrow-next',
+    prevEl: '.product__compare-slider-arrow-prev'
+  },
+  // And if we need scrollbar
+  scrollbar: {
+    enabled: false,
+    hide: true
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.2,
+      spaceBetween: 10
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    1025: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+    1600: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
+  }
+});
+new swiper__WEBPACK_IMPORTED_MODULE_0__["Swiper"]('.product__viewed-slider', {
+  modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Navigation"], swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Pagination"], swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Scrollbar"]],
+  // slidesPerView: 4,
+  // spaceBetween: 40,
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
+  // If we need pagination
+  pagination: {
+    enabled: false
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.product__viewed-slider-arrow-next',
+    prevEl: '.product__viewed-slider-arrow-prev'
+  },
+  // And if we need scrollbar
+  scrollbar: {
+    enabled: false,
+    hide: true
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.2,
+      spaceBetween: 10
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    1025: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+    1600: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
+  }
+});
 
 // document.addEventListener('DOMContentLoaded', () => {
 // 	const mainBanner = document.querySelector('.swiper-container');
