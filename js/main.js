@@ -441,15 +441,28 @@ document.addEventListener('DOMContentLoaded', function () {});
 
 document.addEventListener('DOMContentLoaded', function () {
   var mobileFilterBtns = document.querySelectorAll('.mobile-filter-btn__left');
-  var filter = document.querySelector('.modal-filter');
-  var bg = document.querySelector('.modal-bg');
-  mobileFilterBtns.forEach(function (mobileFilterBtn) {
-    mobileFilterBtn.addEventListener('click', function (e) {
+  var filter = document.querySelector('.filter');
+  var filterCLose = document.querySelector('.filter__close');
+  var filterBg = document.querySelector('.filter__bg');
+  // const bg = document.querySelector('.modal-bg');
+  //
+  mobileFilterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
       e.preventDefault();
-      document.documentElement.style.overflowY = "hidden";
       filter.classList.add('active');
-      bg.classList.add('active');
+      document.documentElement.style.overflowY = "hidden";
+      // filter.classList.add('active');
+      // bg.classList.add('active');
     });
+  });
+
+  filterCLose.addEventListener('click', function (e) {
+    filter.classList.remove('active');
+    document.documentElement.style.overflowY = "auto";
+  });
+  filterBg.addEventListener('click', function (e) {
+    filter.classList.remove('active');
+    document.documentElement.style.overflowY = "auto";
   });
 });
 
@@ -526,42 +539,45 @@ document.addEventListener('DOMContentLoaded', function () {
 /***/ (function(module, exports) {
 
 document.addEventListener('DOMContentLoaded', function () {
-  var rangeInput = document.querySelectorAll(".range-slider__rangeInput input"),
-    priceInput = document.querySelectorAll(".range-slider__field input"),
-    range = document.querySelector(".range-slider__slider-progress");
+  var rangeInput = document.querySelectorAll(".range-slider__rangeInput input");
+  var priceInput = document.querySelectorAll(".range-slider__field input");
+  var ranges = document.querySelectorAll(".range-slider__slider-progress");
   var priceGap = 1000;
   priceInput.forEach(function (input) {
     input.addEventListener("input", function (e) {
-      var minPrice = parseInt(priceInput[0].value),
-        maxPrice = parseInt(priceInput[1].value);
-      if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
-        console.log(e.target.className);
-        if (e.target.className === "range-slider__field-minInput") {
-          rangeInput[0].value = minPrice;
-          range.style.left = minPrice / rangeInput[0].max * 100 + "%";
-        } else {
-          rangeInput[1].value = maxPrice;
-          range.style.right = 100 - maxPrice / rangeInput[1].max * 100 + "%";
+      ranges.forEach(function (range) {
+        var minPrice = parseInt(priceInput[0].value);
+        var maxPrice = parseInt(priceInput[1].value);
+        if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
+          if (e.target.className === "range-slider__field-minInput") {
+            rangeInput[0].value = minPrice;
+            range.style.left = minPrice / rangeInput[0].max * 100 + "%";
+          } else {
+            rangeInput[1].value = maxPrice;
+            range.style.right = 100 - maxPrice / rangeInput[1].max * 100 + "%";
+          }
         }
-      }
+      });
     });
   });
   rangeInput.forEach(function (input) {
     input.addEventListener("input", function (e) {
-      var minVal = parseInt(rangeInput[0].value),
-        maxVal = parseInt(rangeInput[1].value);
-      if (maxVal - minVal < priceGap) {
-        if (e.target.className === "range-slider__rangeInput-minRange") {
-          rangeInput[0].value = maxVal - priceGap;
+      ranges.forEach(function (range) {
+        var minVal = parseInt(rangeInput[0].value);
+        var maxVal = parseInt(rangeInput[1].value);
+        if (maxVal - minVal < priceGap) {
+          if (e.target.className === "range-slider__rangeInput-minRange") {
+            rangeInput[0].value = maxVal - priceGap;
+          } else {
+            rangeInput[1].value = minVal + priceGap;
+          }
         } else {
-          rangeInput[1].value = minVal + priceGap;
+          priceInput[0].value = minVal;
+          priceInput[1].value = maxVal;
+          range.style.left = minVal / rangeInput[0].max * 100 + "%";
+          range.style.right = 100 - maxVal / rangeInput[1].max * 100 + "%";
         }
-      } else {
-        priceInput[0].value = minVal;
-        priceInput[1].value = maxVal;
-        range.style.left = minVal / rangeInput[0].max * 100 + "%";
-        range.style.right = 100 - maxVal / rangeInput[1].max * 100 + "%";
-      }
+      });
     });
   });
 });
@@ -757,11 +773,8 @@ document.addEventListener('DOMContentLoaded', function () {
         text[1].classList.remove('hidden');
         text[0].classList.add('hidden');
       }
-
-      // console.log(btn.parentNode.parentNode.children[1].children)
     });
   });
-
   var productGallery = document.querySelector('#productGallery');
   var productAboutMobile = document.querySelectorAll('.product__about-mobile-row');
   productAboutMobile.forEach(function (btn) {
@@ -779,23 +792,25 @@ document.addEventListener('DOMContentLoaded', function () {
   var productDisclaimer = document.querySelector('.product__info-price-discount span');
   var productDisclaimerNote = document.querySelector('.product__info-price-discount-note');
   var productDisclaimerClose = document.querySelector('.product__info-price-discount-note-close');
-  productDisclaimer.addEventListener('click', function () {
-    productDisclaimer.classList.toggle('active');
-    if (productDisclaimer.classList.contains('active')) {
-      productDisclaimerNote.classList.add('active');
-      if (window.outerWidth <= 564) {
-        document.documentElement.style.overflowY = "hidden";
+  if (productDisclaimer) {
+    productDisclaimer.addEventListener('click', function () {
+      productDisclaimer.classList.toggle('active');
+      if (productDisclaimer.classList.contains('active')) {
+        productDisclaimerNote.classList.add('active');
+        if (window.outerWidth <= 564) {
+          document.documentElement.style.overflowY = "hidden";
+        }
+      } else {
+        productDisclaimerNote.classList.remove('active');
+        document.documentElement.style.overflowY = "auto";
       }
-    } else {
+    });
+    productDisclaimerClose.addEventListener('click', function () {
+      productDisclaimer.classList.remove('active');
       productDisclaimerNote.classList.remove('active');
       document.documentElement.style.overflowY = "auto";
-    }
-  });
-  productDisclaimerClose.addEventListener('click', function () {
-    productDisclaimer.classList.remove('active');
-    productDisclaimerNote.classList.remove('active');
-    document.documentElement.style.overflowY = "auto";
-  });
+    });
+  }
   Object(lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(productGallery, {
     plugins: [lightgallery_plugins_zoom__WEBPACK_IMPORTED_MODULE_2__["default"], lightgallery_plugins_thumbnail__WEBPACK_IMPORTED_MODULE_1__["default"]],
     licenseKey: 'your_license_key',
