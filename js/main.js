@@ -443,25 +443,24 @@ document.addEventListener('DOMContentLoaded', function () {
   var mobileFilterBtns = document.querySelectorAll('.mobile-filter-btn__left');
   var filter = document.querySelector('.filter');
   var filterCLose = document.querySelector('.filter__close');
-  var filterBg = document.querySelector('.filter__bg');
-  // const bg = document.querySelector('.modal-bg');
-  //
+  var bg = document.querySelector('.modal-bg');
   mobileFilterBtns.forEach(function (btn) {
     btn.addEventListener('click', function (e) {
       e.preventDefault();
       filter.classList.add('active');
       document.documentElement.style.overflowY = "hidden";
       // filter.classList.add('active');
-      // bg.classList.add('active');
+      bg.classList.add('active');
     });
   });
-
   filterCLose.addEventListener('click', function (e) {
     filter.classList.remove('active');
+    bg.classList.remove('active');
     document.documentElement.style.overflowY = "auto";
   });
-  filterBg.addEventListener('click', function (e) {
+  bg.addEventListener('click', function (e) {
     filter.classList.remove('active');
+    bg.classList.remove('active');
     document.documentElement.style.overflowY = "auto";
   });
 });
