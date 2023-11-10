@@ -125,9 +125,18 @@
 				span {
 					cursor: pointer;
 
+					&:hover {
+
+						svg {
+							fill: $color-brand-purple;
+						}
+					}
+
 					svg {
 						width: 24px;
 						height: 24px;
+						fill: #7D8899;
+						transition: fill $duration-normal;
 					}
 				}
 
@@ -703,6 +712,17 @@
 		border-radius: 12px;
 		background: #F3F4F6;
 
+		&:hover {
+			background-color: #E5E7EA;
+
+			.product__link-arrow {
+
+				svg {
+					fill: #596476;
+				}
+			}
+		}
+
 		@include tablet() {
 			width: 100%;
 			flex: 1 1 50%;
@@ -742,6 +762,7 @@
 				width: 10px;
 				height: 10px;
 				transform: rotate(180deg);
+				transition: fill $duration-normal;
 			}
 		}
 	}

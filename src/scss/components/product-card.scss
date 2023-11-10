@@ -32,6 +32,33 @@
 		border-radius: 12px;
 		background-color: $color-white;
 		box-shadow: 0 8px 32px 0 rgba(45, 47, 56, 0.08);
+
+		.product-card__name-link {
+			//position: absolute;
+			//top: 0;
+			//left: 0;
+			//width: 100%;
+			height: 100px;
+			background-color: $color-white;
+
+			&:after {
+				//opacity: 0;
+				display: none;
+			}
+
+			@include mobile() {
+				height: 60px;
+
+				&:after {
+					display: block;
+				}
+			}
+
+		}
+
+		@include mobile() {
+			box-shadow: none;
+		}
 	}
 
 
@@ -49,6 +76,8 @@
 	}
 
 	&__name {
+		position: relative;
+		//height: 60px;
 
 		&-link {
 			display: block;
@@ -56,9 +85,13 @@
 			overflow: hidden;
 			position: relative;
 			max-width: 330px;
+			min-height: 60px;
 			height: 60px;
+			transition: height $duration-normal;
+
 
 			&:after {
+				opacity: 1;
 				content: "";
 				text-align: right;
 				position: absolute;
@@ -68,6 +101,7 @@
 				height: 1.2em;
 				background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
 				pointer-events: none;
+				transition: opacity $duration-normal;
 			}
 
 			@include mobile() {
