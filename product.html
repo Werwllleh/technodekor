@@ -14,7 +14,7 @@
 		<meta name="twitter:title" content="Карточка товара">
 		<meta name="twitter:description" content="Карточка товара">
 		<title>Карточка товара</title>
-		<link rel="stylesheet" href="./css/main.css?v=1699617313474">
+		<link rel="stylesheet" href="./css/main.css?v=1699643888089">
 	</head>
 	<body>
 		<!--header-->
@@ -155,7 +155,7 @@
 						<div class="header__menu-body">
 							<div class="header__menu-top">
 								<div class="header__menu-top-items">
-									<div class="header__menu-top-items-links"><a class="header__menu-top-item button-16" href="#">Красим металл</a><a class="header__menu-top-item button-16" href="#">Защита и декор древесины</a><a class="header__menu-top-item button-16" href="#">Декоративные покрытия</a><a class="header__menu-top-item button-16" href="#">Фасады и интерьеры</a><a class="header__menu-top-item button-16" href="#">Декоративные покрытия и арт</a><a class="header__menu-top-item button-16" href="#">Для городской среды</a></div><a class="header__menu-top-item header__menu-top-more"><span>
+									<div class="header__menu-top-items-links"><a class="header__menu-top-item button-16" href="#">Красим металл</a><a class="header__menu-top-item button-16" href="#">Защита и декор древесины</a><a class="header__menu-top-item button-16" href="#">Декоративные покрытия</a><a class="header__menu-top-item header__menu-top-item-hide button-16" href="#">Фасады и интерьеры</a><a class="header__menu-top-item header__menu-top-item-hide button-16" href="#">Декоративные покрытия и арт</a><a class="header__menu-top-item header__menu-top-item-hide button-16" href="#">Для городской среды</a></div><a class="header__menu-top-item header__menu-top-more"><span>
 											<svg>
 												<use xlink:href="./images/sprites.svg#more"></use>
 											</svg></span></a>
@@ -172,6 +172,9 @@
 												<li class="menu__more-item"><a class="text-14" href="#">Ещё категория</a></li>
 												<li class="menu__more-item"><a class="text-14" href="#">Новая категория</a></li>
 												<li class="menu__more-item"><a class="text-14" href="#">Категория про другое</a></li>
+												<li class="menu__more-item"><a class="text-14" href="#">Фасады и интерьеры</a></li>
+												<li class="menu__more-item"><a class="text-14" href="#">Декоративные покрытия и арт</a></li>
+												<li class="menu__more-item"><a class="text-14" href="#">Для городской среды</a></li>
 											</ul>
 										</div>
 									</div>
@@ -704,45 +707,215 @@
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
 										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
+										<div class="product-card">
+											<div class="product-card__body">
 												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн</p>
-												</div>
-												<div class="product-card__price">
-													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old"></span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-											<div class="product-card__labels">
-												<label class="product-card__label-discount text-14">-25 %</label>
-												<label class="product-card__label-status text-14">Новинка</label>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
-												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью"/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью</p>
+												<div class="product-card__name"><a class="product-card__name-link text-16" href="#">Краска с воском IQ 130 для ванн</a>
+													<div class="product-card__info">
+														<div class="product-card__info-available">
+															<p class="text-14">В наличии<span>8</span>шт.</p>
+														</div>
+														<div class="product-card__info-about">
+															<div class="product-card__info-about-block">
+																<ul class="product-card__info-about-list">
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Бренд</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Длинное название бренда</p>
+																		</div>
+																	</li>
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Тип работ</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Характеристика краски для пола по типу работ</p>
+																		</div>
+																	</li>
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Марка</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Марка с длинным названием</p>
+																		</div>
+																	</li>
+																</ul>
+															</div><a class="product-card__info-about-button">
+																<p class="button-14">Храктеристики</p><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#arrow"></use>
+																	</svg></span></a>
+														</div>
+														<div class="product-card__info-footer"><a class="product-card__info-footer-button"><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#compare"></use>
+																	</svg></span>
+																<p class="button-14">Сравнить</p></a><a class="product-card__info-footer-button"><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#heart"></use>
+																	</svg></span>
+																<p class="button-14">В избранное</p></a></div>
+													</div>
 												</div>
 												<div class="product-card__price">
 													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+												</div>
+											</div>
+											<div class="product-card__footer">
+												<div class="product-card__footer-price">
+													<p class="price-s product-card__price-current">от 793,50 ₽ / шт</p>
+												</div><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											</div>
 											<div class="product-card__labels">
-												<label class="product-card__label-discount text-14">-25 %</label>
+												<label class="product-card__label-status text-14">Новинка</label>
 											</div>
 										</div>
 									</div>
 									<div class="swiper-slide">
 										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
-												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн</p>
+										<div class="product-card">
+											<div class="product-card__body">
+												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью"/></div>
+												<div class="product-card__name"><a class="product-card__name-link text-16" href="#">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью</a>
+													<div class="product-card__info">
+														<div class="product-card__info-available">
+															<p class="text-14">В наличии<span>8</span>шт.</p>
+														</div>
+														<div class="product-card__info-about">
+															<div class="product-card__info-about-block">
+																<ul class="product-card__info-about-list">
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Бренд</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Длинное название бренда</p>
+																		</div>
+																	</li>
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Тип работ</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Характеристика краски для пола по типу работ</p>
+																		</div>
+																	</li>
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Марка</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Марка с длинным названием</p>
+																		</div>
+																	</li>
+																</ul>
+															</div><a class="product-card__info-about-button">
+																<p class="button-14">Храктеристики</p><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#arrow"></use>
+																	</svg></span></a>
+														</div>
+														<div class="product-card__info-footer"><a class="product-card__info-footer-button"><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#compare"></use>
+																	</svg></span>
+																<p class="button-14">Сравнить</p></a><a class="product-card__info-footer-button"><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#heart"></use>
+																	</svg></span>
+																<p class="button-14">В избранное</p></a></div>
+													</div>
 												</div>
 												<div class="product-card__price">
 													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+												</div>
+											</div>
+											<div class="product-card__footer">
+												<div class="product-card__footer-price">
+													<p class="price-s product-card__price-current">от 793,50 ₽ / шт</p>
+												</div><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											</div>
+											<div class="product-card__labels">
+												<label class="product-card__label-discount text-14">-25 %</label>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<!--product-card-->
+										<div class="product-card">
+											<div class="product-card__body">
+												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
+												<div class="product-card__name"><a class="product-card__name-link text-16" href="#">Краска с воском IQ 130 для ванн</a>
+													<div class="product-card__info">
+														<div class="product-card__info-available">
+															<p class="text-14">В наличии<span>8</span>шт.</p>
+														</div>
+														<div class="product-card__info-about">
+															<div class="product-card__info-about-block">
+																<ul class="product-card__info-about-list">
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Бренд</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Длинное название бренда</p>
+																		</div>
+																	</li>
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Тип работ</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Характеристика краски для пола по типу работ</p>
+																		</div>
+																	</li>
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Марка</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Марка с длинным названием</p>
+																		</div>
+																	</li>
+																</ul>
+															</div><a class="product-card__info-about-button">
+																<p class="button-14">Храктеристики</p><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#arrow"></use>
+																	</svg></span></a>
+														</div>
+														<div class="product-card__info-footer"><a class="product-card__info-footer-button"><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#compare"></use>
+																	</svg></span>
+																<p class="button-14">Сравнить</p></a><a class="product-card__info-footer-button"><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#heart"></use>
+																	</svg></span>
+																<p class="button-14">В избранное</p></a></div>
+													</div>
+												</div>
+												<div class="product-card__price">
+													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
+												</div>
+											</div>
+											<div class="product-card__footer">
+												<div class="product-card__footer-price">
+													<p class="price-s product-card__price-current">от 793,50 ₽ / шт</p>
+												</div><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											</div>
 											<div class="product-card__labels">
 												<label class="product-card__label-status text-14">Новинка</label>
 											</div>
@@ -750,14 +923,71 @@
 									</div>
 									<div class="swiper-slide">
 										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
+										<div class="product-card">
+											<div class="product-card__body">
 												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью"/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью</p>
+												<div class="product-card__name"><a class="product-card__name-link text-16" href="#">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью</a>
+													<div class="product-card__info">
+														<div class="product-card__info-available">
+															<p class="text-14">В наличии<span>8</span>шт.</p>
+														</div>
+														<div class="product-card__info-about">
+															<div class="product-card__info-about-block">
+																<ul class="product-card__info-about-list">
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Бренд</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Длинное название бренда</p>
+																		</div>
+																	</li>
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Тип работ</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Характеристика краски для пола по типу работ</p>
+																		</div>
+																	</li>
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Марка</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Марка с длинным названием</p>
+																		</div>
+																	</li>
+																</ul>
+															</div><a class="product-card__info-about-button">
+																<p class="button-14">Храктеристики</p><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#arrow"></use>
+																	</svg></span></a>
+														</div>
+														<div class="product-card__info-footer"><a class="product-card__info-footer-button"><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#compare"></use>
+																	</svg></span>
+																<p class="button-14">Сравнить</p></a><a class="product-card__info-footer-button"><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#heart"></use>
+																	</svg></span>
+																<p class="button-14">В избранное</p></a></div>
+													</div>
 												</div>
 												<div class="product-card__price">
 													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old"></span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+												</div>
+											</div>
+											<div class="product-card__footer">
+												<div class="product-card__footer-price">
+													<p class="price-s product-card__price-current">от 793,50 ₽ / шт</p>
+												</div><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											</div>
 											<div class="product-card__labels">
 												<label class="product-card__label-discount text-14">-25 %</label>
 												<label class="product-card__label-status text-14">Новинка</label>
@@ -766,14 +996,71 @@
 									</div>
 									<div class="swiper-slide">
 										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
+										<div class="product-card">
+											<div class="product-card__body">
 												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </p>
+												<div class="product-card__name"><a class="product-card__name-link text-16" href="#">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </a>
+													<div class="product-card__info">
+														<div class="product-card__info-available">
+															<p class="text-14">В наличии<span>8</span>шт.</p>
+														</div>
+														<div class="product-card__info-about">
+															<div class="product-card__info-about-block">
+																<ul class="product-card__info-about-list">
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Бренд</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Длинное название бренда</p>
+																		</div>
+																	</li>
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Тип работ</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Характеристика краски для пола по типу работ</p>
+																		</div>
+																	</li>
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Марка</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Марка с длинным названием</p>
+																		</div>
+																	</li>
+																</ul>
+															</div><a class="product-card__info-about-button">
+																<p class="button-14">Храктеристики</p><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#arrow"></use>
+																	</svg></span></a>
+														</div>
+														<div class="product-card__info-footer"><a class="product-card__info-footer-button"><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#compare"></use>
+																	</svg></span>
+																<p class="button-14">Сравнить</p></a><a class="product-card__info-footer-button"><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#heart"></use>
+																	</svg></span>
+																<p class="button-14">В избранное</p></a></div>
+													</div>
 												</div>
 												<div class="product-card__price">
 													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+												</div>
+											</div>
+											<div class="product-card__footer">
+												<div class="product-card__footer-price">
+													<p class="price-s product-card__price-current">от 793,50 ₽ / шт</p>
+												</div><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											</div>
 											<div class="product-card__labels">
 												<label class="product-card__label-discount text-14">-25 %</label>
 											</div>
@@ -781,14 +1068,71 @@
 									</div>
 									<div class="swiper-slide">
 										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
+										<div class="product-card">
+											<div class="product-card__body">
 												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн</p>
+												<div class="product-card__name"><a class="product-card__name-link text-16" href="#">Краска с воском IQ 130 для ванн</a>
+													<div class="product-card__info">
+														<div class="product-card__info-available">
+															<p class="text-14">В наличии<span>8</span>шт.</p>
+														</div>
+														<div class="product-card__info-about">
+															<div class="product-card__info-about-block">
+																<ul class="product-card__info-about-list">
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Бренд</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Длинное название бренда</p>
+																		</div>
+																	</li>
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Тип работ</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Характеристика краски для пола по типу работ</p>
+																		</div>
+																	</li>
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Марка</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Марка с длинным названием</p>
+																		</div>
+																	</li>
+																</ul>
+															</div><a class="product-card__info-about-button">
+																<p class="button-14">Храктеристики</p><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#arrow"></use>
+																	</svg></span></a>
+														</div>
+														<div class="product-card__info-footer"><a class="product-card__info-footer-button"><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#compare"></use>
+																	</svg></span>
+																<p class="button-14">Сравнить</p></a><a class="product-card__info-footer-button"><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#heart"></use>
+																	</svg></span>
+																<p class="button-14">В избранное</p></a></div>
+													</div>
 												</div>
 												<div class="product-card__price">
 													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+												</div>
+											</div>
+											<div class="product-card__footer">
+												<div class="product-card__footer-price">
+													<p class="price-s product-card__price-current">от 793,50 ₽ / шт</p>
+												</div><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											</div>
 											<div class="product-card__labels">
 												<label class="product-card__label-status text-14">Новинка</label>
 											</div>
@@ -802,81 +1146,422 @@
 							</div>
 							<div class="product__compare-grid">
 								<!--product-card-->
-								<div class="product-card"><a class="product-card__body" href="#">
+								<div class="product-card">
+									<div class="product-card__body">
 										<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-										<div class="product-card__name">
-											<p class="text-16">Краска с воском IQ 130 для ванн</p>
-										</div>
-										<div class="product-card__price">
-											<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old"></span>
-										</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
-									<div class="product-card__labels">
-										<label class="product-card__label-discount text-14">-25 %</label>
-										<label class="product-card__label-status text-14">Новинка</label>
-									</div>
-								</div>
-								<!--product-card-->
-								<div class="product-card"><a class="product-card__body" href="#">
-										<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью"/></div>
-										<div class="product-card__name">
-											<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью</p>
+										<div class="product-card__name"><a class="product-card__name-link text-16" href="#">Краска с воском IQ 130 для ванн</a>
+											<div class="product-card__info">
+												<div class="product-card__info-available">
+													<p class="text-14">В наличии<span>8</span>шт.</p>
+												</div>
+												<div class="product-card__info-about">
+													<div class="product-card__info-about-block">
+														<ul class="product-card__info-about-list">
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Бренд</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Длинное название бренда</p>
+																</div>
+															</li>
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Тип работ</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Характеристика краски для пола по типу работ</p>
+																</div>
+															</li>
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Марка</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Марка с длинным названием</p>
+																</div>
+															</li>
+														</ul>
+													</div><a class="product-card__info-about-button">
+														<p class="button-14">Храктеристики</p><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#arrow"></use>
+															</svg></span></a>
+												</div>
+												<div class="product-card__info-footer"><a class="product-card__info-footer-button"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#compare"></use>
+															</svg></span>
+														<p class="button-14">Сравнить</p></a><a class="product-card__info-footer-button"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#heart"></use>
+															</svg></span>
+														<p class="button-14">В избранное</p></a></div>
+											</div>
 										</div>
 										<div class="product-card__price">
 											<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-										</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+										</div>
+									</div>
+									<div class="product-card__footer">
+										<div class="product-card__footer-price">
+											<p class="price-s product-card__price-current">от 793,50 ₽ / шт</p>
+										</div><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+									</div>
 									<div class="product-card__labels">
-										<label class="product-card__label-discount text-14">-25 %</label>
+										<label class="product-card__label-status text-14">Новинка</label>
 									</div>
 								</div>
 								<!--product-card-->
-								<div class="product-card"><a class="product-card__body" href="#">
-										<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-										<div class="product-card__name">
-											<p class="text-16">Краска с воском IQ 130 для ванн</p>
+								<div class="product-card">
+									<div class="product-card__body">
+										<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью"/></div>
+										<div class="product-card__name"><a class="product-card__name-link text-16" href="#">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью</a>
+											<div class="product-card__info">
+												<div class="product-card__info-available">
+													<p class="text-14">В наличии<span>8</span>шт.</p>
+												</div>
+												<div class="product-card__info-about">
+													<div class="product-card__info-about-block">
+														<ul class="product-card__info-about-list">
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Бренд</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Длинное название бренда</p>
+																</div>
+															</li>
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Тип работ</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Характеристика краски для пола по типу работ</p>
+																</div>
+															</li>
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Марка</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Марка с длинным названием</p>
+																</div>
+															</li>
+														</ul>
+													</div><a class="product-card__info-about-button">
+														<p class="button-14">Храктеристики</p><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#arrow"></use>
+															</svg></span></a>
+												</div>
+												<div class="product-card__info-footer"><a class="product-card__info-footer-button"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#compare"></use>
+															</svg></span>
+														<p class="button-14">Сравнить</p></a><a class="product-card__info-footer-button"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#heart"></use>
+															</svg></span>
+														<p class="button-14">В избранное</p></a></div>
+											</div>
 										</div>
 										<div class="product-card__price">
 											<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-										</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+										</div>
+									</div>
+									<div class="product-card__footer">
+										<div class="product-card__footer-price">
+											<p class="price-s product-card__price-current">от 793,50 ₽ / шт</p>
+										</div><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+									</div>
+									<div class="product-card__labels">
+										<label class="product-card__label-discount text-14">-25 %</label>
+									</div>
+								</div>
+								<!--product-card-->
+								<div class="product-card">
+									<div class="product-card__body">
+										<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
+										<div class="product-card__name"><a class="product-card__name-link text-16" href="#">Краска с воском IQ 130 для ванн</a>
+											<div class="product-card__info">
+												<div class="product-card__info-available">
+													<p class="text-14">В наличии<span>8</span>шт.</p>
+												</div>
+												<div class="product-card__info-about">
+													<div class="product-card__info-about-block">
+														<ul class="product-card__info-about-list">
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Бренд</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Длинное название бренда</p>
+																</div>
+															</li>
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Тип работ</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Характеристика краски для пола по типу работ</p>
+																</div>
+															</li>
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Марка</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Марка с длинным названием</p>
+																</div>
+															</li>
+														</ul>
+													</div><a class="product-card__info-about-button">
+														<p class="button-14">Храктеристики</p><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#arrow"></use>
+															</svg></span></a>
+												</div>
+												<div class="product-card__info-footer"><a class="product-card__info-footer-button"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#compare"></use>
+															</svg></span>
+														<p class="button-14">Сравнить</p></a><a class="product-card__info-footer-button"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#heart"></use>
+															</svg></span>
+														<p class="button-14">В избранное</p></a></div>
+											</div>
+										</div>
+										<div class="product-card__price">
+											<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
+										</div>
+									</div>
+									<div class="product-card__footer">
+										<div class="product-card__footer-price">
+											<p class="price-s product-card__price-current">от 793,50 ₽ / шт</p>
+										</div><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+									</div>
 									<div class="product-card__labels">
 										<label class="product-card__label-status text-14">Новинка</label>
 									</div>
 								</div>
 								<!--product-card-->
-								<div class="product-card"><a class="product-card__body" href="#">
+								<div class="product-card">
+									<div class="product-card__body">
 										<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью"/></div>
-										<div class="product-card__name">
-											<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью</p>
+										<div class="product-card__name"><a class="product-card__name-link text-16" href="#">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью</a>
+											<div class="product-card__info">
+												<div class="product-card__info-available">
+													<p class="text-14">В наличии<span>8</span>шт.</p>
+												</div>
+												<div class="product-card__info-about">
+													<div class="product-card__info-about-block">
+														<ul class="product-card__info-about-list">
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Бренд</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Длинное название бренда</p>
+																</div>
+															</li>
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Тип работ</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Характеристика краски для пола по типу работ</p>
+																</div>
+															</li>
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Марка</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Марка с длинным названием</p>
+																</div>
+															</li>
+														</ul>
+													</div><a class="product-card__info-about-button">
+														<p class="button-14">Храктеристики</p><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#arrow"></use>
+															</svg></span></a>
+												</div>
+												<div class="product-card__info-footer"><a class="product-card__info-footer-button"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#compare"></use>
+															</svg></span>
+														<p class="button-14">Сравнить</p></a><a class="product-card__info-footer-button"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#heart"></use>
+															</svg></span>
+														<p class="button-14">В избранное</p></a></div>
+											</div>
 										</div>
 										<div class="product-card__price">
 											<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old"></span>
-										</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+										</div>
+									</div>
+									<div class="product-card__footer">
+										<div class="product-card__footer-price">
+											<p class="price-s product-card__price-current">от 793,50 ₽ / шт</p>
+										</div><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+									</div>
 									<div class="product-card__labels">
 										<label class="product-card__label-discount text-14">-25 %</label>
 										<label class="product-card__label-status text-14">Новинка</label>
 									</div>
 								</div>
 								<!--product-card-->
-								<div class="product-card"><a class="product-card__body" href="#">
+								<div class="product-card">
+									<div class="product-card__body">
 										<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров "/></div>
-										<div class="product-card__name">
-											<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </p>
+										<div class="product-card__name"><a class="product-card__name-link text-16" href="#">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров </a>
+											<div class="product-card__info">
+												<div class="product-card__info-available">
+													<p class="text-14">В наличии<span>8</span>шт.</p>
+												</div>
+												<div class="product-card__info-about">
+													<div class="product-card__info-about-block">
+														<ul class="product-card__info-about-list">
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Бренд</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Длинное название бренда</p>
+																</div>
+															</li>
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Тип работ</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Характеристика краски для пола по типу работ</p>
+																</div>
+															</li>
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Марка</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Марка с длинным названием</p>
+																</div>
+															</li>
+														</ul>
+													</div><a class="product-card__info-about-button">
+														<p class="button-14">Храктеристики</p><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#arrow"></use>
+															</svg></span></a>
+												</div>
+												<div class="product-card__info-footer"><a class="product-card__info-footer-button"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#compare"></use>
+															</svg></span>
+														<p class="button-14">Сравнить</p></a><a class="product-card__info-footer-button"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#heart"></use>
+															</svg></span>
+														<p class="button-14">В избранное</p></a></div>
+											</div>
 										</div>
 										<div class="product-card__price">
 											<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-										</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+										</div>
+									</div>
+									<div class="product-card__footer">
+										<div class="product-card__footer-price">
+											<p class="price-s product-card__price-current">от 793,50 ₽ / шт</p>
+										</div><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+									</div>
 									<div class="product-card__labels">
 										<label class="product-card__label-discount text-14">-25 %</label>
 									</div>
 								</div>
 								<!--product-card-->
-								<div class="product-card"><a class="product-card__body" href="#">
+								<div class="product-card">
+									<div class="product-card__body">
 										<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-										<div class="product-card__name">
-											<p class="text-16">Краска с воском IQ 130 для ванн</p>
+										<div class="product-card__name"><a class="product-card__name-link text-16" href="#">Краска с воском IQ 130 для ванн</a>
+											<div class="product-card__info">
+												<div class="product-card__info-available">
+													<p class="text-14">В наличии<span>8</span>шт.</p>
+												</div>
+												<div class="product-card__info-about">
+													<div class="product-card__info-about-block">
+														<ul class="product-card__info-about-list">
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Бренд</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Длинное название бренда</p>
+																</div>
+															</li>
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Тип работ</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Характеристика краски для пола по типу работ</p>
+																</div>
+															</li>
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Марка</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Марка с длинным названием</p>
+																</div>
+															</li>
+														</ul>
+													</div><a class="product-card__info-about-button">
+														<p class="button-14">Храктеристики</p><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#arrow"></use>
+															</svg></span></a>
+												</div>
+												<div class="product-card__info-footer"><a class="product-card__info-footer-button"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#compare"></use>
+															</svg></span>
+														<p class="button-14">Сравнить</p></a><a class="product-card__info-footer-button"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#heart"></use>
+															</svg></span>
+														<p class="button-14">В избранное</p></a></div>
+											</div>
 										</div>
 										<div class="product-card__price">
 											<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-										</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+										</div>
+									</div>
+									<div class="product-card__footer">
+										<div class="product-card__footer-price">
+											<p class="price-s product-card__price-current">от 793,50 ₽ / шт</p>
+										</div><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+									</div>
 									<div class="product-card__labels">
 										<label class="product-card__label-status text-14">Новинка</label>
 									</div>
@@ -891,14 +1576,71 @@
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
 										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
+										<div class="product-card">
+											<div class="product-card__body">
 												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн</p>
+												<div class="product-card__name"><a class="product-card__name-link text-16" href="#">Краска с воском IQ 130 для ванн</a>
+													<div class="product-card__info">
+														<div class="product-card__info-available">
+															<p class="text-14">В наличии<span>8</span>шт.</p>
+														</div>
+														<div class="product-card__info-about">
+															<div class="product-card__info-about-block">
+																<ul class="product-card__info-about-list">
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Бренд</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Длинное название бренда</p>
+																		</div>
+																	</li>
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Тип работ</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Характеристика краски для пола по типу работ</p>
+																		</div>
+																	</li>
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Марка</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Марка с длинным названием</p>
+																		</div>
+																	</li>
+																</ul>
+															</div><a class="product-card__info-about-button">
+																<p class="button-14">Храктеристики</p><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#arrow"></use>
+																	</svg></span></a>
+														</div>
+														<div class="product-card__info-footer"><a class="product-card__info-footer-button"><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#compare"></use>
+																	</svg></span>
+																<p class="button-14">Сравнить</p></a><a class="product-card__info-footer-button"><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#heart"></use>
+																	</svg></span>
+																<p class="button-14">В избранное</p></a></div>
+													</div>
 												</div>
 												<div class="product-card__price">
 													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old"></span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+												</div>
+											</div>
+											<div class="product-card__footer">
+												<div class="product-card__footer-price">
+													<p class="price-s product-card__price-current">от 793,50 ₽ / шт</p>
+												</div><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											</div>
 											<div class="product-card__labels">
 												<label class="product-card__label-discount text-14">-25 %</label>
 												<label class="product-card__label-status text-14">Новинка</label>
@@ -907,14 +1649,71 @@
 									</div>
 									<div class="swiper-slide">
 										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
+										<div class="product-card">
+											<div class="product-card__body">
 												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью"/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью</p>
+												<div class="product-card__name"><a class="product-card__name-link text-16" href="#">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью</a>
+													<div class="product-card__info">
+														<div class="product-card__info-available">
+															<p class="text-14">В наличии<span>8</span>шт.</p>
+														</div>
+														<div class="product-card__info-about">
+															<div class="product-card__info-about-block">
+																<ul class="product-card__info-about-list">
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Бренд</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Длинное название бренда</p>
+																		</div>
+																	</li>
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Тип работ</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Характеристика краски для пола по типу работ</p>
+																		</div>
+																	</li>
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Марка</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Марка с длинным названием</p>
+																		</div>
+																	</li>
+																</ul>
+															</div><a class="product-card__info-about-button">
+																<p class="button-14">Храктеристики</p><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#arrow"></use>
+																	</svg></span></a>
+														</div>
+														<div class="product-card__info-footer"><a class="product-card__info-footer-button"><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#compare"></use>
+																	</svg></span>
+																<p class="button-14">Сравнить</p></a><a class="product-card__info-footer-button"><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#heart"></use>
+																	</svg></span>
+																<p class="button-14">В избранное</p></a></div>
+													</div>
 												</div>
 												<div class="product-card__price">
 													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+												</div>
+											</div>
+											<div class="product-card__footer">
+												<div class="product-card__footer-price">
+													<p class="price-s product-card__price-current">от 793,50 ₽ / шт</p>
+												</div><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											</div>
 											<div class="product-card__labels">
 												<label class="product-card__label-discount text-14">-25 %</label>
 											</div>
@@ -922,14 +1721,71 @@
 									</div>
 									<div class="swiper-slide">
 										<!--product-card-->
-										<div class="product-card"><a class="product-card__body" href="#">
+										<div class="product-card">
+											<div class="product-card__body">
 												<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-												<div class="product-card__name">
-													<p class="text-16">Краска с воском IQ 130 для ванн</p>
+												<div class="product-card__name"><a class="product-card__name-link text-16" href="#">Краска с воском IQ 130 для ванн</a>
+													<div class="product-card__info">
+														<div class="product-card__info-available">
+															<p class="text-14">В наличии<span>8</span>шт.</p>
+														</div>
+														<div class="product-card__info-about">
+															<div class="product-card__info-about-block">
+																<ul class="product-card__info-about-list">
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Бренд</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Длинное название бренда</p>
+																		</div>
+																	</li>
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Тип работ</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Характеристика краски для пола по типу работ</p>
+																		</div>
+																	</li>
+																	<li class="product-card__info-about-item">
+																		<div class="product-card__info-about-name">
+																			<p class="text-14">Марка</p>
+																		</div>
+																		<div class="product-card__info-about-separator"></div>
+																		<div class="product-card__info-about-description">
+																			<p class="text-14">Марка с длинным названием</p>
+																		</div>
+																	</li>
+																</ul>
+															</div><a class="product-card__info-about-button">
+																<p class="button-14">Храктеристики</p><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#arrow"></use>
+																	</svg></span></a>
+														</div>
+														<div class="product-card__info-footer"><a class="product-card__info-footer-button"><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#compare"></use>
+																	</svg></span>
+																<p class="button-14">Сравнить</p></a><a class="product-card__info-footer-button"><span>
+																	<svg>
+																		<use xlink:href="./images/sprites.svg#heart"></use>
+																	</svg></span>
+																<p class="button-14">В избранное</p></a></div>
+													</div>
 												</div>
 												<div class="product-card__price">
 													<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-												</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+												</div>
+											</div>
+											<div class="product-card__footer">
+												<div class="product-card__footer-price">
+													<p class="price-s product-card__price-current">от 793,50 ₽ / шт</p>
+												</div><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+											</div>
 											<div class="product-card__labels">
 												<label class="product-card__label-status text-14">Новинка</label>
 											</div>
@@ -943,41 +1799,212 @@
 							</div>
 							<div class="product__viewed-grid">
 								<!--product-card-->
-								<div class="product-card"><a class="product-card__body" href="#">
+								<div class="product-card">
+									<div class="product-card__body">
 										<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-										<div class="product-card__name">
-											<p class="text-16">Краска с воском IQ 130 для ванн</p>
+										<div class="product-card__name"><a class="product-card__name-link text-16" href="#">Краска с воском IQ 130 для ванн</a>
+											<div class="product-card__info">
+												<div class="product-card__info-available">
+													<p class="text-14">В наличии<span>8</span>шт.</p>
+												</div>
+												<div class="product-card__info-about">
+													<div class="product-card__info-about-block">
+														<ul class="product-card__info-about-list">
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Бренд</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Длинное название бренда</p>
+																</div>
+															</li>
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Тип работ</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Характеристика краски для пола по типу работ</p>
+																</div>
+															</li>
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Марка</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Марка с длинным названием</p>
+																</div>
+															</li>
+														</ul>
+													</div><a class="product-card__info-about-button">
+														<p class="button-14">Храктеристики</p><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#arrow"></use>
+															</svg></span></a>
+												</div>
+												<div class="product-card__info-footer"><a class="product-card__info-footer-button"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#compare"></use>
+															</svg></span>
+														<p class="button-14">Сравнить</p></a><a class="product-card__info-footer-button"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#heart"></use>
+															</svg></span>
+														<p class="button-14">В избранное</p></a></div>
+											</div>
 										</div>
 										<div class="product-card__price">
 											<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old"></span>
-										</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+										</div>
+									</div>
+									<div class="product-card__footer">
+										<div class="product-card__footer-price">
+											<p class="price-s product-card__price-current">от 793,50 ₽ / шт</p>
+										</div><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+									</div>
 									<div class="product-card__labels">
 										<label class="product-card__label-discount text-14">-25 %</label>
 										<label class="product-card__label-status text-14">Новинка</label>
 									</div>
 								</div>
 								<!--product-card-->
-								<div class="product-card"><a class="product-card__body" href="#">
+								<div class="product-card">
+									<div class="product-card__body">
 										<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью"/></div>
-										<div class="product-card__name">
-											<p class="text-16">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью</p>
+										<div class="product-card__name"><a class="product-card__name-link text-16" href="#">Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров с основой красики C - для колеровки в холодных помещениях с высокой влажностью и плохой проветриваемостью</a>
+											<div class="product-card__info">
+												<div class="product-card__info-available">
+													<p class="text-14">В наличии<span>8</span>шт.</p>
+												</div>
+												<div class="product-card__info-about">
+													<div class="product-card__info-about-block">
+														<ul class="product-card__info-about-list">
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Бренд</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Длинное название бренда</p>
+																</div>
+															</li>
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Тип работ</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Характеристика краски для пола по типу работ</p>
+																</div>
+															</li>
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Марка</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Марка с длинным названием</p>
+																</div>
+															</li>
+														</ul>
+													</div><a class="product-card__info-about-button">
+														<p class="button-14">Храктеристики</p><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#arrow"></use>
+															</svg></span></a>
+												</div>
+												<div class="product-card__info-footer"><a class="product-card__info-footer-button"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#compare"></use>
+															</svg></span>
+														<p class="button-14">Сравнить</p></a><a class="product-card__info-footer-button"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#heart"></use>
+															</svg></span>
+														<p class="button-14">В избранное</p></a></div>
+											</div>
 										</div>
 										<div class="product-card__price">
 											<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-										</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+										</div>
+									</div>
+									<div class="product-card__footer">
+										<div class="product-card__footer-price">
+											<p class="price-s product-card__price-current">от 793,50 ₽ / шт</p>
+										</div><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+									</div>
 									<div class="product-card__labels">
 										<label class="product-card__label-discount text-14">-25 %</label>
 									</div>
 								</div>
 								<!--product-card-->
-								<div class="product-card"><a class="product-card__body" href="#">
+								<div class="product-card">
+									<div class="product-card__body">
 										<div class="product-card__image"><img src="./images/product/product.png" alt="Краска с воском IQ 130 для ванн"/></div>
-										<div class="product-card__name">
-											<p class="text-16">Краска с воском IQ 130 для ванн</p>
+										<div class="product-card__name"><a class="product-card__name-link text-16" href="#">Краска с воском IQ 130 для ванн</a>
+											<div class="product-card__info">
+												<div class="product-card__info-available">
+													<p class="text-14">В наличии<span>8</span>шт.</p>
+												</div>
+												<div class="product-card__info-about">
+													<div class="product-card__info-about-block">
+														<ul class="product-card__info-about-list">
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Бренд</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Длинное название бренда</p>
+																</div>
+															</li>
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Тип работ</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Характеристика краски для пола по типу работ</p>
+																</div>
+															</li>
+															<li class="product-card__info-about-item">
+																<div class="product-card__info-about-name">
+																	<p class="text-14">Марка</p>
+																</div>
+																<div class="product-card__info-about-separator"></div>
+																<div class="product-card__info-about-description">
+																	<p class="text-14">Марка с длинным названием</p>
+																</div>
+															</li>
+														</ul>
+													</div><a class="product-card__info-about-button">
+														<p class="button-14">Храктеристики</p><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#arrow"></use>
+															</svg></span></a>
+												</div>
+												<div class="product-card__info-footer"><a class="product-card__info-footer-button"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#compare"></use>
+															</svg></span>
+														<p class="button-14">Сравнить</p></a><a class="product-card__info-footer-button"><span>
+															<svg>
+																<use xlink:href="./images/sprites.svg#heart"></use>
+															</svg></span>
+														<p class="button-14">В избранное</p></a></div>
+											</div>
 										</div>
 										<div class="product-card__price">
 											<p class="price-s product-card__price-current">793,50 ₽ / шт</p><span class="product-card__price-old">2 539 ₽</span>
-										</div></a><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+										</div>
+									</div>
+									<div class="product-card__footer">
+										<div class="product-card__footer-price">
+											<p class="price-s product-card__price-current">от 793,50 ₽ / шт</p>
+										</div><a class="product-card__btn btn-dark btn btn-m button-14" href="#">В корзину</a>
+									</div>
 									<div class="product-card__labels">
 										<label class="product-card__label-status text-14">Новинка</label>
 									</div>
@@ -1177,7 +2204,7 @@
 				</div>
 			</div>
 		</div>
-		<script src="./js/vendor.js?v=1699617313480"></script>
-		<script src="./js/main.js?v=1699617313480"></script>
+		<script src="./js/vendor.js?v=1699643888092"></script>
+		<script src="./js/main.js?v=1699643888092"></script>
 	</body>
 </html>
