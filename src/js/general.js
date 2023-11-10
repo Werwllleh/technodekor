@@ -77,8 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 text[1].classList.remove('hidden');
                 text[0].classList.add('hidden');
             }
-
-            // console.log(btn.parentNode.parentNode.children[1].children)
         })
 
     })
@@ -106,25 +104,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const productDisclaimerNote = document.querySelector('.product__info-price-discount-note');
     const productDisclaimerClose = document.querySelector('.product__info-price-discount-note-close');
 
-    productDisclaimer.addEventListener('click', () => {
-        productDisclaimer.classList.toggle('active');
+	if (productDisclaimer) {
+		productDisclaimer.addEventListener('click', () => {
+			productDisclaimer.classList.toggle('active');
 
-        if (productDisclaimer.classList.contains('active')) {
-            productDisclaimerNote.classList.add('active');
-            if (window.outerWidth <= 564) {
-                document.documentElement.style.overflowY = "hidden";
-            }
-        } else {
-            productDisclaimerNote.classList.remove('active');
-            document.documentElement.style.overflowY = "auto";
-        }
-    })
+			if (productDisclaimer.classList.contains('active')) {
+				productDisclaimerNote.classList.add('active');
+				if (window.outerWidth <= 564) {
+					document.documentElement.style.overflowY = "hidden";
+				}
+			} else {
+				productDisclaimerNote.classList.remove('active');
+				document.documentElement.style.overflowY = "auto";
+			}
+		})
 
-    productDisclaimerClose.addEventListener('click', () => {
-        productDisclaimer.classList.remove('active');
-        productDisclaimerNote.classList.remove('active');
-        document.documentElement.style.overflowY = "auto";
-    })
+		productDisclaimerClose.addEventListener('click', () => {
+			productDisclaimer.classList.remove('active');
+			productDisclaimerNote.classList.remove('active');
+			document.documentElement.style.overflowY = "auto";
+		})
+	}
 
     lightGallery((productGallery), {
         plugins: [lgZoom, lgThumbnail],

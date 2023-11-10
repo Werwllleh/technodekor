@@ -7,7 +7,22 @@
 			name: 'Краска с воском IQ 130 для ванн',
 			price: '793,50',
 			oldPrice: '',
-			link: '#'
+			link: '#',
+			available: 8,
+			about: [
+				{
+					name: 'Бренд',
+					description: 'Длинное название бренда'
+				},
+				{
+					name: 'Тип работ',
+					description: 'Характеристика краски для пола по типу работ'
+				},
+				{
+					name: 'Марка',
+					description: 'Марка с длинным названием'
+				}
+			]
 		},
 		{
 			discount: '-25 %',
@@ -16,7 +31,22 @@
 			name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров ',
 			price: '793,50',
 			oldPrice: '2 539',
-			link: '#'
+			link: '#',
+			available: 8,
+			about: [
+				{
+					name: 'Бренд',
+					description: 'Длинное название бренда'
+				},
+				{
+					name: 'Тип работ',
+					description: 'Характеристика краски для пола по типу работ'
+				},
+				{
+					name: 'Марка',
+					description: 'Марка с длинным названием'
+				}
+			]
 		},
 		{
 			discount: '',
@@ -25,7 +55,22 @@
 			name: 'Краска с воском IQ 130 для ванн',
 			price: '793,50',
 			oldPrice: '2 539',
-			link: '#'
+			link: '#',
+			available: 8,
+			about: [
+				{
+					name: 'Бренд',
+					description: 'Длинное название бренда'
+				},
+				{
+					name: 'Тип работ',
+					description: 'Характеристика краски для пола по типу работ'
+				},
+				{
+					name: 'Марка',
+					description: 'Марка с длинным названием'
+				}
+			]
 		},
 		{
 			discount: '-25 %',
@@ -34,7 +79,22 @@
 			name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров ',
 			price: '793,50',
 			oldPrice: '',
-			link: '#'
+			link: '#',
+			available: 8,
+			about: [
+				{
+					name: 'Бренд',
+					description: 'Длинное название бренда'
+				},
+				{
+					name: 'Тип работ',
+					description: 'Характеристика краски для пола по типу работ'
+				},
+				{
+					name: 'Марка',
+					description: 'Марка с длинным названием'
+				}
+			]
 		},
 		{
 			discount: '-25 %',
@@ -43,7 +103,22 @@
 			name: 'Краска с воском IQ 130 для ванн и кухонь в объёме 2 литров ',
 			price: '793,50',
 			oldPrice: '2 539',
-			link: '#'
+			link: '#',
+			available: 8,
+			about: [
+				{
+					name: 'Бренд',
+					description: 'Длинное название бренда'
+				},
+				{
+					name: 'Тип работ',
+					description: 'Характеристика краски для пола по типу работ'
+				},
+				{
+					name: 'Марка',
+					description: 'Марка с длинным названием'
+				}
+			]
 		},
 		{
 			discount: '',
@@ -52,7 +127,22 @@
 			name: 'Краска с воском IQ 130 для ванн',
 			price: '793,50',
 			oldPrice: '2 539',
-			link: '#'
+			link: '#',
+			available: 8,
+			about: [
+				{
+					name: 'Бренд',
+					description: 'Длинное название бренда'
+				},
+				{
+					name: 'Тип работ',
+					description: 'Характеристика краски для пола по типу работ'
+				},
+				{
+					name: 'Марка',
+					description: 'Марка с длинным названием'
+				}
+			]
 		},
 	]
 	var brands = [
@@ -186,12 +276,12 @@
 			h2.main-page__sale-title.h2 Распродажа
 			.main-page__cards.mobile--products-cards
 				each product in products
-					+product-card(product.discount, product.newStatus, product.image, product.name, product.price, product.oldPrice, product.link)
+					+product-card(product.discount, product.newStatus, product.image, product.name, product.price, product.oldPrice, product.link, product.available, product.about)
 			.main-page__sale-cards.desctop--products-cards.products__slider.swiper
 				.swiper-wrapper
 					each product in products
 						.swiper-slide
-							+product-card(product.discount, product.newStatus, product.image, product.name, product.price, product.oldPrice, product.link)
+							+product-card(product.discount, product.newStatus, product.image, product.name, product.price, product.oldPrice, product.link, product.available, product.about)
 			.custom--slider-arrows
 				.swiper-button-prev.products__slider-arrow-prev
 				.swiper-button-next.products__slider-arrow-next

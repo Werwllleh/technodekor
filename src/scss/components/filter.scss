@@ -1,11 +1,104 @@
 .filter {
+	background-color: $color-white;
 
+	@include desktop() {
+		position: fixed;
+		left: -999px;
+		top: 0;
+		width: 360px;
+		height: 100vh;
+		z-index: 40;
+		opacity: 0;
+		visibility: hidden;
+		transition: left $duration-normal;
+
+		&.active {
+			left: 0;
+			opacity: 1;
+			visibility: visible;
+
+			.filter__header {
+				left: 0;
+				opacity: 1;
+			}
+
+			.filter__footer {
+				left: 0;
+				opacity: 1;
+			}
+
+		}
+
+
+	}
+
+	&__header {
+		display: none;
+		align-items: center;
+		justify-content: space-between;
+		padding: 16px;
+		box-shadow: 0 8px 32px 0 rgba(45, 47, 56, 0.08);
+
+		@include desktop() {
+			display: flex;
+			position: fixed;
+			width: 360px;
+			top: 0;
+			left: -999px;
+			opacity: 0;
+			transition: opacity $duration-normal, left $duration-normal;
+		}
+
+		span {
+
+			svg {
+				width: 24px;
+				height: 24px;
+				fill: #7D8899;
+			}
+		}
+	}
+
+	&__bg {
+
+		@include desktop() {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background-color: transparent;
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity $duration-normal, visibility $duration-normal, background-color $duration-normal;
+		}
+
+	}
+
+	&__inner {
+		position: relative;
+
+		@include desktop() {
+			height: 100vh;
+			margin: 56px 0 0 0;
+		}
+
+	}
 
 	&__body {
 		border-radius: 12px;
 		overflow: hidden;
 		border: 1px solid #E5E7EA;
 		padding: 0 0 24px 0;
+
+		@include desktop() {
+			border: none;
+			padding: 0;
+			margin: 0 0 70px 0;
+			border-radius: 0;
+			height: calc(100vh - 200px);
+			overflow-y: scroll;
+		}
 	}
 
 	&__category {
@@ -192,6 +285,15 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 12px;
+
+		@include desktop() {
+			position: fixed;
+			width: 360px;
+			bottom: 0;
+			opacity: 0;
+			left: -999px;
+			transition: opacity $duration-normal, left $duration-normal;
+		}
 
 		&-btn {
 			flex: 0 1 50%;

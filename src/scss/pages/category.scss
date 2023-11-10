@@ -4,13 +4,11 @@
 	&__left {
 
 		@media (max-width: 992px) {
-			display: none;
+			//display: none;
 		}
 
 		&-filter {
-			@include desktop() {
-				display: none;
-			}
+
 		}
 		&-coloring {
 			@include desktop() {

@@ -1,17 +1,49 @@
-mixin product-card(discount, newStatus, image, name, price, oldPrice, link)
+mixin product-card(discount, newStatus, image, name, price, oldPrice, link, available, about)
 	//product-card
 	.product-card&attributes(attributes)
-		a.product-card__body(href=link)
+		.product-card__body
 			.product-card__image
 				img(src="./images/product/" + image + ".png", alt=name)
 			.product-card__name
-				p.text-16= name
+				a(href=link).product-card__name-link.text-16= name
+				.product-card__info
+					.product-card__info-available
+						p.text-14
+							| В наличии
+							span= available
+							| шт.
+					.product-card__info-about
+						.product-card__info-about-block
+							ul.product-card__info-about-list
+								each item in about
+									li.product-card__info-about-item
+										.product-card__info-about-name
+											p.text-14= item.name
+										.product-card__info-about-separator
+										.product-card__info-about-description
+											p.text-14= item.description
+						a.product-card__info-about-button
+							p.button-14 Храктеристики
+							span
+								+svg("arrow")
+					.product-card__info-footer
+						a.product-card__info-footer-button
+							span
+								+svg("compare")
+							p.button-14 Сравнить
+						a.product-card__info-footer-button
+							span
+								+svg("heart")
+							p.button-14 В избранное
 			.product-card__price
 				p.price-s.product-card__price-current= price + " ₽ / шт"
 				span.product-card__price-old
 					if (oldPrice)
 						= oldPrice + " ₽"
-		a.product-card__btn.btn-dark.btn.btn-m.button-14(href="#") В корзину
+		.product-card__footer
+			.product-card__footer-price
+				p.price-s.product-card__price-current= "от " + price + " ₽ / шт"
+			a.product-card__btn.btn-dark.btn.btn-m.button-14(href="#") В корзину
 		if (discount || newStatus)
 			.product-card__labels
 				if (discount)

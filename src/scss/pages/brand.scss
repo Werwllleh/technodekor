@@ -14,17 +14,22 @@
 		flex-direction: column;
 		gap: 32px;
 
-		@include desktop() {
-			display: none;
-		}
 
 		&-categories {
-
-
+			@include desktop() {
+				display: none;
+			}
 		}
 
 		&-filter {
 		}
+
+		&-coloring {
+			@include desktop() {
+				display: none;
+			}
+		}
+
 	}
 
 	&__right {

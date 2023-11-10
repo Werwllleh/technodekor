@@ -17,6 +17,7 @@ import './components/mobile-filter-btn';
 import './components/categories-cloud';
 import './components/switch-buttons';
 import './components/product-characteristics';
+import './components/product-card';
 
 
 import lazyLoading from './modules/lazyLoading';

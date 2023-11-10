@@ -50,25 +50,25 @@
 
 	&__name {
 
-		overflow: hidden;
-		position: relative;
-		max-width: 330px;
-		height: 60px;
-
-		&:after {
-			content: "";
-			text-align: right;
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			left: 0;
-			height: 1.2em;
-			background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
-			pointer-events: none;
-		}
-
-		p {
+		&-link {
+			display: block;
 			color: $color-txt-primary;
+			overflow: hidden;
+			position: relative;
+			max-width: 330px;
+			height: 60px;
+
+			&:after {
+				content: "";
+				text-align: right;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				height: 1.2em;
+				background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
+				pointer-events: none;
+			}
 
 			@include mobile() {
 				overflow: hidden;
@@ -76,6 +76,143 @@
 				-webkit-line-clamp: 3;
 				-webkit-box-orient: vertical;
 				font-size: 14px;
+			}
+		}
+	}
+
+	&__info {
+		display: none;
+
+		&-available {
+			color: #00AB5B;
+			margin: 0 0 16px 0;
+
+			span {
+				margin: 0 5px;
+			}
+		}
+
+		&-about {
+
+
+			&-block {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height $duration-normal;
+			}
+
+			&-list {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 16px;
+				padding: 0 0 16px 0;
+			}
+
+			&-item {
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+				gap: 10px;
+
+				&:after {
+					content: "";
+					position: absolute;
+					width: 80%;
+					height: 15px;
+					left: 25px;
+					flex-grow: 1;
+					background-image: radial-gradient(circle,#D5D9DF 1px,transparent 0);
+					background-position: bottom;
+					background-size: .8ex 2.7px;
+					background-repeat: space no-repeat;
+				}
+			}
+
+			&-name {
+				background-color: $color-white;
+				white-space: nowrap;
+				color: $color-txt-secondary;
+			}
+
+			&-separator {
+				//flex: 1 0;
+				//border-bottom: 1px dotted #D5D9DF;
+				//height: 1px;
+				//margin: 0 .4em;
+				//border-bottom: 1px dotted #D5D9DF;
+			}
+			&-description {
+				background-color: $color-white;
+				margin: 0 0 0 auto;
+				white-space: nowrap;
+			}
+
+			&-button {
+				display: inline-flex;
+				align-items: center;
+				gap: 8px;
+
+				&.active {
+
+					span {
+
+						svg {
+							transform: rotate(90deg);
+						}
+					}
+				}
+
+				p {
+					color: $color-brand-purple;
+				}
+
+				span {
+
+					svg {
+						width: 10px;
+						height: 10px;
+						fill: #C5CAD3;
+						transform: rotate(270deg);
+						transition: transform $duration-normal;
+					}
+				}
+			}
+		}
+
+		&-footer {
+			margin: 32px 0 0 0;
+			display: flex;
+			align-items: center;
+			gap: 24px;
+
+			&-button {
+				display: flex;
+				align-items: center;
+				gap: 8px;
+				color: $color-brand-purple;
+
+				&:hover {
+
+					span {
+
+						svg {
+							fill: $color-brand-purple;
+						}
+					}
+				}
+
+				span {
+
+					svg {
+						width: 20px;
+						height: 20px;
+						fill: #7D8899;
+						transition: fill $duration-normal;
+					}
+				}
 			}
 		}
 	}
@@ -95,6 +232,7 @@
 
 
 		&-current {
+			white-space: nowrap;
 			color: $color-txt-primary;
 		}
 
@@ -113,11 +251,19 @@
 		}
 	}
 
-	&__btn {
-		display: block;
+	&__footer {
 		margin: auto 0 0 0;
+
+		&-price {
+			display: none;
+		}
+	}
+
+	&__btn {
 		color: $color-white;
 		border-radius: 8px;
+		max-height: 44px;
+		height: 100%;
 
 		@include mobile() {
 			padding: 8px 16px;
