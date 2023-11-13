@@ -820,23 +820,50 @@ document.addEventListener('DOMContentLoaded', function () {
   var productDisclaimerNote = document.querySelector('.product__info-price-discount-note');
   var productDisclaimerClose = document.querySelector('.product__info-price-discount-note-close');
   if (productDisclaimer) {
-    productDisclaimer.addEventListener('click', function () {
-      productDisclaimer.classList.toggle('active');
-      if (productDisclaimer.classList.contains('active')) {
-        productDisclaimerNote.classList.add('active');
-        if (window.outerWidth <= 564) {
-          document.documentElement.style.overflowY = "hidden";
-        }
-      } else {
-        productDisclaimerNote.classList.remove('active');
-        document.documentElement.style.overflowY = "auto";
+    if (window.innerWidth <= 1200) {
+      // Обработчик для клика
+      productDisclaimer.addEventListener('click', function () {
+        toggleDisclaimer();
+      });
+    } else {
+      // Обработчик для наведения
+      productDisclaimer.addEventListener('mouseenter', function () {
+        toggleDisclaimer(true);
+      });
+
+      // Обработчик для ухода с элемента
+      productDisclaimer.addEventListener('mouseleave', function () {
+        toggleDisclaimer(false);
+      });
+    }
+    document.addEventListener('click', function (event) {
+      var isClickInsideDisclaimer = productDisclaimer.contains(event.target);
+      if (!isClickInsideDisclaimer) {
+        closeDisclaimer();
       }
     });
     productDisclaimerClose.addEventListener('click', function () {
-      productDisclaimer.classList.remove('active');
-      productDisclaimerNote.classList.remove('active');
-      document.documentElement.style.overflowY = "auto";
+      closeDisclaimer();
     });
+  }
+  function toggleDisclaimer(showNote) {
+    productDisclaimer.classList.toggle('active');
+    if (productDisclaimer.classList.contains('active')) {
+      productDisclaimerNote.classList.add('active');
+      if (window.innerWidth <= 564) {
+        document.documentElement.style.overflowY = "hidden";
+      }
+    } else {
+      if (!showNote) {
+        productDisclaimerNote.classList.remove('active');
+        document.documentElement.style.overflowY = "auto";
+      }
+    }
+  }
+  function closeDisclaimer() {
+    productDisclaimer.classList.remove('active');
+    productDisclaimerNote.classList.remove('active');
+    document.documentElement.style.overflowY = "auto";
   }
   Object(lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(productGallery, {
     plugins: [lightgallery_plugins_zoom__WEBPACK_IMPORTED_MODULE_2__["default"], lightgallery_plugins_thumbnail__WEBPACK_IMPORTED_MODULE_1__["default"]],
