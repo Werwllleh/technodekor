@@ -30967,17 +30967,6 @@ u=-1===u.indexOf("url(")?"url("+u+")":u,1===d.length?t.style.backgroundImage=u:t
 
 /***/ }),
 
-/***/ "./node_modules/ninelines-sharing/dist/ninelines-sharing.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/ninelines-sharing/dist/ninelines-sharing.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-!function(n,e){ true?module.exports=e():undefined}(self,(function(){return function(){"use strict";var n={d:function(e,t){for(var o in t)n.o(t,o)&&!n.o(e,o)&&Object.defineProperty(e,o,{enumerable:!0,get:t[o]})},o:function(n,e){return Object.prototype.hasOwnProperty.call(n,e)}},e={};function t(n,e){for(var t=0;t<e.length;t++){var o=e[t];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(n,o.key,o)}}n.d(e,{default:function(){return o}});var o=function(){function n(){!function(n,e){if(!(n instanceof e))throw new TypeError("Cannot call a class as a function")}(this,n)}var e,o;return e=n,o=[{key:"getUrl",value:function(e,t){return n.urlList[e]?n.urlList[e]+encodeURIComponent(t):null}},{key:"openWindow",value:function(n){var e,t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null,o=arguments.length>2&&void 0!==arguments[2]?arguments[2]:"Поделиться",r=arguments.length>3&&void 0!==arguments[3]?arguments[3]:"width=640,height=480,location=no,toolbar=no,menubar=no";return t?(e=window.open("",o,r),t.then((function(){e.location=n})).catch((function(){e.close()}))):e=window.open(n,o,r),e}},{key:"fb",value:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null;return n.openWindow(n.getUrl("fb",e),t)}},{key:"vk",value:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null;return n.openWindow(n.getUrl("vk",e),t)}},{key:"tw",value:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null;return n.openWindow(n.getUrl("tw",e),t)}},{key:"ok",value:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null;return n.openWindow(n.getUrl("ok",e),t)}},{key:"tg",value:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null;return n.openWindow(n.getUrl("tg",e),t,void 0,null)}},{key:"facebook",value:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null;return n.fb(e,t)}},{key:"vkontakte",value:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null;return n.vk(e,t)}},{key:"twitter",value:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null;return n.tw(e,t)}},{key:"odnoklassniki",value:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null;return n.ok(e,t)}},{key:"telegram",value:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null;return n.tg(e,t)}}],null&&false,o&&t(e,o),n}();return o.urlList={fb:"https://facebook.com/sharer/sharer.php?u=",vk:"https://vk.com/share.php?url=",tw:"http://twitter.com/share?url=",ok:"https://connect.ok.ru/offer?url=",tg:"https://t.me/share/url?url="},e.default}()}));
-
-/***/ }),
-
 /***/ "./node_modules/ninelines-ua-parser/dist/ninelines-ua-parser.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/ninelines-ua-parser/dist/ninelines-ua-parser.js ***!

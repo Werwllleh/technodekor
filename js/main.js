@@ -165,31 +165,22 @@
 document.addEventListener('DOMContentLoaded', function () {
   var words = ['товар', 'товара', 'товаров'];
   var counts = document.querySelectorAll('.brand-mini-card__count p');
-  counts.forEach(function (count) {
-    var value = Math.abs(Number(count.innerHTML)) % 100;
-    var num = value % 10;
-    if (value > 10 && value < 20) {
-      count.innerHTML = count.innerHTML + " " + words[2];
-    } else if (num > 1 && num < 5) {
-      count.innerHTML = count.innerHTML + " " + words[1];
-    } else if (num === 1) {
-      count.innerHTML = count.innerHTML + " " + words[0];
-    } else {
-      count.innerHTML = count.innerHTML + " " + words[2];
-    }
-  });
+  if (counts.length) {
+    counts.forEach(function (count) {
+      var value = Math.abs(Number(count.innerHTML)) % 100;
+      var num = value % 10;
+      if (value > 10 && value < 20) {
+        count.innerHTML = count.innerHTML + " " + words[2];
+      } else if (num > 1 && num < 5) {
+        count.innerHTML = count.innerHTML + " " + words[1];
+      } else if (num === 1) {
+        count.innerHTML = count.innerHTML + " " + words[0];
+      } else {
+        count.innerHTML = count.innerHTML + " " + words[2];
+      }
+    });
+  }
 });
-
-/***/ }),
-
-/***/ "./src/js/components/catalog-button.js":
-/*!*********************************************!*\
-  !*** ./src/js/components/catalog-button.js ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-document.addEventListener('DOMContentLoaded', function () {});
 
 /***/ }),
 
@@ -202,27 +193,29 @@ document.addEventListener('DOMContentLoaded', function () {});
 
 document.addEventListener('DOMContentLoaded', function () {
   var showAllCategories = document.querySelectorAll('.categories-cloud__item-all');
-  showAllCategories.forEach(function (btn) {
-    var list = btn.closest('.categories-cloud__items');
-    btn.addEventListener('click', function () {
-      btn.classList.toggle('active');
-      if (btn.classList.contains('active')) {
-        btn.children[0].innerHTML = 'Свернуть';
-        for (var i = 0; i < list.children.length; i++) {
-          if (list.children.item(i).classList.contains('hidden')) {
-            list.children.item(i).classList.remove('hidden');
+  if (showAllCategories.length) {
+    showAllCategories.forEach(function (btn) {
+      var list = btn.closest('.categories-cloud__items');
+      btn.addEventListener('click', function () {
+        btn.classList.toggle('active');
+        if (btn.classList.contains('active')) {
+          btn.children[0].innerHTML = 'Свернуть';
+          for (var i = 0; i < list.children.length; i++) {
+            if (list.children.item(i).classList.contains('hidden')) {
+              list.children.item(i).classList.remove('hidden');
+            }
+          }
+        } else {
+          btn.children[0].innerHTML = 'Все категории';
+          for (var _i = 0; _i < list.children.length; _i++) {
+            if (_i >= 14 && _i !== list.children.length - 1) {
+              list.children.item(_i).classList.add('hidden');
+            }
           }
         }
-      } else {
-        btn.children[0].innerHTML = 'Все категории';
-        for (var _i = 0; _i < list.children.length; _i++) {
-          if (_i >= 14 && _i !== list.children.length - 1) {
-            list.children.item(_i).classList.add('hidden');
-          }
-        }
-      }
+      });
     });
-  });
+  }
 });
 
 /***/ }),
@@ -236,17 +229,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
   var catsBtns = document.querySelectorAll('.categories__title');
-  catsBtns.forEach(function (catsBtn) {
-    catsBtn.addEventListener('click', function () {
-      var catsList = catsBtn.parentNode.children[1];
-      catsBtn.classList.toggle('opened');
-      if (catsBtn.classList.contains("opened")) {
-        catsList.style.maxHeight = "".concat(catsList.children[0].clientHeight, "px");
-      } else {
-        catsList.style.maxHeight = "0px";
-      }
+  if (catsBtns.length) {
+    catsBtns.forEach(function (catsBtn) {
+      catsBtn.addEventListener('click', function () {
+        var catsList = catsBtn.parentNode.children[1];
+        catsBtn.classList.toggle('opened');
+        if (catsBtn.classList.contains("opened")) {
+          catsList.style.maxHeight = "".concat(catsList.children[0].clientHeight, "px");
+        } else {
+          catsList.style.maxHeight = "0px";
+        }
+      });
     });
-  });
+  }
 });
 
 /***/ }),
@@ -260,23 +255,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
   var filterCategories = document.querySelectorAll('.filter__category-header');
-  filterCategories.forEach(function (filterCategory) {
-    var filterCategoryList = filterCategory.nextElementSibling;
-    filterCategory.addEventListener('click', function () {
-      filterCategory.classList.toggle('opened');
-      if (filterCategory.classList.contains('opened')) {
-        filterCategoryList.classList.add('show');
-        var filterCategoryListHeight = 0;
-        for (var i = 0; i < filterCategoryList.children.length; i++) {
-          filterCategoryListHeight += filterCategoryList.children[i].clientHeight;
+  if (filterCategories.length) {
+    filterCategories.forEach(function (filterCategory) {
+      var filterCategoryList = filterCategory.nextElementSibling;
+      filterCategory.addEventListener('click', function () {
+        filterCategory.classList.toggle('opened');
+        if (filterCategory.classList.contains('opened')) {
+          filterCategoryList.classList.add('show');
+          var filterCategoryListHeight = 0;
+          for (var i = 0; i < filterCategoryList.children.length; i++) {
+            filterCategoryListHeight += filterCategoryList.children[i].clientHeight;
+          }
+          filterCategoryList.style.maxHeight = "".concat(filterCategoryListHeight, "px");
+        } else {
+          filterCategoryList.classList.remove('show');
+          filterCategoryList.style.maxHeight = "0px";
         }
-        filterCategoryList.style.maxHeight = "".concat(filterCategoryListHeight, "px");
-      } else {
-        filterCategoryList.classList.remove('show');
-        filterCategoryList.style.maxHeight = "0px";
-      }
+      });
     });
-  });
+  }
 });
 
 /***/ }),
@@ -302,133 +299,154 @@ document.addEventListener('DOMContentLoaded', function () {
   var headerSelectPhone = document.querySelector('.header__phone-arrow');
   var modalHeaderMoreButtons = document.querySelectorAll('.modal-header-more__footer-about-header');
   var modalHeaderMoreCitySelect = document.querySelector('.city--select');
-  menuListMore.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      btn.classList.toggle('active');
-      btn.parentNode.children.forEach(function (li, index) {
-        if (btn.classList.contains('active') && li.classList.contains('hidden')) {
-          li.classList.remove('hidden');
-          li.classList.add('show');
+  if (menuListMore.length) {
+    menuListMore.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        btn.classList.toggle('active');
+        btn.parentNode.children.forEach(function (li, index) {
+          if (btn.classList.contains('active') && li.classList.contains('hidden')) {
+            li.classList.remove('hidden');
+            li.classList.add('show');
+          } else {
+            if (li.classList.contains('show')) {
+              li.classList.remove('show');
+              li.classList.add('hidden');
+            }
+          }
+        });
+      });
+    });
+  }
+  if (headerSelectCity) {
+    document.addEventListener('click', function (event) {
+      if (headerSelectCity && !headerSelectCity.contains(event.target)) {
+        headerSelectCity.classList.remove('active');
+        var cityListBlock = headerSelectCity.children[2];
+        cityListBlock.classList.remove('show');
+      }
+    });
+    headerSelectCity.addEventListener('click', function () {
+      var cityTitle = headerSelectCity.children[0];
+      var cityListBlock = headerSelectCity.children[2];
+      var cityList = cityListBlock.children[0].children;
+      headerSelectCity.classList.toggle('active');
+      if (headerSelectCity.classList.contains('active')) {
+        cityListBlock.classList.add('show');
+        cityList.forEach(function (item) {
+          item.addEventListener('click', function (e) {
+            e.stopPropagation();
+            cityList.forEach(function (li) {
+              li.classList.remove('active');
+            });
+            item.classList.add('active');
+            cityTitle.innerHTML = item.innerHTML;
+            headerSelectCity.classList.remove('active');
+            cityListBlock.classList.remove('show');
+          });
+        });
+      } else {
+        cityListBlock.classList.remove('show');
+      }
+    });
+  }
+  if (headerSelectPhone) {
+    document.addEventListener('click', function (event) {
+      if (headerSelectPhone && !headerSelectPhone.contains(event.target)) {
+        headerSelectPhone.classList.remove('active');
+        var phoneListBlock = headerSelectPhone.parentNode.children[2];
+        phoneListBlock.classList.remove('show');
+      }
+    });
+    headerSelectPhone.addEventListener('click', function () {
+      var phoneListBlock = headerSelectPhone.parentNode.children[2];
+      headerSelectPhone.classList.toggle('active');
+      if (headerSelectPhone.classList.contains('active')) {
+        phoneListBlock.classList.add('show');
+      } else {
+        phoneListBlock.classList.remove('show');
+      }
+    });
+  }
+  if (menuButton) {
+    menuButton.addEventListener('click', function (e) {
+      e.preventDefault();
+      menuButton.classList.toggle('active');
+      if (menuButton.classList.contains('active')) {
+        menuBlock.classList.add('active');
+        document.documentElement.style.overflow = "hidden";
+      } else {
+        document.documentElement.style.overflow = "auto";
+        menuBlock.classList.remove('active');
+        menuTopMoreButton.classList.remove('active');
+        menuTopMore.classList.remove('active');
+      }
+    });
+  }
+  if (menuMobileCLose) {
+    menuMobileCLose.addEventListener('click', function () {
+      menuButton.classList.remove('active');
+      menuTopMore.classList.remove('active');
+      menuBlock.classList.remove('active');
+      menuTopMoreButton.classList.remove('active');
+      document.documentElement.style.overflow = "auto";
+    });
+  }
+  if (menuTopMoreButton) {
+    menuTopMoreButton.addEventListener('click', function (e) {
+      e.preventDefault();
+      menuTopMoreButton.classList.toggle('active');
+      if (menuTopMoreButton.classList.contains('active')) {
+        menuTopMore.classList.add('active');
+      } else {
+        menuTopMore.classList.remove('active');
+      }
+    });
+  }
+  if (menuMoreCLose) {
+    menuMoreCLose.addEventListener('click', function () {
+      menuTopMore.classList.remove('active');
+      menuTopMoreButton.classList.remove('active');
+    });
+  }
+  if (headerMore) {
+    headerMore.addEventListener('click', function () {
+      modalHeaderMore.classList.add('active');
+      document.documentElement.style.overflow = "hidden";
+    });
+  }
+  if (modalHeaderMoreButtons.length) {
+    modalHeaderMoreButtons.forEach(function (btn) {
+      var bottomBlock = btn.parentNode.children[1];
+      var list = btn.parentNode.children[1].children[0];
+      btn.addEventListener('click', function (e) {
+        btn.classList.toggle('active');
+        if (btn.classList.contains('active')) {
+          bottomBlock.style.maxHeight = "".concat(list.clientHeight, "px");
         } else {
-          if (li.classList.contains('show')) {
-            li.classList.remove('show');
-            li.classList.add('hidden');
+          bottomBlock.style.maxHeight = 0;
+        }
+        if (btn.classList.contains('active') && btn.classList.contains('city--select')) {
+          var cityList = btn.parentNode.children[1].children[0];
+          var _loop = function _loop() {
+            var city = cityList.children[i].children[0];
+            var titleBtn = btn.children[0].children[0];
+            city.addEventListener('click', function (e) {
+              e.preventDefault();
+              cityList.children.forEach(function (li) {
+                li.classList.remove('active');
+              });
+              city.parentNode.classList.add('active');
+              titleBtn.innerHTML = city.innerHTML;
+            });
+          };
+          for (var i = 0; i < cityList.children.length; i++) {
+            _loop();
           }
         }
       });
     });
-  });
-  headerSelectCity.addEventListener('click', function () {
-    var cityTitle = headerSelectCity.children[0];
-    var cityListBlock = headerSelectCity.children[2];
-    var cityList = cityListBlock.children[0].children;
-    headerSelectCity.classList.toggle('active');
-    if (headerSelectCity.classList.contains('active')) {
-      cityListBlock.classList.add('show');
-      cityList.forEach(function (item) {
-        item.addEventListener('click', function (e) {
-          e.stopPropagation();
-          cityList.forEach(function (li) {
-            li.classList.remove('active');
-          });
-          item.classList.add('active');
-          cityTitle.innerHTML = item.innerHTML;
-          headerSelectCity.classList.remove('active');
-          cityListBlock.classList.remove('show');
-        });
-      });
-    } else {
-      cityListBlock.classList.remove('show');
-    }
-  });
-  headerSelectPhone.addEventListener('click', function () {
-    var phoneListBlock = headerSelectPhone.parentNode.children[2];
-    headerSelectPhone.classList.toggle('active');
-    if (headerSelectPhone.classList.contains('active')) {
-      phoneListBlock.classList.add('show');
-    } else {
-      phoneListBlock.classList.remove('show');
-    }
-  });
-  menuButton.addEventListener('click', function (e) {
-    e.preventDefault();
-    menuButton.classList.toggle('active');
-    if (menuButton.classList.contains('active')) {
-      menuBlock.classList.add('active');
-      document.documentElement.style.overflow = "hidden";
-    } else {
-      document.documentElement.style.overflow = "auto";
-      menuBlock.classList.remove('active');
-      menuTopMoreButton.classList.remove('active');
-      menuTopMore.classList.remove('active');
-    }
-  });
-  menuMobileCLose.addEventListener('click', function () {
-    menuButton.classList.remove('active');
-    menuTopMore.classList.remove('active');
-    menuBlock.classList.remove('active');
-    menuTopMoreButton.classList.remove('active');
-    document.documentElement.style.overflow = "auto";
-  });
-  menuTopMoreButton.addEventListener('click', function (e) {
-    e.preventDefault();
-    menuTopMoreButton.classList.toggle('active');
-    if (menuTopMoreButton.classList.contains('active')) {
-      menuTopMore.classList.add('active');
-    } else {
-      menuTopMore.classList.remove('active');
-    }
-  });
-  menuMoreCLose.addEventListener('click', function () {
-    menuTopMore.classList.remove('active');
-    menuTopMoreButton.classList.remove('active');
-  });
-  headerMore.addEventListener('click', function () {
-    modalHeaderMore.classList.add('active');
-    document.documentElement.style.overflow = "hidden";
-  });
-  modalHeaderMoreButtons.forEach(function (btn) {
-    var bottomBlock = btn.parentNode.children[1];
-    var list = btn.parentNode.children[1].children[0];
-    btn.addEventListener('click', function (e) {
-      btn.classList.toggle('active');
-      if (btn.classList.contains('active')) {
-        bottomBlock.style.maxHeight = "".concat(list.clientHeight, "px");
-      } else {
-        bottomBlock.style.maxHeight = 0;
-      }
-      if (btn.classList.contains('active') && btn.classList.contains('city--select')) {
-        var cityList = btn.parentNode.children[1].children[0];
-        var _loop = function _loop() {
-          var city = cityList.children[i].children[0];
-          var titleBtn = btn.children[0].children[0];
-          city.addEventListener('click', function (e) {
-            e.preventDefault();
-            cityList.children.forEach(function (li) {
-              li.classList.remove('active');
-            });
-            city.parentNode.classList.add('active');
-            titleBtn.innerHTML = city.innerHTML;
-          });
-        };
-        for (var i = 0; i < cityList.children.length; i++) {
-          _loop();
-        }
-      }
-    });
-  });
+  }
 });
-
-/***/ }),
-
-/***/ "./src/js/components/left-bar.js":
-/*!***************************************!*\
-  !*** ./src/js/components/left-bar.js ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-document.addEventListener('DOMContentLoaded', function () {});
 
 /***/ }),
 
@@ -479,31 +497,33 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
   var modalCloseButtons = document.querySelectorAll('.modal__close');
   var bg = document.querySelector('.modal-bg');
-  modalCloseButtons.forEach(function (btn) {
-    var modalBody = btn.parentNode.parentNode.parentNode;
-    btn.addEventListener('click', function () {
-      if (modalBody.classList.contains('active')) {
-        modalBody.classList.remove('active');
-        document.documentElement.style.overflow = "auto";
+  if (modalCloseButtons.length) {
+    modalCloseButtons.forEach(function (btn) {
+      var modalBody = btn.parentNode.parentNode.parentNode;
+      btn.addEventListener('click', function () {
+        if (modalBody.classList.contains('active')) {
+          modalBody.classList.remove('active');
+          document.documentElement.style.overflow = "auto";
+          if (bg.classList.contains('active')) {
+            bg.classList.remove('active');
+          }
+        }
+      });
+      // modalCloseButton.addEventListener('click', (e) => {
+      // 	modalCloseButton.closest('.modal').classList.remove('opened')
+      // 	document.documentElement.style.overflowY = "auto";
+      // 	bg.classList.remove('active');
+      // })
+      //
+      bg.addEventListener('click', function (e) {
         if (bg.classList.contains('active')) {
+          document.documentElement.style.overflowY = "auto";
+          btn.closest('.modal').classList.remove('active');
           bg.classList.remove('active');
         }
-      }
+      });
     });
-    // modalCloseButton.addEventListener('click', (e) => {
-    // 	modalCloseButton.closest('.modal').classList.remove('opened')
-    // 	document.documentElement.style.overflowY = "auto";
-    // 	bg.classList.remove('active');
-    // })
-    //
-    bg.addEventListener('click', function (e) {
-      if (bg.classList.contains('active')) {
-        document.documentElement.style.overflowY = "auto";
-        btn.closest('.modal').classList.remove('active');
-        bg.classList.remove('active');
-      }
-    });
-  });
+  }
 });
 
 /***/ }),
@@ -517,19 +537,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
   var descriptionButtons = document.querySelectorAll('.product-card__info-about-button');
-  descriptionButtons.forEach(function (btn) {
-    var listBlock = btn.previousElementSibling;
-    var list = btn.previousElementSibling.children[0];
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      btn.classList.toggle('active');
-      if (btn.classList.contains('active')) {
-        listBlock.style.maxHeight = "".concat(list.clientHeight, "px");
-      } else {
-        listBlock.style.maxHeight = 0;
-      }
+  if (descriptionButtons.length) {
+    descriptionButtons.forEach(function (btn) {
+      var listBlock = btn.previousElementSibling;
+      var list = btn.previousElementSibling.children[0];
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        btn.classList.toggle('active');
+        if (btn.classList.contains('active')) {
+          listBlock.style.maxHeight = "".concat(list.clientHeight, "px");
+        } else {
+          listBlock.style.maxHeight = 0;
+        }
+      });
     });
-  });
+  }
 });
 
 /***/ }),
@@ -543,17 +565,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
   var attributs = document.querySelectorAll('.product-characteristics__item');
-  attributs.forEach(function (attribut) {
-    attribut.addEventListener('click', function () {
-      var attributsList = attribut.parentNode.children;
-      attributsList.forEach(function (item) {
-        item.classList.remove('active');
-        item.children[0].checked = false;
+  if (attributs.length) {
+    attributs.forEach(function (attribut) {
+      attribut.addEventListener('click', function () {
+        var attributsList = attribut.parentNode.children;
+        attributsList.forEach(function (item) {
+          item.classList.remove('active');
+          item.children[0].checked = false;
+        });
+        attribut.classList.add('active');
+        attribut.children[0].checked = true;
       });
-      attribut.classList.add('active');
-      attribut.children[0].checked = true;
     });
-  });
+  }
 });
 
 /***/ }),
@@ -570,43 +594,47 @@ document.addEventListener('DOMContentLoaded', function () {
   var priceInput = document.querySelectorAll(".range-slider__field input");
   var ranges = document.querySelectorAll(".range-slider__slider-progress");
   var priceGap = 1000;
-  priceInput.forEach(function (input) {
-    input.addEventListener("input", function (e) {
-      ranges.forEach(function (range) {
-        var minPrice = parseInt(priceInput[0].value);
-        var maxPrice = parseInt(priceInput[1].value);
-        if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
-          if (e.target.className === "range-slider__field-minInput") {
-            rangeInput[0].value = minPrice;
-            range.style.left = minPrice / rangeInput[0].max * 100 + "%";
-          } else {
-            rangeInput[1].value = maxPrice;
-            range.style.right = 100 - maxPrice / rangeInput[1].max * 100 + "%";
+  if (priceInput.length) {
+    priceInput.forEach(function (input) {
+      input.addEventListener("input", function (e) {
+        ranges.forEach(function (range) {
+          var minPrice = parseInt(priceInput[0].value);
+          var maxPrice = parseInt(priceInput[1].value);
+          if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
+            if (e.target.className === "range-slider__field-minInput") {
+              rangeInput[0].value = minPrice;
+              range.style.left = minPrice / rangeInput[0].max * 100 + "%";
+            } else {
+              rangeInput[1].value = maxPrice;
+              range.style.right = 100 - maxPrice / rangeInput[1].max * 100 + "%";
+            }
           }
-        }
+        });
       });
     });
-  });
-  rangeInput.forEach(function (input) {
-    input.addEventListener("input", function (e) {
-      ranges.forEach(function (range) {
-        var minVal = parseInt(rangeInput[0].value);
-        var maxVal = parseInt(rangeInput[1].value);
-        if (maxVal - minVal < priceGap) {
-          if (e.target.className === "range-slider__rangeInput-minRange") {
-            rangeInput[0].value = maxVal - priceGap;
+  }
+  if (rangeInput.length) {
+    rangeInput.forEach(function (input) {
+      input.addEventListener("input", function (e) {
+        ranges.forEach(function (range) {
+          var minVal = parseInt(rangeInput[0].value);
+          var maxVal = parseInt(rangeInput[1].value);
+          if (maxVal - minVal < priceGap) {
+            if (e.target.className === "range-slider__rangeInput-minRange") {
+              rangeInput[0].value = maxVal - priceGap;
+            } else {
+              rangeInput[1].value = minVal + priceGap;
+            }
           } else {
-            rangeInput[1].value = minVal + priceGap;
+            priceInput[0].value = minVal;
+            priceInput[1].value = maxVal;
+            range.style.left = minVal / rangeInput[0].max * 100 + "%";
+            range.style.right = 100 - maxVal / rangeInput[1].max * 100 + "%";
           }
-        } else {
-          priceInput[0].value = minVal;
-          priceInput[1].value = maxVal;
-          range.style.left = minVal / rangeInput[0].max * 100 + "%";
-          range.style.right = 100 - maxVal / rangeInput[1].max * 100 + "%";
-        }
+        });
       });
     });
-  });
+  }
 });
 
 /***/ }),
@@ -647,31 +675,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
-/***/ "./src/js/components/social.js":
-/*!*************************************!*\
-  !*** ./src/js/components/social.js ***!
-  \*************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var ninelines_sharing__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ninelines-sharing */ "./node_modules/ninelines-sharing/dist/ninelines-sharing.js");
-/* harmony import */ var ninelines_sharing__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(ninelines_sharing__WEBPACK_IMPORTED_MODULE_0__);
-
-if (document.querySelector('[data-social]')) {
-  var list = document.querySelectorAll('[data-social]');
-  Array.prototype.forEach.call(list, function (item) {
-    item.addEventListener('click', function (e) {
-      var social = e.currentTarget.dataset.social;
-      var url = location.origin + location.pathname;
-      ninelines_sharing__WEBPACK_IMPORTED_MODULE_0___default.a[social](url);
-    });
-  });
-}
-
-/***/ }),
-
 /***/ "./src/js/components/switch-buttons.js":
 /*!*********************************************!*\
   !*** ./src/js/components/switch-buttons.js ***!
@@ -682,6 +685,7 @@ if (document.querySelector('[data-social]')) {
 document.addEventListener('DOMContentLoaded', function () {
   var switchButtons = document.querySelectorAll('.switch-buttons__button');
   var catalogs = document.querySelectorAll('.catalog--grid');
+  if (!switchButtons.length && !catalogs.length) return;
   switchButtons.forEach(function (switchButton, index) {
     window.addEventListener('resize', function (e) {
       var windowWidth = e.currentTarget.innerWidth;
@@ -744,78 +748,84 @@ __webpack_require__.r(__webpack_exports__);
 
 document.addEventListener('DOMContentLoaded', function () {
   var showBtns = document.querySelectorAll('.text__block-btn');
-  showBtns.forEach(function (showBtn) {
-    var texts = showBtn.parentNode.querySelectorAll('p');
-    var textsLength = 0;
-    texts.forEach(function (text) {
-      textsLength += text.innerHTML.length;
-    });
-    if (textsLength > 500 && window.outerWidth >= 564) {
-      showBtn.classList.remove('hidden');
-      texts.forEach(function (text, index) {
-        if (index > 0) {
-          text.classList.add('active');
-        }
+  if (showBtns.length) {
+    showBtns.forEach(function (showBtn) {
+      var texts = showBtn.parentNode.querySelectorAll('p');
+      var textsLength = 0;
+      texts.forEach(function (text) {
+        textsLength += text.innerHTML.length;
       });
-    } else if (textsLength < 500 && window.outerWidth >= 564) {
-      showBtn.classList.add('hidden');
-      texts.forEach(function (text, index) {
-        text.classList.remove('active');
-      });
-    } else if (textsLength < 500 && window.outerWidth <= 564) {
-      showBtn.classList.remove('hidden');
-      texts.forEach(function (text, index) {
-        if (index > 0) {
-          text.classList.add('active');
-        }
-      });
-    }
-    showBtn.addEventListener('click', function (e) {
-      e.preventDefault();
-      showBtn.classList.toggle('active');
-      texts.forEach(function (text, index) {
-        if (showBtn.classList.contains('active')) {
-          showBtn.children[0].innerHTML = 'Скрыть текст';
-          text.classList.remove('active');
-        } else {
-          showBtn.children[0].innerHTML = 'Подробнее';
+      if (textsLength > 500 && window.outerWidth >= 564) {
+        showBtn.classList.remove('hidden');
+        texts.forEach(function (text, index) {
           if (index > 0) {
             text.classList.add('active');
           }
+        });
+      } else if (textsLength < 500 && window.outerWidth >= 564) {
+        showBtn.classList.add('hidden');
+        texts.forEach(function (text, index) {
+          text.classList.remove('active');
+        });
+      } else if (textsLength < 500 && window.outerWidth <= 564) {
+        showBtn.classList.remove('hidden');
+        texts.forEach(function (text, index) {
+          if (index > 0) {
+            text.classList.add('active');
+          }
+        });
+      }
+      showBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        showBtn.classList.toggle('active');
+        texts.forEach(function (text, index) {
+          if (showBtn.classList.contains('active')) {
+            showBtn.children[0].innerHTML = 'Скрыть текст';
+            text.classList.remove('active');
+          } else {
+            showBtn.children[0].innerHTML = 'Подробнее';
+            if (index > 0) {
+              text.classList.add('active');
+            }
+          }
+        });
+      });
+    });
+  }
+  var productAboutButtons = document.querySelectorAll('.product__about-button');
+  if (productAboutButtons.length) {
+    productAboutButtons.forEach(function (btn, index) {
+      var text = btn.parentNode.parentNode.children[1].children;
+      btn.addEventListener('click', function () {
+        btn.classList.add('active');
+        var otherButton = productAboutButtons[(index + 1) % productAboutButtons.length];
+        otherButton.classList.remove('active');
+        if (index === 0) {
+          text[0].classList.remove('hidden');
+          text[1].classList.add('hidden');
+        } else {
+          text[1].classList.remove('hidden');
+          text[0].classList.add('hidden');
         }
       });
     });
-  });
-  var productAboutButtons = document.querySelectorAll('.product__about-button');
-  productAboutButtons.forEach(function (btn, index) {
-    var text = btn.parentNode.parentNode.children[1].children;
-    btn.addEventListener('click', function () {
-      btn.classList.add('active');
-      var otherButton = productAboutButtons[(index + 1) % productAboutButtons.length];
-      otherButton.classList.remove('active');
-      if (index === 0) {
-        text[0].classList.remove('hidden');
-        text[1].classList.add('hidden');
-      } else {
-        text[1].classList.remove('hidden');
-        text[0].classList.add('hidden');
-      }
-    });
-  });
+  }
   var productGallery = document.querySelector('#productGallery');
   var productAboutMobile = document.querySelectorAll('.product__about-mobile-row');
-  productAboutMobile.forEach(function (btn) {
-    var textBlock = btn.children[1];
-    var textInner = btn.children[1].children[0];
-    btn.addEventListener('click', function () {
-      btn.classList.toggle('active');
-      if (btn.classList.contains('active')) {
-        textBlock.style.maxHeight = "".concat(textInner.clientHeight, "px");
-      } else {
-        textBlock.style.maxHeight = 0;
-      }
+  if (productGallery && productAboutMobile.length) {
+    productAboutMobile.forEach(function (btn) {
+      var textBlock = btn.children[1];
+      var textInner = btn.children[1].children[0];
+      btn.addEventListener('click', function () {
+        btn.classList.toggle('active');
+        if (btn.classList.contains('active')) {
+          textBlock.style.maxHeight = "".concat(textInner.clientHeight, "px");
+        } else {
+          textBlock.style.maxHeight = 0;
+        }
+      });
     });
-  });
+  }
   var productDisclaimer = document.querySelector('.product__info-price-discount span');
   var productDisclaimerNote = document.querySelector('.product__info-price-discount-note');
   var productDisclaimerClose = document.querySelector('.product__info-price-discount-note-close');
@@ -1087,34 +1097,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers */ "./src/js/helpers.js");
 /* harmony import */ var _sliders__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sliders */ "./src/js/sliders.js");
 /* harmony import */ var _general__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./general */ "./src/js/general.js");
-/* harmony import */ var _components_social__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/social */ "./src/js/components/social.js");
-/* harmony import */ var _components_catalog_button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/catalog-button */ "./src/js/components/catalog-button.js");
-/* harmony import */ var _components_catalog_button__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_catalog_button__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_left_bar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/left-bar */ "./src/js/components/left-bar.js");
-/* harmony import */ var _components_left_bar__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_left_bar__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _components_brand_mini_card__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/brand-mini-card */ "./src/js/components/brand-mini-card.js");
-/* harmony import */ var _components_brand_mini_card__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_brand_mini_card__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _components_categories__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/categories */ "./src/js/components/categories.js");
-/* harmony import */ var _components_categories__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_categories__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/select */ "./src/js/components/select.js");
-/* harmony import */ var _components_filter__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/filter */ "./src/js/components/filter.js");
-/* harmony import */ var _components_filter__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_components_filter__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _components_range_slider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/range-slider */ "./src/js/components/range-slider.js");
-/* harmony import */ var _components_range_slider__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_range_slider__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/modals */ "./src/js/components/modals.js");
-/* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_components_modals__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _components_mobile_filter_btn__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/mobile-filter-btn */ "./src/js/components/mobile-filter-btn.js");
-/* harmony import */ var _components_mobile_filter_btn__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_components_mobile_filter_btn__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _components_categories_cloud__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/categories-cloud */ "./src/js/components/categories-cloud.js");
-/* harmony import */ var _components_categories_cloud__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_components_categories_cloud__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _components_switch_buttons__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/switch-buttons */ "./src/js/components/switch-buttons.js");
-/* harmony import */ var _components_switch_buttons__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_components_switch_buttons__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _components_product_characteristics__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/product-characteristics */ "./src/js/components/product-characteristics.js");
-/* harmony import */ var _components_product_characteristics__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_components_product_characteristics__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _components_product_card__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/product-card */ "./src/js/components/product-card.js");
-/* harmony import */ var _components_product_card__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_components_product_card__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _modules_lazyLoading__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/lazyLoading */ "./src/js/modules/lazyLoading.js");
-/* harmony import */ var _modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/scrollToAnchor */ "./src/js/modules/scrollToAnchor.js");
+/* harmony import */ var _components_brand_mini_card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/brand-mini-card */ "./src/js/components/brand-mini-card.js");
+/* harmony import */ var _components_brand_mini_card__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_brand_mini_card__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_categories__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/categories */ "./src/js/components/categories.js");
+/* harmony import */ var _components_categories__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_categories__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/select */ "./src/js/components/select.js");
+/* harmony import */ var _components_filter__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/filter */ "./src/js/components/filter.js");
+/* harmony import */ var _components_filter__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_filter__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_range_slider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/range-slider */ "./src/js/components/range-slider.js");
+/* harmony import */ var _components_range_slider__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_range_slider__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/modals */ "./src/js/components/modals.js");
+/* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_components_modals__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _components_mobile_filter_btn__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/mobile-filter-btn */ "./src/js/components/mobile-filter-btn.js");
+/* harmony import */ var _components_mobile_filter_btn__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_components_mobile_filter_btn__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _components_categories_cloud__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/categories-cloud */ "./src/js/components/categories-cloud.js");
+/* harmony import */ var _components_categories_cloud__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_categories_cloud__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _components_switch_buttons__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/switch-buttons */ "./src/js/components/switch-buttons.js");
+/* harmony import */ var _components_switch_buttons__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_components_switch_buttons__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _components_product_characteristics__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/product-characteristics */ "./src/js/components/product-characteristics.js");
+/* harmony import */ var _components_product_characteristics__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_components_product_characteristics__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _components_product_card__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/product-card */ "./src/js/components/product-card.js");
+/* harmony import */ var _components_product_card__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_components_product_card__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _modules_lazyLoading__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/lazyLoading */ "./src/js/modules/lazyLoading.js");
+/* harmony import */ var _modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/scrollToAnchor */ "./src/js/modules/scrollToAnchor.js");
 
 
 
@@ -1132,11 +1137,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-_modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_19__["default"].init();
-_modules_lazyLoading__WEBPACK_IMPORTED_MODULE_18__["default"].init();
+_modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_16__["default"].init();
+_modules_lazyLoading__WEBPACK_IMPORTED_MODULE_15__["default"].init();
 
 /***/ }),
 
