@@ -163,6 +163,16 @@
 					background-size: .8ex 2.7px;
 					background-repeat: space no-repeat;
 				}
+
+				@media (max-width: 1400px) {
+					align-items: flex-start;
+					flex-direction: column;
+					gap: 5px;
+
+					&:after {
+						display: none;
+					}
+				}
 			}
 
 			&-name {
@@ -182,6 +192,10 @@
 				background-color: $color-white;
 				margin: 0 0 0 auto;
 				white-space: nowrap;
+
+				@media (max-width: 1400px) {
+					margin: 0;
+				}
 			}
 
 			&-button {

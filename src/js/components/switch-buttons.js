@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const switchButtons = document.querySelectorAll('.switch-buttons__button');
 	const catalogs = document.querySelectorAll('.catalog--grid');
 
+	if (!switchButtons.length && !catalogs.length) return
+
 	switchButtons.forEach((switchButton, index) => {
 
 		window.addEventListener('resize', function(e){

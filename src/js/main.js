@@ -3,10 +3,7 @@ import './vendor';
 import './helpers';
 import './sliders';
 import './general';
-import './components/social';
 
-import './components/catalog-button';
-import './components/left-bar';
 import './components/brand-mini-card';
 import './components/categories';
 import './components/select';
