@@ -14,6 +14,29 @@ document.addEventListener('DOMContentLoaded', () => {
 	const modalHeaderMoreButtons = document.querySelectorAll('.modal-header-more__footer-about-header');
 	const modalHeaderMoreCitySelect = document.querySelector('.city--select');
 
+	function getScrollbarWidth() {
+
+		// Creating invisible container
+		const outer = document.createElement('div');
+		outer.style.visibility = 'hidden';
+		outer.style.overflow = 'scroll'; // forcing scrollbar to appear
+		outer.style.msOverflowStyle = 'scrollbar'; // needed for WinJS apps
+		document.body.appendChild(outer);
+
+		// Creating inner element and placing it in the container
+		const inner = document.createElement('div');
+		outer.appendChild(inner);
+
+		// Calculating difference between container's full width and the child width
+		const scrollbarWidth = (outer.offsetWidth - inner.offsetWidth);
+
+		// Removing temporary elements from the DOM
+		outer.parentNode.removeChild(outer);
+
+		return scrollbarWidth;
+
+	}
+
 	if (menuListMore.length) {
 		menuListMore.forEach((btn) => {
 			btn.addEventListener('click', () => {
@@ -75,8 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 	}
 
-
-
 	if (headerSelectPhone) {
 		document.addEventListener('click', (event) => {
 			if (headerSelectPhone && !headerSelectPhone.contains(event.target)) {
@@ -102,6 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (menuButton) {
 		menuButton.addEventListener('click', (e) => {
 			e.preventDefault();
+			getScrollbarWidth();
 			menuButton.classList.toggle('active');
 
 			if (menuButton.classList.contains('active')) {
