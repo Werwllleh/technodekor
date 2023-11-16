@@ -3434,9 +3434,10 @@ iframe {
         .header__menu-grid {
           -ms-grid-columns: 1fr 40px 1fr 40px 1fr;
           grid-template-columns: 1fr 1fr 1fr;
-          -ms-grid-rows: 350px 40px 350px 40px 350px 40px 350px 40px auto 40px 350px;
-          grid-template-rows: 350px 350px 350px 350px auto 350px;
+          grid-auto-rows: -webkit-min-content;
+          grid-auto-rows: min-content;
           gap: 40px;
+          -ms-grid-rows: auto 40px auto 40px auto 40px auto 40px auto 40px auto;
               grid-template-areas: "categories categories categories" "categories categories categories" "categories categories categories" "categories categories categories" "brands brands brands" "coloring coloring ."; } }
       @media (max-width: 564px) {
         .header__menu-grid {
@@ -3470,7 +3471,9 @@ iframe {
       @media (max-width: 1200px) {
         .header__menu-categories {
           -ms-grid-columns: (1fr)[4];
-          grid-template-columns: repeat(4, 1fr); } }
+          grid-template-columns: repeat(4, 1fr);
+          grid-auto-rows: -webkit-min-content;
+          grid-auto-rows: min-content; } }
       @media (max-width: 992px) {
         .header__menu-categories {
           -ms-grid-columns: (1fr)[3];

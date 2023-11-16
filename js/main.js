@@ -299,6 +299,25 @@ document.addEventListener('DOMContentLoaded', function () {
   var headerSelectPhone = document.querySelector('.header__phone-arrow');
   var modalHeaderMoreButtons = document.querySelectorAll('.modal-header-more__footer-about-header');
   var modalHeaderMoreCitySelect = document.querySelector('.city--select');
+  function getScrollbarWidth() {
+    // Creating invisible container
+    var outer = document.createElement('div');
+    outer.style.visibility = 'hidden';
+    outer.style.overflow = 'scroll'; // forcing scrollbar to appear
+    outer.style.msOverflowStyle = 'scrollbar'; // needed for WinJS apps
+    document.body.appendChild(outer);
+
+    // Creating inner element and placing it in the container
+    var inner = document.createElement('div');
+    outer.appendChild(inner);
+
+    // Calculating difference between container's full width and the child width
+    var scrollbarWidth = outer.offsetWidth - inner.offsetWidth;
+
+    // Removing temporary elements from the DOM
+    outer.parentNode.removeChild(outer);
+    return scrollbarWidth;
+  }
   if (menuListMore.length) {
     menuListMore.forEach(function (btn) {
       btn.addEventListener('click', function () {
@@ -370,6 +389,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (menuButton) {
     menuButton.addEventListener('click', function (e) {
       e.preventDefault();
+      getScrollbarWidth();
       menuButton.classList.toggle('active');
       if (menuButton.classList.contains('active')) {
         menuBlock.classList.add('active');
