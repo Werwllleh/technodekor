@@ -3224,6 +3224,7 @@ iframe {
         -webkit-box-shadow: 0 4px 20px 0 rgba(45, 47, 56, 0.08);
                 box-shadow: 0 4px 20px 0 rgba(45, 47, 56, 0.08); }
     .header__search-icon {
+      opacity: 0;
       cursor: pointer;
       position: absolute;
       width: 20px;
@@ -3231,8 +3232,28 @@ iframe {
       top: 0;
       right: 24px;
       bottom: 0;
-      margin: auto 0; }
+      margin: auto 0;
+      -webkit-transition: opacity 0.3s;
+      transition: opacity 0.3s; }
+      .header__search-icon.active {
+        opacity: 1; }
       .header__search-icon svg {
+        fill: #7D8899; }
+    .header__search-icon-clear {
+      opacity: 0;
+      cursor: pointer;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 0;
+      right: 50px;
+      bottom: 0;
+      margin: auto 0;
+      -webkit-transition: opacity 0.3s;
+      transition: opacity 0.3s; }
+      .header__search-icon-clear.active {
+        opacity: 1; }
+      .header__search-icon-clear svg {
         fill: #7D8899; }
   .header__buttons {
     display: -webkit-box;

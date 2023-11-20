@@ -299,6 +299,30 @@ document.addEventListener('DOMContentLoaded', function () {
   var headerSelectPhone = document.querySelector('.header__phone-arrow');
   var modalHeaderMoreButtons = document.querySelectorAll('.modal-header-more__footer-about-header');
   var modalHeaderMoreCitySelect = document.querySelector('.city--select');
+  var headerSearchInput = document.querySelector('.header__search input');
+  var headerSearch = document.querySelector('.header__search');
+  if (headerSearchInput && headerSearch) {
+    var searchButton = headerSearch.querySelector('.header__search-icon');
+    var clearButton = headerSearch.querySelector('.header__search-icon-clear');
+    if (headerSearchInput.value.length > 0) {
+      searchButton.classList.remove('active');
+      clearButton.classList.remove('active');
+    }
+    clearButton.addEventListener('click', function () {
+      headerSearchInput.value = '';
+      searchButton.classList.remove('active');
+      clearButton.classList.remove('active');
+    });
+    headerSearchInput.addEventListener('input', function () {
+      if (headerSearchInput.value.length > 0) {
+        searchButton.classList.add('active');
+        clearButton.classList.add('active');
+      } else {
+        searchButton.classList.remove('active');
+        clearButton.classList.remove('active');
+      }
+    });
+  }
   function getScrollbarWidth() {
     // Creating invisible container
     var outer = document.createElement('div');
