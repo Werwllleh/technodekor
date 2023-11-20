@@ -1,5 +1,7 @@
 .header {
-	position: relative;
+	position: fixed;
+	background-color: #fff;
+	width: 100vw;
 	padding: 40px 0 24px;
 	z-index: 20;
 
@@ -377,6 +379,12 @@
 
 
 		&-icon {
+
+			&.active {
+				opacity: 1;
+			}
+
+			opacity: 0;
 			cursor: pointer;
 			position: absolute;
 			width: 20px;
@@ -385,6 +393,28 @@
 			right: 24px;
 			bottom: 0;
 			margin: auto 0;
+			transition: opacity $duration-normal;
+
+			svg {
+				fill: #7D8899;
+			}
+		}
+
+		&-icon-clear {
+			&.active {
+				opacity: 1;
+			}
+
+			opacity: 0;
+			cursor: pointer;
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			top: 0;
+			right: 50px;
+			bottom: 0;
+			margin: auto 0;
+			transition: opacity $duration-normal;
 
 			svg {
 				fill: #7D8899;
@@ -404,9 +434,9 @@
 
 	&__menu {
 		position: fixed;
-		top: 210px;
+		top: 194px;
 		left: 0;
-		width: 100%;
+		width: 100vw;
 		height: 100%;
 		background-color: $color-white;
 		transform: scaleY(0);
@@ -416,7 +446,7 @@
 		transition: opacity $duration-normal, visibility $duration-normal, transform $duration-normal;
 
 		@media (max-width: 992px) {
-			top: 115px;
+			top: 98px;
 		}
 
 		@include mobile() {
@@ -472,7 +502,7 @@
 		}
 
 		&-body {
-
+			padding: 20px 0 0 0;
 			height: calc(100vh - 210px);
 			overflow-y: scroll;
 

@@ -13,7 +13,35 @@ document.addEventListener('DOMContentLoaded', () => {
 	const headerSelectPhone = document.querySelector('.header__phone-arrow');
 	const modalHeaderMoreButtons = document.querySelectorAll('.modal-header-more__footer-about-header');
 	const modalHeaderMoreCitySelect = document.querySelector('.city--select');
+	const headerSearchInput = document.querySelector('.header__search input');
+	const headerSearch = document.querySelector('.header__search');
 
+	if (headerSearchInput && headerSearch) {
+		const searchButton = headerSearch.querySelector('.header__search-icon');
+		const clearButton = headerSearch.querySelector('.header__search-icon-clear');
+
+		if (headerSearchInput.value.length > 0) {
+			searchButton.classList.remove('active');
+			clearButton.classList.remove('active');
+		}
+
+		clearButton.addEventListener('click', () => {
+			headerSearchInput.value = '';
+			searchButton.classList.remove('active');
+			clearButton.classList.remove('active');
+		})
+
+		headerSearchInput.addEventListener('input', () => {
+
+			if (headerSearchInput.value.length > 0) {
+				searchButton.classList.add('active');
+				clearButton.classList.add('active');
+			} else {
+				searchButton.classList.remove('active');
+				clearButton.classList.remove('active');
+			}
+		});
+	}
 	function getScrollbarWidth() {
 
 		// Creating invisible container
@@ -123,17 +151,19 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (menuButton) {
 		menuButton.addEventListener('click', (e) => {
 			e.preventDefault();
-			getScrollbarWidth();
+
 			menuButton.classList.toggle('active');
 
 			if (menuButton.classList.contains('active')) {
+				document.body.style.paddingRight = getScrollbarWidth() + 'px';
 				menuBlock.classList.add('active')
 				document.documentElement.style.overflow = "hidden";
 			} else {
-				document.documentElement.style.overflow = "auto";
+				document.body.style.paddingRight = 0;
 				menuBlock.classList.remove('active')
 				menuTopMoreButton.classList.remove('active');
 				menuTopMore.classList.remove('active')
+				document.documentElement.style.overflow = "auto";
 			}
 		})
 	}

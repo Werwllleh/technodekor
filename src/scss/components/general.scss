@@ -208,7 +208,13 @@
 	visibility: visible;
 }
 
+
+
 .custom--slider-arrows {
+	position: absolute;
+	top: 300px;
+	left: 0;
+	width: 100%;
 
 	@include tablet() {
 		display: none;
@@ -272,7 +278,9 @@
 	}
 
 }
-
+.custom--slider-banner {
+	top: 50%;
+}
 .text__block {
 
 
