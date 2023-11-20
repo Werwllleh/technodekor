@@ -389,16 +389,17 @@ document.addEventListener('DOMContentLoaded', function () {
   if (menuButton) {
     menuButton.addEventListener('click', function (e) {
       e.preventDefault();
-      getScrollbarWidth();
       menuButton.classList.toggle('active');
       if (menuButton.classList.contains('active')) {
+        document.body.style.paddingRight = getScrollbarWidth() + 'px';
         menuBlock.classList.add('active');
         document.documentElement.style.overflow = "hidden";
       } else {
-        document.documentElement.style.overflow = "auto";
+        document.body.style.paddingRight = 0;
         menuBlock.classList.remove('active');
         menuTopMoreButton.classList.remove('active');
         menuTopMore.classList.remove('active');
+        document.documentElement.style.overflow = "auto";
       }
     });
   }
