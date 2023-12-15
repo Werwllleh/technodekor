@@ -159,11 +159,11 @@ document.addEventListener('DOMContentLoaded', () => {
 				menuBlock.classList.add('active')
 				document.documentElement.style.overflow = "hidden";
 			} else {
-				document.body.style.paddingRight = 0;
+				document.documentElement.style.overflow = '';
+				document.body.style.paddingRight = '';
 				menuBlock.classList.remove('active')
 				menuTopMoreButton.classList.remove('active');
 				menuTopMore.classList.remove('active')
-				document.documentElement.style.overflow = "auto";
 			}
 		})
 	}
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			menuTopMore.classList.remove('active');
 			menuBlock.classList.remove('active')
 			menuTopMoreButton.classList.remove('active');
-			document.documentElement.style.overflow = "auto";
+			document.documentElement.style.overflow = '';
 		})
 	}
 
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				if (btn.classList.contains('active')) {
 					bottomBlock.style.maxHeight = `${list.clientHeight}px`;
 				} else {
-					bottomBlock.style.maxHeight = 0;
+					bottomBlock.style.maxHeight = '';
 				}
 
 				if (btn.classList.contains('active') && btn.classList.contains('city--select')) {

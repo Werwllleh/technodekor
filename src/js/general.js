@@ -148,12 +148,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		if (productDisclaimer.classList.contains('active')) {
 			productDisclaimerNote.classList.add('active');
 			if (window.innerWidth <= 564) {
-				document.documentElement.style.overflowY = "hidden";
+				document.documentElement.style.overflow = "hidden";
 			}
 		} else {
 			if (!showNote) {
 				productDisclaimerNote.classList.remove('active');
-				document.documentElement.style.overflowY = "auto";
+				document.documentElement.style.overflow = '';
 			}
 		}
 	}
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	function closeDisclaimer() {
 		productDisclaimer.classList.remove('active');
 		productDisclaimerNote.classList.remove('active');
-		document.documentElement.style.overflowY = "auto";
+		document.documentElement.style.overflow = '';
 	}
 
 	lightGallery((productGallery), {
